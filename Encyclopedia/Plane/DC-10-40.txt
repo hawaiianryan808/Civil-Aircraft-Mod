@@ -1,0 +1,28 @@
+DC-10-40
+
+dc_10
+
+
+Name: McDonnell Douglas DC-10-40
+Type: Wide-body jet airliner
+Crew: 3 (Pilot, Co-pilot, Flight Engineer)
+Max seating: 380 (typical 250-270)
+Length: 55.5 m (182 ft 1 in)
+Wing span: 50.4 m (165 ft 4 in)
+Height: 17.7 m (58 ft 1 in)
+Wing area: 367.7 m² (3,958 sq ft)
+Weight Empty: 122,951 kg (271,060 lb)
+Max Takeoff Weight: 251,744 kg (555,000 lb)
+Internal Fuel: 138,720 L (36,650 US gal)
+Cruise speed: 908 km/h (490 kt) / Mach 0.82
+Max Mach at altitude: 0.88
+Range: 9,450 km (5,100 nmi)
+Service ceiling: 12,800 m (42,000 ft)
+Takeoff distance: 2,850 m (9,350 ft)
+Landing distance: 1,750 m (5,740 ft)
+Powerplant: 3 x Pratt & Whitney JT9D-59A turbofans, 236 kN (53,000 lbf) each
+
+
+The McDonnell Douglas DC-10-40 is a long-range trijet airliner optimized for intercontinental routes. Originally designated the Series 20, the aircraft was renamed the Series 40 at the specific request of launch customer Northwest Orient Airlines, who wished to emphasize that the aircraft was more advanced than the Series 30. It entered commercial service in late 1972. The -40 was the first variant to qualify for the 555,000 lb MTOW, matching the capabilities of the Series 30 but utilizing Pratt & Whitney engines rather than the General Electric CF6 found on all other DC-10 variants.
+
+The jetliner is powered by three Pratt & Whitney JT9D-59A (or earlier JT9D-20) turbofan engines producing up to 53,000 lbf (236 kN) of thrust. Distinctively, the DC-10-40 features a peculiar bulge in the intake cowling of the number 2 (tail-mounted) engine; this structural modification was required to accommodate the slightly larger fan diameter of the JT9D engine compared to the GE CF6. Like the Series 30, the Series 40 features an extended wingspan of 165 ft 4 in (50.4 m) and a centerline main landing gear leg to distribute its heavier takeoff weight on runways. Primary operators were Northwest Airlines and Japan Airlines (JAL), who selected the type to maintain commonality with their Pratt & Whitney-powered Boeing 747 fleets. The DC-10-40D was a domestic sub-variant operated by JAL, which removed the center landing gear and reduced fuel capacity for high-density, short-range routes within Japan. Northwest's fleet proved durable, with the airline retiring its last DC-10-40s in 2002 after nearly 30 years of service on Transpacific and domestic trunk routes.

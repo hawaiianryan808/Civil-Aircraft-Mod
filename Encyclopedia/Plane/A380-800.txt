@@ -1,0 +1,27 @@
+Airbus A380-800
+
+A_380
+
+
+Name: Airbus A380-800
+Type: Double-deck wide-body jet airliner
+Crew: 2
+Max seating: 853 (typical 525)
+Length: 72.72 m (238 ft 7 in)
+Wing span: 79.75 m (261 ft 8 in)
+Height: 24.09 m (79 ft 1 in)
+Wing area: 845 m² (9,100 sq ft)
+Weight Empty: 276,800 kg (610,200 lb)
+Max Takeoff Weight: 575,000 kg (1,268,000 lb)
+Internal Fuel: 323,546 L (85,472 US gal)
+Cruise speed: 903 km/h (488 kt) / Mach 0.85
+Max Mach at altitude: 0.89
+Range: 15,200 km (8,200 nmi)
+Service ceiling: 13,100 m (43,000 ft)
+Takeoff distance: 2,950 m (9,680 ft)
+Landing distance: 2,000 m (6,560 ft)
+Powerplant: 4 x Rolls-Royce Trent 970, 311 kN (70,000 lbf) each, or
+	4 x Engine Alliance GP7270, 311 kN (70,000 lbf) each
+
+
+The Airbus A380-800 is the largest passenger airliner in the world, featuring a full-length double-deck fuselage. Entering service in 2007 with Singapore Airlines, it was designed to challenge the monopoly of the Boeing 747 in the long-haul hub-to-hub market. The aircraft utilizes advanced materials, including Glare (glass-reinforced aluminum), to reduce weight despite its immense size. Its wing area is 54% larger than that of the Boeing 747-400, providing sufficient lift for its 1.2 million pound takeoff weight without requiring extreme takeoff speeds. Due to its size, airports required modifications to gates and taxiways (Code F) to accommodate its 80-meter wingspan.

@@ -1,0 +1,27 @@
+Boeing 747-400F
+
+B_747
+
+
+Name: Boeing 747-400F
+Type: Wide-body cargo jet
+Crew: 2
+Max seating: 2 (courier seats available on upper deck)
+Length: 70.66 m (231 ft 10 in)
+Wing span: 64.44 m (211 ft 5 in)
+Height: 19.41 m (63 ft 8 in)
+Wing area: 560 m² (6,027 sq ft)
+Weight Empty: 172,135 kg (379,500 lb)
+Max Takeoff Weight: 396,890 kg (875,000 lb)
+Internal Fuel: 216,840 L (57,280 US gal)
+Cruise speed: 908 km/h (490 kt) / Mach 0.85
+Max Mach at altitude: 0.92
+Range: 8,230 km (4,445 nmi) with max payload
+Service ceiling: 13,715 m (45,000 ft)
+Takeoff distance: 3,018 m (9,900 ft)
+Landing distance: 2,179 m (7,150 ft)
+Powerplant: 4 x General Electric CF6-80C2B5F, 274 kN (62,100 lbf) each, or
+	4 x Pratt & Whitney PW4062, 282 kN (63,300 lbf) each
+
+
+The Boeing 747-400F is the all-cargo production variant of the 747-400, distinguished by its shorter "hump" (upper deck) compared to the passenger version to save weight. It features a large hinged nose door that swings upward, allowing extra-long or oversized cargo to be loaded directly into the main deck. The floor is strengthened and equipped with a powered cargo handling system to maneuver pallets and containers. Unlike converted passenger 747s (BCF), the factory-built 400F lacks passenger windows and has a dedicated side cargo door. With a payload capacity of approximately 113,000 kg (248,600 lb), it remains a backbone of the global air freight industry.

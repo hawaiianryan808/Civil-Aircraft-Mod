@@ -1,0 +1,27 @@
+Airbus A320neo
+
+A_320
+
+
+Name: Airbus A320neo (New Engine Option)
+Type: Narrow-body jet airliner
+Crew: 2
+Max seating: 194
+Length: 37.57 m (123 ft 3 in)
+Wing span: 35.80 m (117 ft 5 in)
+Height: 11.76 m (38 ft 7 in)
+Wing area: 122.4 m² (1,318 sq ft)
+Weight Empty: 44,300 kg (97,700 lb)
+Max Takeoff Weight: 79,000 kg (174,200 lb)
+Internal Fuel: 26,730 L (7,060 US gal)
+Cruise speed: 828 km/h (447 kt) / Mach 0.78
+Max Mach at altitude: 0.82
+Range: 6,500 km (3,500 nmi)
+Service ceiling: 11,900 m (39,100 ft)
+Takeoff distance: 1,900 m (6,230 ft)
+Landing distance: 1,500 m (4,920 ft)
+Powerplant: 2 x CFM International LEAP-1A26, 120.6 kN (27,120 lbf) each, or
+	2 x Pratt & Whitney PW1127G-JM, 120.4 kN (27,075 lbf) each
+
+
+The Airbus A320neo (New Engine Option) is an evolution of the A320ceo, featuring large, fuel-efficient engines and aerodynamic refinements. The "neo" utilizes geared turbofan technology (PW1100G) or advanced core architecture (CFM LEAP) to deliver a 15-20% reduction in fuel consumption per seat. It is easily identified by its massive engines and standard "Sharklet" wingtips, which reduce drag and improve takeoff performance. The cabin features the "Airspace by Airbus" interior, offering larger overhead bins and modern LED lighting. Since its introduction in 2016, it has become the fastest-selling commercial aircraft in history.

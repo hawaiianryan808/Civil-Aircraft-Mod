@@ -1,0 +1,26 @@
+Cessna P210N
+
+Cessna_210N
+
+
+Name: Cessna P210N Pressurized Centurion
+Type: Single-engine pressurized piston aircraft
+Crew: 1
+Max seating: 6
+Length: 8.59 m (28 ft 2 in)
+Wing span: 11.20 m (36 ft 9 in)
+Height: 2.95 m (9 ft 8 in)
+Wing area: 16.2 m² (175 sq ft)
+Weight Empty: 1,080 kg (2,380 lb)
+Max Takeoff Weight: 1,814 kg (4,000 lb)
+Internal Fuel: 333 L (88 US gal) usable
+Cruise speed: 359 km/h (194 kt)
+Max speed: 374 km/h (202 kt)
+Range: 1,667 km (900 nmi)
+Service ceiling: 7,010 m (23,000 ft)
+Takeoff distance: 640 m (2,100 ft)
+Landing distance: 457 m (1,500 ft)
+Powerplant: 1 x Continental TSIO-520-P turbocharged piston, 213 kW (285 hp)
+
+
+The Cessna P210N is a pressurized version of the popular 210 Centurion, manufactured between 1978 and 1983. It features a distinctive high-wing design with retractable landing gear, allowing for a clean aerodynamic profile and higher cruise speeds compared to fixed-gear rivals. The "P" in the designation stands for "Pressurized," utilizing bleed air from the turbocharger to maintain a cabin altitude of 8,000 ft at an aircraft altitude of 23,000 ft. It eliminates the need for supplemental oxygen masks for passengers during high-altitude cruise, a rare luxury in single-engine piston aircraft of its era. The P210N is widely regarded as one of the most capable personal cross-country machines ever built, often cited for its ability to fly over weather that would ground non-turbocharged aircraft.

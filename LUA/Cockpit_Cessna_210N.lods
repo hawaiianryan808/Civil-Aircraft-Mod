@@ -1,0 +1,5 @@
+model = {
+	lods = {		
+		{"Cockpit_Cessna_210N.edm",20000.000000},
+	};
+}

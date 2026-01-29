@@ -1,0 +1,27 @@
+Airbus A330-300
+
+A_330
+
+
+Name: Airbus A330-300
+Type: Wide-body jet airliner
+Crew: 2
+Max seating: 440 (typical 277)
+Length: 63.69 m (208 ft 11 in)
+Wing span: 60.30 m (197 ft 10 in)
+Height: 16.83 m (55 ft 3 in)
+Wing area: 361.6 m² (3,892 sq ft)
+Weight Empty: 124,500 kg (274,500 lb)
+Max Takeoff Weight: 242,000 kg (533,500 lb)
+Internal Fuel: 139,090 L (36,750 US gal)
+Cruise speed: 871 km/h (470 kt) / Mach 0.82
+Max Mach at altitude: 0.86
+Range: 11,750 km (6,350 nmi)
+Service ceiling: 12,500 m (41,100 ft)
+Takeoff distance: 2,770 m (9,100 ft)
+Landing distance: 1,730 m (5,680 ft)
+Powerplant: 2 x General Electric CF6-80E1, 320 kN (72,000 lbf) each, or
+	2 x Rolls-Royce Trent 772, 316 kN (71,100 lbf) each
+
+
+The Airbus A330-300 is a medium-to-long-range twinjet that shares its avionics and cockpit layout with the quad-jet A340. Optimized for high-density routes, the -300 has a longer fuselage than the -200 but a slightly shorter range. It was the first Airbus variant to offer a choice of three engine manufacturers (GE, Pratt & Whitney, and Rolls-Royce). The 242-tonne MTOW variant, introduced later in its life cycle, significantly improved its range capability, allowing it to compete effectively on Transpacific routes. It remains one of the most efficient aircraft for regional Asian and Transatlantic sectors.

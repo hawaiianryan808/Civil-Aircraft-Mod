@@ -1,0 +1,29 @@
+Boeing 757-300
+
+B_757
+
+
+Name: Boeing 757-300
+Type: Narrow-body jet airliner
+Crew: 2
+Max seating: 295 (typical 243)
+Length: 54.4 m (178 ft 7 in)
+Wing span: 38.05 m (124 ft 10 in)
+Height: 13.6 m (44 ft 6 in)
+Wing area: 185.25 m² (1,994 sq ft)
+Weight Empty: 64,590 kg (142,400 lb)
+Max Takeoff Weight: 123,830 kg (273,000 lb)
+Internal Fuel: 43,490 L (11,489 US gal)
+Cruise speed: 854 km/h (461 kt)
+Max Mach at altitude: 0.86
+Range: 6,295 km (3,400 nmi)
+Service ceiling: 13,000 m (42,000 ft)
+Takeoff distance: 2,550 m (8,366 ft)
+Landing distance: 1,750 m (5,750 ft)
+Powerplant: 2 x Rolls-Royce RB211-535E4-B turbofans, 193.5 kN (43,500 lbf) each, or
+	2 x Pratt & Whitney PW2043 turbofans, 193 kN (43,400 lbf) each
+
+
+The Boeing 757-300 is a stretched American narrow-body airliner designed and built by Boeing Commercial Airplanes. Announced at the Farnborough Air Show in September 1996, the -300 was the longest single-aisle twinjet ever built until the introduction of the A321XLR. Launch customer Condor placed the aircraft into commercial service in March 1999. It was designed as a high-capacity derivative of the original 757-200, stretching the fuselage by 23.4 feet (7.1 m) to increase seat availability by approximately 20%. Production of the 757 family, including the 55 -300 units built, ended in October 2004 as Boeing shifted focus to the 737 NG and 787 Dreamliner.
+
+The jetliner is powered by uprated 43,000–43,500 lbf (191–193 kN) Rolls-Royce RB211-535E4-B or Pratt & Whitney PW2043 underwing turbofan engines to support a 273,000 lb (124 t) MTOW. The 757-300 retains the 2,000 sq ft (185 m2) supercritical wing of the -200 but features strengthened structure, wheels, and brakes to handle higher weights. It keeps the 707 cross-section and its two-crew glass cockpit has a common type rating with the 757-200 and 767. The fuselage measures 178 ft (54.4 m), making it the longest variant; it typically seats 243 passengers in two classes over a range of 3,400 nmi (6,295 km). Due to its length, the -300 features a retractable tail skid to prevent tail strikes during rotation. While less common than the -200, the -300 provides the lowest seat-mile operating cost of any mid-range single-aisle jet of its era. It was not produced in freighter variants (PF or SF) directly from the factory, as the -200 was preferred for cargo volume versus weight balance. Major customers for the 757-300 included Condor, Northwest Airlines (now Delta), and Continental Airlines (now United). It is commonly used for high-density leisure routes and heavy domestic trunks where passenger volume exceeds -200 capacity. Like its predecessor, it is ETOPS approved for intercontinental flights, though slightly range-limited compared to the -200. Operators valued the -300 for its efficiency, moving nearly as many passengers as a wide-body 767-200 with significantly lower fuel burn. As of 2024, the majority of the 55 aircraft produced remain in service, primarily with Delta Air Lines and United Airlines. The 757-300 has a clean safety record with no hull-loss accidents recorded in its operational history.

@@ -1,0 +1,26 @@
+Boeing 727-100
+
+B_727
+
+
+Name: Boeing 727-100
+Type: Narrow-body trijet airliner
+Crew: 3 (Pilot, Co-pilot, Flight Engineer)
+Max seating: 131
+Length: 40.59 m (133 ft 2 in)
+Wing span: 32.92 m (108 ft 0 in)
+Height: 10.36 m (34 ft 0 in)
+Wing area: 157.9 m² (1,700 sq ft)
+Weight Empty: 36,560 kg (80,600 lb)
+Max Takeoff Weight: 72,570 kg (160,000 lb)
+Internal Fuel: 29,070 L (7,680 US gal)
+Cruise speed: 917 km/h (495 kt) / Mach 0.84
+Max Mach at altitude: 0.90
+Range: 4,170 km (2,250 nmi)
+Service ceiling: 11,000 m (36,100 ft)
+Takeoff distance: 2,530 m (8,300 ft)
+Landing distance: 1,463 m (4,800 ft)
+Powerplant: 3 x Pratt & Whitney JT8D-7 turbofans, 62 kN (14,000 lbf) each
+
+
+The Boeing 727-100 is the original short-body variant of the only trijet ever produced by Boeing. Designed to serve smaller airports with shorter runways, it features a unique high-lift wing system with triple-slotted flaps and leading-edge devices that allow for remarkably low approach speeds. The three engines are mounted at the rear: two on pylons and the third fed by an S-duct through the tail fin. It is equipped with a ventral airstair under the tail, which allowed passenger boarding without ground support equipment, a key feature for 1960s regional operations. The 727-100 entered service in 1964 and was the first jetliner to undergo rigorous fatigue testing during certification.

@@ -1,0 +1,26 @@
+Boeing 737-700
+
+B_737
+
+
+Name: Boeing 737-700
+Type: Narrow-body jet airliner
+Crew: 2
+Max seating: 149
+Length: 33.63 m (110 ft 4 in)
+Wing span: 35.79 m (117 ft 5 in) with winglets
+Height: 12.57 m (41 ft 3 in)
+Wing area: 124.6 m² (1,341 sq ft)
+Weight Empty: 38,147 kg (84,100 lb)
+Max Takeoff Weight: 70,080 kg (154,500 lb)
+Internal Fuel: 26,020 L (6,875 US gal)
+Cruise speed: 828 km/h (447 kt) / Mach 0.78
+Max Mach at altitude: 0.82
+Range: 6,370 km (3,440 nmi)
+Service ceiling: 12,500 m (41,000 ft)
+Takeoff distance: 2,042 m (6,699 ft)
+Landing distance: 1,400 m (4,600 ft)
+Powerplant: 2 x CFM International CFM56-7B24, 108 kN (24,200 lbf) each
+
+
+The Boeing 737-700 was the first variant of the Next Generation (NG) series to be delivered, entering service with Southwest Airlines in 1997. It was designed to replace the 737-300, offering greater range, higher speed, and lower maintenance costs. The -700 features a new wing with greater span and chord, and is often equipped with substantial blended winglets. It became the basis for the Boeing Business Jet (BBJ1) and the military C-40 Clipper. Known for its "hot and high" performance, the -700 can operate out of airports with shorter runways than the larger -800.
