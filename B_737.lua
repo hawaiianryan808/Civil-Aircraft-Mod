@@ -28,7 +28,7 @@ MILITARY VERSION:	Boeing C-40 Clipper
 --]]
 
 B_737 =  {
-      
+
 	Name 			= 'B_737',
 	DisplayName		= _('B737-700'),
 	date_of_introduction= 1997.12,
@@ -38,15 +38,15 @@ B_737 =  {
 	WorldID			=  WSTYPE_PLACEHOLDER,
 	defFuelRatio    = 0.8,
 	singleInFlight 	= true,
-        
-	shape_table_data 	= 
+
+	shape_table_data 	=
 	{
 		{
 			file  	 	= 'B_737';
-			life  	 	= 20; 
-			vis   	 	= 3; 
-			desrt    	= 'kc-135-oblomok'; 
-			fire  	 	= { 300, 2}; 
+			life  	 	= 20;
+			vis   	 	= 3;
+			desrt    	= 'kc-135-oblomok';
+			fire  	 	= { 300, 2};
 			username	= 'B_737';
 			index       =  WSTYPE_PLACEHOLDER;
 			classname   = "lLandPlane";
@@ -58,11 +58,11 @@ B_737 =  {
 			fire  		= { 240, 2};
 		},
 	},
-	
+
 	mapclasskey 		= "P0091000029",
 	attribute  			= {wsType_Air, wsType_Airplane, wsType_Cruiser, WSTYPE_PLACEHOLDER, "Transports",},
 	Categories 			= {},
-	
+
 	-- ============================================================
 	-- MASS & CAPACITY (737-700)
 	-- ============================================================
@@ -70,7 +70,7 @@ B_737 =  {
 	M_nominal	= 56000,	-- [kg] (Typical ZFW + Fuel)
 	M_max		= 70080,	-- [kg] (MTOW HGW)
 	M_fuel_max	= 20894,	-- [kg] (Standard Tanks)
-	
+
 	-- ============================================================
 	-- GEOMETRY & DIMENSIONS
 	-- ============================================================
@@ -79,13 +79,13 @@ B_737 =  {
 	wing_area	= 124.6,	-- [m^2] (1,341 sq ft) - NG Wing
 	wing_span	= 34.32,	-- [m] (112 ft 7 in) - STANDARD SPAN (No Winglets)
 	wing_tip_pos = {-4.807, -0.486, 17.092},
-	
+
 	-- Gear Positions
 	nose_gear_pos 	= 	{ 12.763, -4.165, 0.0}, 		-- Nose gear position (ground under center of the axle)
-		
+
 	main_gear_pos 	= 	{-0.374,  -4.17,  3.52},		-- Main gear position (ground under center of the axle)
 														-- automatically mirrored
-	
+
 	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
 	nose_gear_amortizer_reversal_stroke 	 = -0.371,	-- Full Strut Compression (maximum+ weight on wheels)
 	nose_gear_amortizer_normal_weight_stroke = -0.078,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
@@ -95,7 +95,7 @@ B_737 =  {
 	main_gear_amortizer_reversal_stroke 	 = -0.129,	-- Full Strut Compression (maximum+ weight on wheels)
 	main_gear_amortizer_normal_weight_stroke = -0.03225,-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
 	main_gear_wheel_diameter 				 =  1.006,	-- Diameter of the main gear wheels (meters)
-	
+
 	--[[
 		tand_gear_max defines the Maximum Nose Wheel Steering Angle using the formula:
 		
@@ -109,12 +109,12 @@ B_737 =  {
 				75°					3.732			Extreme castering (rare).
 	]]
 	tand_gear_max	=	math.tan(math.rad(78)),
-	
+
 	-- ============================================================
 	-- PERFORMANCE PARAMETERS
 	-- ============================================================
 	H_max 			= 12500,  	-- [m] (41,000 ft Service Ceiling)
-	
+
 	-- Speeds (m/s)
 	CAS_min 		= 64,  		-- [m/s TAS] Slightly higher stall speed vs Winglet version
 	V_opt			= 232,		-- [m/s TAS] Cruise Mach 0.785
@@ -123,18 +123,18 @@ B_737 =  {
 	V_max_sea_level	= 206,		-- [m/s TAS] Set to max dive speed (Vd = ~400 KCAS) since DCS was magic restricting climb due to powerful engines
 	V_max_h			= 246,		-- [m/s TAS] Mach 0.82 MMO
 	Mach_max 		= 0.82,
-	
+
 	Vy_max 			= 17.0,  	-- [m/s] (Reduced from 18.0 due to drag)
 	range 			= 5926,		-- [km] (Standard -700 range without winglets)
-	
+
 	-- Limits
 	Ny_min			= -1.52,	-- [G]
 	Ny_max			= 2.0,		-- [G]
 	Ny_max_e		= 2.5,		-- [G]
 	bank_angle_max 	= 35,		-- [degrees]
 	AOA_take_off 	= math.rad(9.0),
-	
-	
+
+
 	-- ===================================================================
     -- INERTIA & CG
     -- ===================================================================
@@ -276,8 +276,8 @@ B_737 =  {
 	
 ]]
 	moment_of_inertia	= {3.83e6, 6.89e6, 6.22e6, -185e3},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
-	
-	
+
+
 
 	-- ============================================================
 	-- ENGINE & FUEL (2x CFM56-7B24)
@@ -286,19 +286,19 @@ B_737 =  {
 	-- 2 x 24,200 lbf = 48,400 lbf = ~215,300 N
 	thrust_sum_max	= 21950,	-- [kgf] 
 	thrust_sum_ab	= 21950,	-- [kgf]
-	
+
 	-- Fuel Consumption:
 	-- Increased from 0.67 to 0.70 to reflect efficiency loss of no winglets
 	average_fuel_consumption = 0.70,  -- [kg/sec] total
-	
+
 	has_afteburner		= false,
 	has_thrustReverser 	= true,
 	engines_count		= 2,
-	
+
 	engines_startup_sequence = { 1, 0 }, -- Typical for civilian airliners
-	engines_nozzles = 
+	engines_nozzles =
 	{
-		[1] = 
+		[1] =
 		{
 			pos 	= {0.53, -2.66, -5.66},
 			elevation			= -5.0,	-- 5.0 degree exhaust depression (negative means exhaust points down)
@@ -309,7 +309,7 @@ B_737 =  {
 			smokiness_level     = 0.03,
 			engine_number       = 1,
 		},
-		[2] = 
+		[2] =
 		{
 			pos 	= {0.53, -2.66, 5.66},
 			elevation			= -5.0,	-- 5.0 degree exhaust depression (negative means exhaust points down)
@@ -320,7 +320,7 @@ B_737 =  {
 			smokiness_level     = 0.03,
 			engine_number       = 2,
 		},
-	}, 
+	},
 
 	-- ============================================================
 	-- SYSTEMS & CREW
@@ -335,20 +335,20 @@ B_737 =  {
 	flaps_maneuver				= 5/30,	-- Flaps 5 for takeoff; 30 degrees for normal-length field landing (40 degrees possible).
 	brakeshute_name				= 0,
 	is_tanker					= false,
-	
+
 	crew_size	= 2, -- 737NG typically 2 crew
-	crew_members = 
+	crew_members =
 	{
-		[1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {14.4, 0.150, -0.408} }, 
-		[2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {14.4, 0.150,  0.408} }, 
-	}, 
+		[1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {14.4, 0.150, -0.408} },
+		[2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {14.4, 0.150,  0.408} },
+	},
 
 	RCS						= 45, 	-- [m^2] 
 	detection_range_max		= 30,	-- [km] Distance pilots in this airframe can possibly become aware of other airframes
 	IR_emission_coeff		= 1.0,	-- Comparable total energy. Cooler exhaust than Su-27, but higher mass flow balances it out.
 	IR_emission_coeff_ab	= 0,
 
-	fires_pos = 
+	fires_pos =
 	{
 		[1] = 	{-0.138,	-0.79,	0},
 		[2] = 	{-0.138,	-0.79,	5.741},
@@ -375,7 +375,7 @@ B_737 =  {
 		{ id = 'l_engine',  label = _('L-ENGINE'), 	enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 		{ id = 'r_engine',	label = _('R-ENGINE'), 	enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 	},
-	
+
 	HumanRadio = {
 		frequency = 127.5,
 		editable = true,
@@ -385,8 +385,8 @@ B_737 =  {
 	},
 
 	Pylons = {},
-	
-	Tasks = { aircraft_task(Transport) },	
+
+	Tasks = { aircraft_task(Transport) },
 	DefaultTask = aircraft_task(Nothing),
 
 	-- ============================================================
@@ -401,29 +401,29 @@ B_737 =  {
 			kjx		= 2.2,		-- Roll inertia
 			kjz		= 0.0013,	-- Pitch inertia
 			Czbe	= -0.020,	-- Directional stability
-			
+
 			-- Drag & Lift Coefficients
 			cx_gear	= 0.017,	-- Gear drag
 			cx_flap	= 0.075,	-- Flaps drag (Double-slotted vs Triple on Classic)
 			cy_flap	= 0.95,		-- Flaps lift coefficient
 			cx_brk	= 0.02,		-- Speedbrake drag
-			
+
 			table_data = {
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
 				-- 		M        Cx0     Cya     B        B4   Omxmax  Aldop    Cymax
-				
+
 				-- Low Speed
 				[1]  = {0.0,	0.020,	0.095,	0.053,	0.001,	0.45,	15,		1.55},
 				[2]  = {0.2,	0.020,	0.095,	0.053,	0.001,	0.50,	15,		1.55},
 				[3]  = {0.4,	0.021,	0.095,	0.053,	0.002,	0.50,	14,		1.55},
 				[4]  = {0.6,	0.023,	0.090,	0.058,	0.01,	0.55,	13,		1.50},
-				
+
 				-- Cruise
 				[5]  = {0.7,	0.026,	0.072,	0.063,	0.02,	0.55,	12.5,	1.40},
 				[6]  = {0.78,	0.029,	0.070,	0.068,	0.03,	0.55,	12,		1.30},
-				
+
 				-- Transonic Drag Rise
 				[7]  = {0.82,	0.035,	0.068,	0.084,	0.04,	0.50,	11.5,	1.20},
 				[8]  = {0.85,	0.060,  0.066,  0.105,	0.150,  0.8,    11.0,   1.05},
@@ -431,12 +431,12 @@ B_737 =  {
 				[10] = {1.0,	0.140,  0.060,  0.360,	0.500,  0.4,    8.0,    0.50},
 			},
 		},
-		
-		
+
+
 		engine = {
 			typeng 	= 4,
 			type 	= "TurboFan",
-			
+
 			Nmg		= 59.0,				-- Ground Idle RPM % (60% N2 typical for CFM56-7B)
 			Nominal_RPM = 14460.0,		-- 100% speed high pressure turbine (N2)
 			Nominal_Fan_RPM = 5175.0,	-- 100% speed fan (N1)
@@ -444,20 +444,20 @@ B_737 =  {
 			MaxRUD	= 1,
 			MaksRUD	= 1,
 			ForsRUD	= 1,
-			
+
 			hMaxEng	= 14.0,		-- [km]
 			dcx_eng	= 0.0090,
-			
+
 			-- FUEL FLOW
 			-- Max SFC for CFM56-7B is ~0.67 kg/kgf/h
 			cefor	= 0.67,		-- [kg/kgf/h]
 			cemax	= 0.67,		-- [kg/kgf/h]
-			
+
 			-- Altitude Lapse
 			dpdh_m	= 10500,		-- [N/km per engine]
 			dpdh_f	= 10500,		-- [N/km per engine]
-			
-			table_data = 
+
+			table_data =
 			{
 				-- THRUST TABLE (2x CFM56-7B24)
 				-- Static: ~215 kN Total
@@ -473,7 +473,7 @@ B_737 =  {
 			},
 		},
 	},
-	
+
 	-- ============================================================
 	-- DAMAGE MODEL
 	-- ============================================================
@@ -504,14 +504,14 @@ B_737 =  {
 		[29] = {critical_damage = 5, args = {224}, deps_cells = {23, 25}},
 		[30] = {critical_damage = 5, args = {214}, deps_cells = {24, 26}},
 		[35] = {critical_damage = 6, args = {225}, deps_cells = {23, 29, 25, 37}},
-		[36] = {critical_damage = 6, args = {215}, deps_cells = {24, 30, 26, 38}}, 
+		[36] = {critical_damage = 6, args = {215}, deps_cells = {24, 30, 26, 38}},
 		[37] = {critical_damage = 2,  args = {228}},
 		[38] = {critical_damage = 2,  args = {218}},
-		[39] = {critical_damage = 2,  args = {244}, deps_cells = {53}}, 
-		[40] = {critical_damage = 2,  args = {241}, deps_cells = {54}}, 
+		[39] = {critical_damage = 2,  args = {244}, deps_cells = {53}},
+		[40] = {critical_damage = 2,  args = {241}, deps_cells = {54}},
 		[43] = {critical_damage = 2,  args = {243}, deps_cells = {39, 53}},
-		[44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}}, 
-		[51] = {critical_damage = 2,  args = {240}}, 
+		[44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}},
+		[51] = {critical_damage = 2,  args = {240}},
 		[52] = {critical_damage = 2,  args = {238}},
 		[53] = {critical_damage = 2,  args = {248}},
 		[54] = {critical_damage = 2,  args = {247}},
@@ -521,9 +521,9 @@ B_737 =  {
 		[61] = {critical_damage = 2,  args = {147}},
 		[82] = {critical_damage = 2,  args = {152}},
 	},
-	
-	DamageParts = 
-	{  
+
+	DamageParts =
+	{
 		[1] = "B_737-OBLOMOK-WING-R",
 		[2] = "B_737-OBLOMOK-WING-L",
 	},
@@ -531,7 +531,7 @@ B_737 =  {
 	-- ============================================================
 	-- LIGHTS
 	-- ============================================================
-	
+
 	--[[
 		--------------------------------------------------------------
 		------------------  HawaiianRyan overhaul  -------------------
@@ -556,7 +556,7 @@ B_737 =  {
 	]]
 	lights_data = {
 		typename = "collection", lights = {
-		
+
 		[WOLALIGHT_AUX_LIGHTS] = {
             typename = "Collection",
             lights = {
@@ -565,20 +565,20 @@ B_737 =  {
                     lights = {
 						{	-- port empennage logo illumination. Source: https://www.pinterest.com/pin/374572893980740008/
                             typename = "Spot",  position = { -5.6, -0.499848, -17.105591 },
-							direction = {azimuth = math.rad(117.0), elevation = math.rad(-16.0)}, 
+							direction = {azimuth = math.rad(117.0), elevation = math.rad(-16.0)},
                             proto = lamp_prototypes.LFS_R_27_130, angle_max = math.rad(22.0), angle_min = math.rad(0),
                             exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.8, movable = true,
                         },
 						{	-- starboard empennage logo illumination. Source: https://www.pinterest.com/pin/374572893980740008/
                             typename = "Spot",  position = { -5.6, -0.499719, 17.105755 },
-							direction = {azimuth = math.rad(-117.0), elevation = math.rad(-16.0)}, 
+							direction = {azimuth = math.rad(-117.0), elevation = math.rad(-16.0)},
                             proto = lamp_prototypes.LFS_R_27_130, angle_max = math.rad(22.0), angle_min = math.rad(0),
                             exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.8, movable = true,
                         },
-						
+
 						{	-- port aft-facing white tail light. Source: https://www.pinterest.com/pin/374572893980740008/
                             typename = "Spot",  position = { -5.6, -0.499848, -17.105591 },
-							direction = {azimuth = math.rad(180.0), elevation = math.rad(0)}, 
+							direction = {azimuth = math.rad(180.0), elevation = math.rad(0)},
                             proto = lamp_prototypes.ANO_3_Bl, angle_max = math.rad(150.0), angle_min = math.rad(0),
 							exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.8, movable = true,
                         },
@@ -588,7 +588,7 @@ B_737 =  {
 						},
 						{	-- starboard aft-facing white tail light. Source: https://www.pinterest.com/pin/374572893980740008/
                             typename = "Spot",  position = { -5.6, -0.499719, 17.105755 },
-							direction = {azimuth = math.rad(180.0), elevation = math.rad(0)}, 
+							direction = {azimuth = math.rad(180.0), elevation = math.rad(0)},
                             proto = lamp_prototypes.ANO_3_Bl, angle_max = math.rad(150.0), angle_min = math.rad(0.0),
 							exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.8, movable = true,
                         },
@@ -596,7 +596,7 @@ B_737 =  {
 							typename = "Omni", position = { -5.6, -0.499719, 17.105755 },
 							proto = lamp_prototypes.ANO_3_Bl, movable = true,
 						},
-						
+
 						-- Wing illumination. Source: https://www.pinterest.com/pin/374572893980740008/
 						{
                             typename = "Spot",  position = { 10.000, -0.500, -2.00 },
@@ -610,7 +610,7 @@ B_737 =  {
                             proto = lamp_prototypes.LFS_R_27_130, angle_max = math.rad(22.0), angle_min = math.rad(0),
                             exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.5, movable = true,
                         },
-						
+
 						{	-- Anti-collision white strobes
                             typename = "Spot", position = { -5.125769, -0.499848, -17.105591 },
                             controller = "VariablePatternStrobe", mode = "1 Flash",
@@ -629,12 +629,12 @@ B_737 =  {
 							proto = lamp_prototypes.MPS_1, intensity_max = 500.0, period = 0.333, phase_shift = 0.25,
 							direction = {azimuth = math.rad(180.0), elevation = math.rad(0)}, angle_max = math.rad(160.0), angle_min = math.rad(0),
                         },
-						
+
                     },
                 },
             },
         },
-		
+
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
@@ -644,7 +644,7 @@ B_737 =  {
 						{typename = "argumentlight",argument = 190}, -- Left Position(red)
 						{typename = "argumentlight",argument = 191}, -- Right Position(green)
 						{typename = "argumentlight",argument = 192}, -- Tail Position (white)
-						
+
                         {
                             typename = "Spot", position = { -17.0112, 0.971818, 0 },
 							direction = {azimuth = math.rad(180.0)}, -- argument = 192,
@@ -664,7 +664,7 @@ B_737 =  {
 							direction = {azimuth = math.rad(60.0), elevation = math.rad(0)}, -- argument = 191,
                             proto = lamp_prototypes.BANO_7M_green, angle_max = math.rad(120.0), angle_min = math.rad(0),
                         },
-						
+
 						-- {	-- port empennage logo illumination. Source: https://www.pinterest.com/pin/374572893980740008/
                             -- typename = "Spot",  position = { -5.6, -0.499848, -17.105591 },
 							-- direction = {azimuth = math.rad(117.0), elevation = math.rad(-16.0)}, 
@@ -677,7 +677,7 @@ B_737 =  {
                             -- proto = lamp_prototypes.LFS_R_27_130, angle_max = math.rad(22.0), angle_min = math.rad(0),
                             -- exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.8, movable = true,
                         -- },
-						
+
 						-- {	-- port aft-facing white tail light. Source: https://www.pinterest.com/pin/374572893980740008/
                             -- typename = "Spot",  position = { -5.6, -0.499848, -17.105591 },
 							-- direction = {azimuth = math.rad(180.0), elevation = math.rad(0)}, 
@@ -698,7 +698,7 @@ B_737 =  {
 							-- typename = "Omni", position = { -5.6, -0.499719, 17.105755 },
 							-- proto = lamp_prototypes.ANO_3_Bl, movable = true,
 						-- },
-						
+
 						-- -- Wing illumination. Source: https://www.pinterest.com/pin/374572893980740008/
 						-- {
                             -- typename = "Spot",  position = { 10.000, -0.500, -2.00 },
@@ -740,7 +740,7 @@ B_737 =  {
                             proto = lamp_prototypes.LFS_P_27_600, angle_max = math.rad(21.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Outboard landing lights. Source: https://www.pinterest.com/pin/374572893980740008/
 						{
                             typename = "Spot",  position = { -2.500, -1.300, -10.200 },
@@ -781,7 +781,7 @@ B_737 =  {
                             proto = lamp_prototypes.LFS_R_27_180, angle_max = math.rad(33.3), angle_min = math.rad(0.0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Runway turnoff lights. These really ought to be animated as part of the wheel steering mechanism, but I don't know how to do that.
 						{
                             typename = "Spot",  position = { 7.000, -1.600, -2.500 },
@@ -817,13 +817,13 @@ B_737 =  {
                 },
             },
         },
-		
+
 		[WOLALIGHT_STROBES] = {			-- For moving around on/near the runway (including airborne).
             typename = "collection",
             lights = {
                 [1] = {
                     typename = "Collection",
-                    lights = {						
+                    lights = {
                         {
                             typename = "natostrobelight", position = { 2.9, 1.9, 0.000 },
                             proto = lamp_prototypes.SMI_2KM, period = 1.50, phase_shift = 0.0,
@@ -854,7 +854,7 @@ B_737 =  {
                 },
             },
         },
-    
+
         [WOLALIGHT_FORMATION_LIGHTS] = {
 			typename = "collection",
 			lights = {
@@ -876,7 +876,7 @@ B_737 =  {
 				},
 			},
 		},
-		
+
 		[WOLALIGHT_CABIN_NIGHT] = {
             typename = "collection",
             lights = {

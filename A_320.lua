@@ -21,25 +21,25 @@ FINAL CONVERSION TO AIRBUS A320neo (LEAP-1A)
 --]]
 
 A_320 =  {
-      
+
 		Name 			= 'A_320',
 		DisplayName		= _('A320neo'),
 		date_of_introduction  	= 2016.01,
         Picture 		= "A-320.png",
         Rate 			= "40",
         Shape			= "A_320",
-        WorldID			=  WSTYPE_PLACEHOLDER, 
+        WorldID			=  WSTYPE_PLACEHOLDER,
 		defFuelRatio    = 0.8,
 		singleInFlight 	= true,
-        
-	shape_table_data 	= 
+
+	shape_table_data 	=
 	{
 		{
 			file  	 	= 'A_320';
-			life  	 	= 20; 
-			vis   	 	= 3; 
-			desrt    	= 'kc-135-oblomok'; 
-			fire  	 	= { 300, 2}; 
+			life  	 	= 20;
+			vis   	 	= 3;
+			desrt    	= 'kc-135-oblomok';
+			fire  	 	= { 300, 2};
 			username	= 'A_320';
 			index       =  WSTYPE_PLACEHOLDER;
 			classname   = "lLandPlane";
@@ -51,11 +51,11 @@ A_320 =  {
 			fire  		= { 240, 2};
 		},
 	},
-	
+
 	mapclasskey 		= "P0091000029",
 	attribute  			= {wsType_Air, wsType_Airplane, wsType_Cruiser, WSTYPE_PLACEHOLDER, "Transports",},
 	Categories 			= {},
-	
+
 	-- ============================================================
 	-- MASS & CAPACITY (A320neo)
 	-- ============================================================
@@ -71,15 +71,15 @@ A_320 =  {
 	height 			= 11.76,	-- [m]
 	wing_area		= 122.6,	-- [m^2] 
 	wing_span		= 35.80,	-- [m] (With Sharklets)
-	
+
 	wing_tip_pos 	= {-4.3, 0.34,	16.59}, -- +/- 17.9m span
-	
+
 	-- LANDING GEAR
 	nose_gear_pos 	= { 12.135, -4.23,  0.0}, 		-- Nose gear position (ground under center of the axle)
-	
+
 	main_gear_pos 	= {-0.375,  -4.146, 3.7834},	-- Main gear position (ground under center of the axle)
 													-- automatically mirrored
-	
+
 	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
 	nose_gear_amortizer_reversal_stroke 	 = -0.237,	-- Full Strut Compression (maximum+ weight on wheels)
 	nose_gear_amortizer_normal_weight_stroke = -0.1343,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
@@ -89,7 +89,7 @@ A_320 =  {
 	main_gear_amortizer_reversal_stroke 	 = -0.082,	-- Full Strut Compression (maximum+ weight on wheels)
 	main_gear_amortizer_normal_weight_stroke = -0.0246,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
 	main_gear_wheel_diameter 				 =  1.287,	-- Diameter of the main gear wheels (meters)
-	
+
 	--[[
 		tand_gear_max defines the Maximum Nose Wheel Steering Angle using the formula:
 		
@@ -103,7 +103,7 @@ A_320 =  {
 				75°					3.732			Extreme castering (rare).
 	]]
 	tand_gear_max	=	math.tan(math.rad(75)), 	-- Max steering angle
-	
+
 	-- ============================================================
 	-- PERFORMANCE
 	-- ============================================================
@@ -124,7 +124,7 @@ A_320 =  {
 	Ny_max_e		= 2.5,		-- [G]
 	bank_angle_max 	= 35,		-- [degrees]
 	AOA_take_off 	= math.rad(10),	-- [radians]
-	
+
 	-- ===================================================================
     -- INERTIA & CG (Airbus A320neo)
     -- ===================================================================
@@ -271,24 +271,24 @@ A_320 =  {
 	-- ENGINES (2x CFM LEAP-1A26)
 	-- ============================================================
 	engines_count	=	2,
-	
+
 	-- Thrust: 2x 27,120 lbf = 54,240 lbf = 241.2 kN = ~24,596 kgf
 	thrust_sum_max	= 24596,	-- [kgf] Total thrust
 	thrust_sum_ab	= 24596,	-- [kgf] Total thrust w/afterburner
-	
+
 	-- Fuel Consumption
 	-- (Cruise fuel flow ~2,400 kg/h / 0.65 kg/s total for LEAP engines)
 	average_fuel_consumption = 0.65, 	-- [kg/s] Total fuel consumption rate
-	
+
 	has_afteburner 		= false,
 	has_thrustReverser 	= true,
-	
+
 	-- Startup: Right (2/1) then Left (1/0)
-	engines_startup_sequence = { 1, 0 }, 
-	
-	engines_nozzles = 
+	engines_startup_sequence = { 1, 0 },
+
+	engines_nozzles =
 	{
-		[1] = 
+		[1] =
 		{
 			pos 	= {0.93, -2.357, -5.801},
 			elevation			= -3.6,	-- 3.6 degree exhaust depression (negative means exhaust points down)
@@ -298,8 +298,8 @@ A_320 =  {
 			exhaust_length_ab_K	= 0.76,
 			smokiness_level     = 0.005, -- LEAP is very clean
 			engine_number       = 1,
-		}, 
-		[2] = 
+		},
+		[2] =
 		{
 			pos 	= {0.93, -2.357, 5.801},
 			elevation			= -3.6,	-- 3.6 degree exhaust depression (negative means exhaust points down)
@@ -307,9 +307,9 @@ A_320 =  {
 			diameter 			= 1.71,
 			exhaust_length_ab	= 2.5,
 			exhaust_length_ab_K	= 0.76,
-			smokiness_level     = 0.005, 
+			smokiness_level     = 0.005,
 			engine_number       = 2,
-		}, 
+		},
 	},
 
 	-- ============================================================
@@ -324,21 +324,21 @@ A_320 =  {
 	tanker_type					= 0,
 	is_tanker					= false,
 	brakeshute_name				= 0,
-	
+
 	flaps_maneuver		= 0.25,	-- Corresponds to CONF 1+F
 	RCS					= 65,	-- [m^2]
 	detection_range_max	= 30,	-- [km] Distance pilots in this airframe can possibly become aware of other airframes
 	IR_emission_coeff	= 0.90, -- Very high bypass (12:1) shrouds the core; cool exhaust reduces intensity despite higher mass flow than Su-27.
 	IR_emission_coeff_ab= 0,
-	
+
 	crew_size		= 2, -- 2 Pilots
-	crew_members	= 
+	crew_members	=
 	{
-		[1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {14.6, 0.4, -0.47} }, 
-		[2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {14.6, 0.4,  0.47} }, 
+		[1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {14.6, 0.4, -0.47} },
+		[2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {14.6, 0.4,  0.47} },
 	},
 
-	fires_pos = 
+	fires_pos =
 	{
 		[1] = 	{-0.138,	-0.79,	0},
 		[2] = 	{-0.138,	-0.79,	5.741},
@@ -357,7 +357,7 @@ A_320 =  {
         azimuth = {-110.0, 110.0},
         elevation = {-30.0, 60.0},
     },
-	
+
 	Failures = {
 		{ id = 'asc', 		label = _('ASC'), 		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 		{ id = 'autopilot', label = _('AUTOPILOT'), enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
@@ -373,9 +373,9 @@ A_320 =  {
 		maxFrequency = 137.000,
 		modulation = MODULATION_AM
 	},
-	
+
 	Pylons = { },
-	Tasks = { aircraft_task(Transport) },	
+	Tasks = { aircraft_task(Transport) },
 	DefaultTask = aircraft_task(Nothing),
 
 	-- ============================================================
@@ -389,79 +389,79 @@ A_320 =  {
             kjx     = 2.8,      -- Roll inertia
             kjz     = 0.0012,	-- Pitch inertia
             Czbe    = -0.018,	-- Directional stability
-            
+
             cx_gear = 0.020,	-- Gear drag coefficient
             cx_flap = 0.055,	-- Flaps drag coefficient
             cy_flap = 0.90,		-- Flaps lift coefficient
             cx_brk  = 0.05,		-- Speedbrake drag
-            
+
             table_data = {
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
 				-- 		 M      Cx0     Cya      B       B4    Omxmax   Aldop   Cymax
-				
+
 				-- Low Speed
 				[1]  = {0.0,   0.015,  0.098,  0.030,  0.001,   0.30,   13,     1.45},
 				[2]  = {0.2,   0.015,  0.098,  0.030,  0.001,   0.30,   13,     1.45},
 				[3]  = {0.4,   0.016,  0.098,  0.030,  0.002,   0.30,   12.5,   1.45},
-				
+
 				-- Climb
 				[4]  = {0.6,   0.018,  0.099,  0.035,  0.01,    0.26,   15,     1.40},
-				
+
 				-- Cruise (Mach 0.78 - 0.82 typical)
 				[5]  = {0.7,   0.02,   0.100,  0.040,  0.02,    0.26,   14,     1.30},
 				[6]  = {0.8,   0.022,  0.100,  0.043,  0.03,    0.26,   14.0,   1.05},
 				[7]  = {0.84,  0.028,  0.095,  0.045,  0.03,    0.26,   13,     1.20},
-				
+
 				-- Mach Limit
 				[8]  = {0.88,  0.05,   0.090,  0.17,   0.100,   0.22,   11.0,   0.80},
 				[9]  = {0.9,   0.09,   0.082,  0.29,   0.200,   0.20,   12,     1.00},
 				[10] = {1.0,   0.14,   0.075,  0.49,   0.300,   0.15,   8.0,    0.40},
-			}, 
-		}, 
-		
+			},
+		},
+
 		engine = {
 			typeng 		= 4,
 			type 		= "TurboFan",
-			
-			Nmg			= 58.5,		
+
+			Nmg			= 58.5,
 			Nominal_RPM = 16645.0,	-- N2 100%
 			Nominal_Fan_RPM = 3851.0, -- N1 100%
 			MinRUD		= 0,
 			MaxRUD		= 1,
 			MaksRUD		= 1,
 			ForsRUD		= 1,
-			
-			hMaxEng		= 13.5,		
+
+			hMaxEng		= 13.5,
 			dcx_eng		= 0.0075,
-			
+
 			-- FUEL FLOW
 			cemax		= 0.55,     -- kg/kgf/h scaled	
 			cefor		= 0.55,     -- kg/kgf/h scaled	
-			
+
 			-- Altitude lapse
 			dpdh_m		= 12000,	-- [N/km per engine]
 			dpdh_f		= 12000,
-			
+
 			table_data = {
 				--      M      Pmax (N)   Pmax_ab (N)
 				-- THRUST TABLE (2x CFM LEAP-1A26)
 				-- Re-tuned for "High Bypass" Momentum Drag characteristics.
-				
+
 				[1] = {0.0,    241200,     241200}, -- Static: 100% (241 kN)
 				[2] = {0.2,    238000,     238000}, -- Takeoff/Climb out
-				[3] = {0.4,    230000,     230000}, 
+				[3] = {0.4,    230000,     230000},
 				[4] = {0.6,    215000,     215000}, -- Climb profile
-				[5] = {0.7,    205000,     205000}, 
-				
+				[5] = {0.7,    205000,     205000},
+
 				-- CRUISE REGIME
 				-- Significant drop introduced here to match real-world "Net Thrust"
 				[6] = {0.78,   195000,     195000}, -- Cruise Base (~80% of static)
 				[7] = {0.82,   170000,     170000}, -- MMO Wall (Thrust drops off fast)
 				[8] = {0.9,    120000,     120000}, -- Transonic Drag Rise (Engine chokes)
-			}, 
-		}, 
+			},
+		},
 	},
 
 	--damage , index meaning see in  Scripts\Aircrafts\_Common\Damage.lua
@@ -492,14 +492,14 @@ A_320 =  {
 	[29] = {critical_damage = 5,  args = {224}, deps_cells = {23, 25}},
 	[30] = {critical_damage = 5,  args = {214}, deps_cells = {24, 26}},
 	[35] = {critical_damage = 6,  args = {225}, deps_cells = {23, 29, 25, 37}},
-	[36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}}, 
+	[36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}},
 	[37] = {critical_damage = 2,  args = {228}},
 	[38] = {critical_damage = 2,  args = {218}},
-	[39] = {critical_damage = 2,  args = {244}, deps_cells = {53}}, 
-	[40] = {critical_damage = 2,  args = {241}, deps_cells = {54}}, 
+	[39] = {critical_damage = 2,  args = {244}, deps_cells = {53}},
+	[40] = {critical_damage = 2,  args = {241}, deps_cells = {54}},
 	[43] = {critical_damage = 2,  args = {243}, deps_cells = {39, 53}},
-	[44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}}, 
-	[51] = {critical_damage = 2,  args = {240}}, 
+	[44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}},
+	[51] = {critical_damage = 2,  args = {240}},
 	[52] = {critical_damage = 2,  args = {238}},
 	[53] = {critical_damage = 2,  args = {248}},
 	[54] = {critical_damage = 2,  args = {247}},
@@ -509,16 +509,16 @@ A_320 =  {
 	[61] = {critical_damage = 2,  args = {147}},
 	[82] = {critical_damage = 2,  args = {152}},
 	},
-	
-	DamageParts = 
-	{  
+
+	DamageParts =
+	{
 		[1] = "A_320-OBLOMOK-WING-R", -- wing R
 		[2] = "A_320-OBLOMOK-WING-L", -- wing L
 --		[3] = "kc-135-oblomok-noise", -- nose
 --		[4] = "kc-135-oblomok-tail-r", -- tail
 --		[5] = "kc-135-oblomok-tail-l", -- tail
 	},
-	
+
 	-- ============================================================
 	-- LIGHTS
 	-- ============================================================
@@ -548,7 +548,7 @@ A_320 =  {
 
 	lights_data = {
 	typename = "collection", lights = {
-	
+
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
@@ -574,7 +574,7 @@ A_320 =  {
 							direction = {azimuth = math.rad(60.0), elevation = math.rad(0)}, -- argument = 191,
                             proto = lamp_prototypes.BANO_7M_green, angle_max = math.rad(120.0), angle_min = math.rad(0),
                         },
-						
+
 						{	-- port empennage logo illumination. Source: https://www.theseus.fi/bitstream/handle/10024/506067/Korhonen_Soila.pdf
                             typename = "Spot",  position = { -17.0, 0.7, -3.0 },
 							direction = {azimuth = math.rad(70.0), elevation = math.rad(-55.0)},
@@ -587,7 +587,7 @@ A_320 =  {
                             proto = lamp_prototypes.FR_100, angle_max = math.rad(80.0), angle_min = math.rad(0),
                             exposure = {{0, 0.9, 1.0}}, power_up_t = 0.2, cool_down_t = 0.2, movable = true,
                         },
-						
+
 						-- Wing illumination. Source: https://www.theseus.fi/bitstream/handle/10024/506067/Korhonen_Soila.pdf
 						{
                             typename = "Spot",  position = { 10.000, -0.500, -1.90 },
@@ -628,7 +628,7 @@ A_320 =  {
 							direction = {azimuth = math.rad(10.0), elevation = math.rad(4.0)},
                             proto = lamp_prototypes.LFS_P_27_600, angle_max = math.rad(20.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
-                        },										
+                        },
                     },
                 },
             },
@@ -656,7 +656,7 @@ A_320 =  {
 							direction = {azimuth = math.rad(45.0), elevation = math.rad(8.0)},
                             proto = lamp_prototypes.LFS_R_27_180, angle_max = math.rad(50), angle_min = math.rad(0.0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
-                        },						
+                        },
                     },
                 },
             },
@@ -680,7 +680,7 @@ A_320 =  {
                 },
             },
         },
-		
+
 		[WOLALIGHT_STROBES] = {			-- For moving around on/near the runway (including airborne).
 			-- Source: https://www.theseus.fi/bitstream/handle/10024/506067/Korhonen_Soila.pdf
             typename = "collection",
@@ -696,7 +696,7 @@ A_320 =  {
                             typename = "natostrobelight", position = { 1.00, -2.80, 0.000 },
                             proto = lamp_prototypes.SMI_2KM, period = 1.9, phase_shift = 0.5,
                         },
-						
+
 						{
                             typename = "Spot", position = { -3.375624, 0.542083, -16.727669 },
                             controller = "VariablePatternStrobe", mode = "2 Flash Long",
@@ -719,7 +719,7 @@ A_320 =  {
                 },
             },
         },
-    
+
         [WOLALIGHT_FORMATION_LIGHTS] = {
 			typename = "collection",
 			lights = {
@@ -741,7 +741,7 @@ A_320 =  {
 				},
 			},
 		},
-		
+
 		[WOLALIGHT_CABIN_NIGHT] = {
             typename = "collection",
             lights = {
