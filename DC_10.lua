@@ -452,8 +452,8 @@ DC_10 =  {
             -- Altitude compensation
 			-- Standard for high-bypass turbofans to approximate
 			-- thrust lapse (~30% at cruise altitude)
-            dpdh_m		= 38000,	-- [N/km per engine]
-            dpdh_f		= 38000,	-- 35500?
+            dpdh_m		= 35500,	-- [N/km per engine]
+            dpdh_f		= 35500,	-- [N/km per engine]
 
             table_data = {
                 -- THRUST (3x JT9D-59A)
