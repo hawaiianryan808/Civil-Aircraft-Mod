@@ -24,7 +24,6 @@ FINAL CONVERSION TO AIRBUS A380-800 (REAL WORLD SPEC)
 --]]
 
 A_380 =  {
-      
     Name 				= 'A_380',
     DisplayName			= _('A380-800'),
 	date_of_introduction= 2007.10,
@@ -34,7 +33,7 @@ A_380 =  {
     WorldID				= WSTYPE_PLACEHOLDER, 
 	defFuelRatio    	= 0.8,
     singleInFlight 		= true,
-    
+
     shape_table_data 	= 
     {
         {
@@ -54,12 +53,12 @@ A_380 =  {
             fire  		= { 240, 2};
         },
     },
-    
+
     mapclasskey 		= "P0091000029",
     attribute  			= {wsType_Air, wsType_Airplane, wsType_Cruiser, WSTYPE_PLACEHOLDER, "Transports",},
-    
+
     Categories = {},
-    
+
     -- ===================================================================
     -- MASS AND CAPACITY PARAMETERS
     -- ===================================================================
@@ -67,24 +66,24 @@ A_380 =  {
     M_nominal   = 485000,   -- [kg] (Typical Op Weight)
     M_max       = 575000,   -- [kg] (MTOW)
     M_fuel_max  = 254000,   -- [kg] (Standard Capacity)
-    
+
     -- ===================================================================
     -- PERFORMANCE AND SPEEDS
     -- ===================================================================
     H_max       = 13100,    -- [m] Max altitude (43,000 ft)
     range       = 15200,    -- [km] Max range
-    
+
     Mach_max    = 0.89,     -- MMO
     V_max_sea_level = 175,  -- [m/s TAS] (340 KCAS)
     V_max_h     = 263.4,    -- [m/s TAS]
     CAS_min     = 56,       -- [m/s TAS] (Stall clean)
-    
+
     V_opt       = 250,      -- [m/s TAS] (Mach 0.85 Cruise)
     V_take_off  = 77,     	-- [m/s TAS] (Vr)
     V_land      = 69,     	-- [m/s TAS] (Vref)
-    
+
     Vy_max      = 9,      	-- [m/s] (Initial heavy climb)
-    
+
     Ny_min      = -1.52,    -- [G]
     Ny_max      = 2.0,      -- [G]
     Ny_max_e    = 2.5,      -- [G]
@@ -97,7 +96,7 @@ A_380 =  {
     -- Total thrust 4 × 356.81 kN = 1,427 kN / ~145,500 kgf
     thrust_sum_max  = 145500, -- [kgf] Total thrust
     thrust_sum_ab   = 145500, -- [kgf] Total thrust w/afterburner
-    
+
 	-- Cruise fuel flow for Trent engines.
     average_fuel_consumption = 4.7, -- [kg/sec] total
 
@@ -110,7 +109,7 @@ A_380 =  {
     wing_span   = 65.0,		-- [m] Limited because DCS is stupid (real-world: 79.75m)
     length      = 65.0,		-- [m] Limited because DCS is stupid (real-world: 72.72m)
     height      = 12.4,		-- [m] Limited because DCS is stupid (real-world: 24.09m)
-    
+
     has_afteburner      		= false,
     has_speedbrake      		= true,
     has_thrustReverser  		= true,
@@ -119,22 +118,22 @@ A_380 =  {
 	flaps_transmission          = "Hydraulic",
     undercarriage_transmission  = "Hydraulic",
 	flaps_maneuver				= 0.24,		-- Corresponds to CONF 1+F
-    
+
     crew_size   				= 3,
     RCS         				= 140,		-- [m^2] Radar Cross Section
 	detection_range_max			= 30,		-- [km] Distance pilots in this airframe can possibly become aware of other airframes
     IR_emission_coeff 			= 4.2,		-- While efficient/cool per unit of thrust, the 1.2+ million lbs of total thrust generates a massive IR blooming effect.
     IR_emission_coeff_ab 		= 0,
     engines_count 				= 4,
-    
+
 	wing_tip_pos  = {-13.37, 1.588, 39.69}, -- Fits 79.75m span
-	
+
     -- Gear Configuration
 	nose_gear_pos 	= 	{ 31.548, -5.856, -0.0056}, 	-- Nose gear position (ground under center of the axle)
-		
+
 	main_gear_pos 	= 	{-1.45,   -6.02,   7.631},		-- Main gear position (ground under center of the axle)
 														-- automatically mirrored
-	
+
 	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
 	nose_gear_amortizer_reversal_stroke 	 = -0.4192,	-- Full Strut Compression (maximum+ weight on wheels)
 	nose_gear_amortizer_normal_weight_stroke = -0.173,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
@@ -144,7 +143,7 @@ A_380 =  {
 	main_gear_amortizer_reversal_stroke 	 = -0.144,	-- Full Strut Compression (maximum+ weight on wheels)
 	main_gear_amortizer_normal_weight_stroke = -0.0646,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
 	main_gear_wheel_diameter 				 =  1.455,	-- Diameter of the main gear wheels (meters)
-	
+
 	--[[
 		tand_gear_max defines the Maximum Nose Wheel Steering Angle using the formula:
 		
@@ -308,8 +307,7 @@ A_380 =  {
     -- ENGINE NOZZLES
     -- ===================================================================
 	engines_startup_sequence = { 0, 1, 2, 3 }, -- Left to Right
-    engines_nozzles = 
-    {
+    engines_nozzles = {
         [1] = {		-- Left outboard
 			pos = {-1.227, -1.9785, -25.374}, 
 			elevation			= -2.5,	-- 2.5 degree exhaust depression (negative means exhaust points down)
@@ -352,15 +350,13 @@ A_380 =  {
 		},
     },
 
-    crew_members = 
-    {
+    crew_members = {
         [1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {32.9, 0.986, -0.50} },
         [2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {32.9, 0.986, 0.50} },
         [3] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {29.9, 0.986, 0} },
     },
     
-    fires_pos = 
-    {
+    fires_pos = {
         [1] = 	{-0.138,	-0.79,	0},
         [2] = 	{-0.138,	-0.79,	5.741},
         [3] = 	{-0.138,	-0.79,	-5.741},
@@ -385,7 +381,7 @@ A_380 =  {
         { id = 'engine_2',  label = _('Engine 2 (L-In)'),   enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
         { id = 'engine_3',  label = _('Engine 3 (R-In)'),   enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
         { id = 'engine_4',  label = _('Engine 4 (R-Out)'),  enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
-        
+
         -- Standard Systems
         { id = 'asc',       label = _('ASC'),       enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
         { id = 'autopilot', label = _('AUTOPILOT'), enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
@@ -401,7 +397,7 @@ A_380 =  {
 	},
 
     Pylons = { },
-    
+
     Tasks = { aircraft_task(Transport) },	
     DefaultTask = aircraft_task(Nothing),
 
@@ -409,8 +405,7 @@ A_380 =  {
     -- SFM AERODYNAMICS & ENGINE SIMULATION
     -- ===================================================================
     SFM_Data = {
-        aerodynamics = 
-        {
+        aerodynamics = {
             -- Control authority parameters
             Cy0         = 0.15,     -- 0 degree AoA lift
             Mzalfa      = 6.0,		-- Pitch stability
@@ -482,8 +477,7 @@ A_380 =  {
             }, 
         },
         
-        engine = 
-        {
+        engine = {
             typeng 			= 4,
 			type 			= "TurboFan",
             
@@ -582,17 +576,16 @@ A_380 =  {
         [61] = {critical_damage = 2,  args = {147}},
         [82] = {critical_damage = 2,  args = {152}},
     },
-    
-    DamageParts = 
-    {  
+
+    DamageParts = {  
         [1] = "A_380-OBLOMOK-WING-R",
         [2] = "A_380-OBLOMOK-WING-L",
     },
-    
+
     -- ===================================================================
     -- LIGHTS CONFIGURATION
     -- ===================================================================
-	
+
 	--[[
 		--------------------------------------------------------------
 		------------------  HawaiianRyan overhaul  -------------------
@@ -617,7 +610,7 @@ A_380 =  {
 	]]
     lights_data = {
 	typename = "collection", lights = {
-	
+
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
@@ -643,9 +636,7 @@ A_380 =  {
 							direction = {azimuth = math.rad(60.0), elevation = math.rad(0)},
 							proto = lamp_prototypes.BANO_8M_green, angle_max = math.rad(120.0), angle_min = math.rad(0),
 						},
-						
-						
-						
+
 						{	-- port empennage logo illumination. Source: https://www.cnn.com/travel/article/last-a380-emirates/index.html
                             typename = "Spot",  position = { -31.0, 2.7, -8.0 },
 							direction = {azimuth = math.rad(70.0), elevation = math.rad(-48.0)},
@@ -658,7 +649,7 @@ A_380 =  {
                             proto = lamp_prototypes.FR_100, intensity_max = 160.0, angle_max = math.rad(80.0), angle_min = math.rad(0),
                             exposure = {{0, 0.9, 1.0}}, power_up_t = 0.2, cool_down_t = 0.2, movable = true,
                         },
-						
+
 						-- Wing illumination. Source: https://www.cnn.com/travel/article/last-a380-emirates/index.html
 						{
 							typename = "Spot",  position = { 23.0, 1.20, -3.70 },
@@ -728,7 +719,7 @@ A_380 =  {
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Runway turnoff lights. These really ought to be animated as part of the wheel steering mechanism, but I don't know how to do that.
 						{
                             typename = "Spot",  position = { 28.2, -0.40, -3.70 },
@@ -746,7 +737,7 @@ A_380 =  {
                 },
             },
 		},	
-      
+
         [WOLALIGHT_BEACONS] = {			-- For moving around on the ground/taxiing.
             typename = "collection",
             lights = {
@@ -765,7 +756,7 @@ A_380 =  {
                 },
             },
         },
-		
+
         [WOLALIGHT_STROBES] = {			-- For moving around on/near the runway (including airborne).
             typename = "collection",
             lights = {
@@ -780,7 +771,7 @@ A_380 =  {
                             typename = "natostrobelight", position = { 2.5, -4.60, 0.000 },
                             proto = lamp_prototypes.SMI_2KM, period = 1.9, phase_shift = 0.5,
                         },
-						
+
 						{
                             typename = "Spot", position = { -13.369998, 1.587861, -39.692001 },
                             controller = "VariablePatternStrobe", mode = "2 Flash Long",
@@ -803,7 +794,7 @@ A_380 =  {
                 },
             },
         },
-    
+
         [WOLALIGHT_FORMATION_LIGHTS] = {
 			typename = "collection",
 			lights = {
@@ -824,7 +815,7 @@ A_380 =  {
 					},
 				},
 			},
-		},	
+		},
 	},
 	},
 }
