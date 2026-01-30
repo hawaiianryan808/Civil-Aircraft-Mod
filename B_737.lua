@@ -393,8 +393,7 @@ B_737 =  {
 	-- SFM DATA (Aerodynamics & Engine Tables)
 	-- ============================================================
 	SFM_Data = {
-		aerodynamics = 
-		{
+		aerodynamics = {
 			-- NG Wing is more efficient than Classic (-300)
 			Cy0		= 0.18,		-- Positive lift at zero AoA
 			Mzalfa	= 4.6,		-- Pitch stability
@@ -409,8 +408,7 @@ B_737 =  {
 			cy_flap	= 0.95,		-- Flaps lift coefficient
 			cx_brk	= 0.02,		-- Speedbrake drag
 			
-			table_data = 
-			{
+			table_data = {
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
@@ -423,20 +421,19 @@ B_737 =  {
 				[4]  = {0.6,	0.023,	0.090,	0.058,	0.01,	0.55,	13,		1.50},
 				
 				-- Cruise
-				[5]  = {0.7,	0.026,	0.089,	0.063,	0.02,	0.55,	12.5,	1.40},
-				[6]  = {0.78,	0.029,	0.088,	0.068,	0.03,	0.55,	12,		1.30},
+				[5]  = {0.7,	0.026,	0.072,	0.063,	0.02,	0.55,	12.5,	1.40},
+				[6]  = {0.78,	0.029,	0.070,	0.068,	0.03,	0.55,	12,		1.30},
 				
 				-- Transonic Drag Rise
-				[7]  = {0.82,	0.035,	0.085,	0.084,	0.04,	0.50,	11.5,	1.20},
-				[8]  = {0.85,	0.060,  0.088,  0.105,	0.150,  0.8,    11.0,   1.05},
-				[9]  = {0.90,	0.090,  0.080,  0.210,	0.300,  0.6,    10.0,   0.80},
-				[10] = {1.0,	0.140,  0.070,  0.360,	0.500,  0.4,    8.0,    0.50},
+				[7]  = {0.82,	0.035,	0.068,	0.084,	0.04,	0.50,	11.5,	1.20},
+				[8]  = {0.85,	0.060,  0.066,  0.105,	0.150,  0.8,    11.0,   1.05},
+				[9]  = {0.90,	0.090,  0.063,  0.210,	0.300,  0.6,    10.0,   0.80},
+				[10] = {1.0,	0.140,  0.060,  0.360,	0.500,  0.4,    8.0,    0.50},
 			},
 		},
 		
 		
-		engine = 
-		{
+		engine = {
 			typeng 	= 4,
 			type 	= "TurboFan",
 			
@@ -457,8 +454,8 @@ B_737 =  {
 			cemax	= 0.67,		-- [kg/kgf/h]
 			
 			-- Altitude Lapse
-			dpdh_m	= 14200,		-- [N/km per engine]
-			dpdh_f	= 14200,
+			dpdh_m	= 10500,		-- [N/km per engine]
+			dpdh_f	= 10500,		-- [N/km per engine]
 			
 			table_data = 
 			{
