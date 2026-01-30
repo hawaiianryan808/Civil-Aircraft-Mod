@@ -26,25 +26,24 @@ FINAL CONVERSION TO AIRBUS A330-300 (TRENT 700)
 --]]
 
 A_330 =  {
-      
     Name 			= 'A_330',
     DisplayName		= _('A330-300'),
 	date_of_introduction= 1994.01,
     Picture 		= "A-330.png",
     Rate 			= "40",
-    Shape			= "A_330",	
-    WorldID			=  WSTYPE_PLACEHOLDER, 
+    Shape			= "A_330",
+    WorldID			=  WSTYPE_PLACEHOLDER,
 	defFuelRatio    = 0.8,
     singleInFlight 	= true,
-    
-    shape_table_data 	= 
+
+    shape_table_data 	=
     {
         {
             file  	 	= 'A_330';
-            life  	 	= 20; 
-            vis   	 	= 3; 
-            desrt    	= 'kc-135-oblomok'; 
-            fire  	 	= { 300, 2}; 
+            life  	 	= 20;
+            vis   	 	= 3;
+            desrt    	= 'kc-135-oblomok';
+            fire  	 	= { 300, 2};
             username	= 'A_330';
             index       =  WSTYPE_PLACEHOLDER;
             classname   = "lLandPlane";
@@ -59,9 +58,9 @@ A_330 =  {
 
     mapclasskey 		= "P0091000029",
     attribute  			= {wsType_Air, wsType_Airplane, wsType_Cruiser, WSTYPE_PLACEHOLDER, "Transports",},
-    
+
     Categories = { },
-            
+
     -- ===================================================================
     -- MASS & CAPACITY
     -- ===================================================================
@@ -74,7 +73,7 @@ A_330 =  {
     -- PERFORMANCE
     -- ===================================================================
     H_max       = 12634,    -- [m] Ceiling (41,450 ft)
-    
+
     -- Speeds
     V_opt		= 243,      -- [m/s TAS] (Mach 0.82 Cruise)
     V_take_off	= 80,       -- [m/s TAS] (~155 kts)
@@ -100,15 +99,15 @@ A_330 =  {
     wing_span	= 59.44,	-- [m] (60.3m real-world) - Limited because DCS is stupid
     length      = 63.69,	-- [m]
     height      = 16.83,	-- [m]
-    
+
     wing_tip_pos  = {-9.972, 1.561, 29.045},
 
     -- GEAR GEOMETRY
     nose_gear_pos 	= 	{ 25.16, -4.783, 0.013}, 		-- Nose gear position (ground under center of the axle)
-		
+
 	main_gear_pos 	= 	{-1.21,	 -5.22,	 6.20},			-- Main gear position (ground under center of the axle)
 														-- automatically mirrored
-	
+
 	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
 	nose_gear_amortizer_reversal_stroke 	 = -0.24,	-- Full Strut Compression (maximum+ weight on wheels)
 	nose_gear_amortizer_normal_weight_stroke = -0.10,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
@@ -118,7 +117,7 @@ A_330 =  {
 	main_gear_amortizer_reversal_stroke 	 = -0.0815,	-- Full Strut Compression (maximum+ weight on wheels)
 	main_gear_amortizer_normal_weight_stroke = -0.04,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
 	main_gear_wheel_diameter 				 =  1.35,	-- Diameter of the main gear wheels (meters)
-	
+
 	--[[
 		tand_gear_max defines the Maximum Nose Wheel Steering Angle using the formula:
 		
@@ -134,8 +133,8 @@ A_330 =  {
 	tand_gear_max	=	math.tan(math.rad(72)),
 
     AOA_take_off = math.rad(12),	-- ~12 degrees
-	
-	
+
+
 	-- ===================================================================
     -- INERTIA & CG (Airbus A330-300)
     -- ===================================================================
@@ -283,11 +282,11 @@ A_330 =  {
     -- ENGINE (Rolls-Royce Trent 772B-60)
     -- ===================================================================
     engines_count	= 2,
-    
+
     -- Thrust: 632 kN Total (2x 316 kN)
     thrust_sum_max	= 64501,	-- [kgf] Total thrust from both engines
     thrust_sum_ab	= 64501,	-- [kgf] Total thrust from both engines w/afterburner
-    
+
     -- Fuel: ~5,700 kg/hr cruise
     average_fuel_consumption = 1.58, -- [kg/s] Total fuel consumption rate
 
@@ -297,7 +296,7 @@ A_330 =  {
     has_differential_stabilizer = false,
 	flaps_transmission          = "Hydraulic",
     undercarriage_transmission  = "Hydraulic",
-    
+
     -- Systems
     radar_can_see_ground = false,
     stores_number	= 0,
@@ -305,17 +304,17 @@ A_330 =  {
     is_tanker       = false,
     flaps_maneuver	= 0.25,		-- Corresponds to CONF 1+F
     brakeshute_name = 0,
-    
+
     crew_size					= 2,
     RCS							= 80,	-- [m^2] Radar cross section
     detection_range_max			= 30,	-- [km] Distance pilots in this airframe can possibly become aware of other airframes
     IR_emission_coeff			= 2.1,	-- Massive engines with huge plume volume. Total radiated power is roughly double the fighter's dry output.
     IR_emission_coeff_ab 		= 0,
-	
+
 	engines_startup_sequence 	= { 1, 0 },	-- Right (2), then Left (1)
-    engines_nozzles = 
+    engines_nozzles =
     {
-        [1] = 
+        [1] =
         {
             pos = 	{3.90,	-2.412,	-9.373},
             elevation			= 	-4.2,	-- 4.2 degree exhaust depression (negative means exhaust points down)
@@ -323,10 +322,10 @@ A_330 =  {
             diameter			=	1.36, 	-- Trent 700 Fan
             exhaust_length_ab	=	7.62,
             exhaust_length_ab_K	=	0.76,
-            smokiness_level     = 	0.05, 
+            smokiness_level     = 	0.05,
             engine_number       = 	1,
         },
-        [2] = 
+        [2] =
         {
             pos = 	{3.90,	-2.412,	9.373},
             elevation			=	-4.2,	-- 4.2 degree exhaust depression (negative means exhaust points down)
@@ -334,18 +333,18 @@ A_330 =  {
             diameter			=	1.36,
             exhaust_length_ab	=	7.62,
             exhaust_length_ab_K	=	0.76,
-            smokiness_level     = 	0.05, 
+            smokiness_level     = 	0.05,
             engine_number       = 	2,
         },
     },
 
-    crew_members = 
+    crew_members =
     {
         [1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {29.42, 1.27, -0.535} },
         [2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {29.42, 1.27,  0.535} },
     },
 
-    fires_pos = 
+    fires_pos =
     {
         [1] = 	{-0.138,	-0.79,	0},
         [2] = 	{-0.138,	-0.79,	5.741},
@@ -382,8 +381,8 @@ A_330 =  {
 	},
 
     Pylons = { },
-    
-    Tasks = { aircraft_task(Transport) },	
+
+    Tasks = { aircraft_task(Transport) },
     DefaultTask = aircraft_task(Nothing),
 
     -- ===================================================================
@@ -398,67 +397,67 @@ A_330 =  {
             kjx         = 2.9,      -- High Roll Inertia
             kjz         = 0.002,    -- Yaw inertia
             Czbe        = -0.012,   -- Directional stability
-            
+
             -- Drag
             cx_gear     = 0.030,    -- Gear drag coefficient
             cx_flap     = 0.090,    -- Flaps drag coefficient
             cy_flap 	= 0.70,  	-- Flaps lift coefficient
             cx_brk      = 0.06,     -- Speedbrake drag
-        
-            table_data = 
+
+            table_data =
             {
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
                 -- 		 M      Cx0     Cya      B        B4    Omxmax   Aldop   Cymax
-                
+
                 -- Low Speed
                 [1]  = {0.0,   0.016,  0.12,   0.060,   0.003,   0.6,    13.0,   1.44},
 				[2]  = {0.2,   0.016,  0.12,   0.061,   0.006,   0.6,    13.0,   1.44},
 				[3]  = {0.4,   0.017,  0.120,  0.063,   0.011,   0.6,    12.5,   1.42},
-                
+
                 -- Climb
                 [4]  = {0.6,   0.019,  0.122,  0.067,   0.018,   0.5,    12.0,   1.38},
 				[5]  = {0.7,   0.021,  0.122,  0.076,   0.026,   0.4,    11.5,   1.34},
-                
+
                 -- Cruise (Mach 0.82)
                 [6]  = {0.76,  0.023,  0.125,  0.088,   0.034,   0.4,    11.0,   1.30},
 				[7]  = {0.78,  0.024,  0.127,  0.100,   0.042,   0.3,    10.8,   1.26},
 				[8]  = {0.80,  0.025,  0.130,  0.115,   0.052,   0.3,    10.5,   1.22},
 				[9]  = {0.82,  0.026,  0.135,  0.130,   0.062,   0.3,    10.0,   1.18},
 				[10] = {0.84,  0.030,  0.130,  0.155,   0.072,   0.3,    9.5,    1.14},
-				[11] = {0.86,  0.045,  0.120,  0.180,   0.080,   0.3,    9.0,    1.10}, 
-                
+				[11] = {0.86,  0.045,  0.120,  0.180,   0.080,   0.3,    9.0,    1.10},
+
                 -- Overspeed
                 [12] = {0.88,  0.070,  0.110,  0.250,   0.120,   0.2,    8.5,    1.00},
 				[13] = {0.92,  0.110,  0.090,  0.350,   0.180,   0.2,    8.0,    0.90},
 				[14] = {1.0,   0.180,  0.060,  0.600,   0.250,   0.1,    7.0,    0.50},
             },
         },
-        
+
         engine = {
             typeng 			= 4,
 			type 			= "TurboFan",
-            
+
 			-- For Trent 772B-60 engine
             Nmg				= 60.0,		-- N2 Idle RPM %
             Nominal_RPM 	= 10611.0,	-- 100% speed high pressure turbine (N2)
             Nominal_Fan_RPM = 3900.0,	-- 100% fan speed (N1)
-			
+
             MinRUD			= 0,
             MaxRUD			= 1,
             MaksRUD			= 1,
             ForsRUD			= 1,
-            
+
             hMaxEng			= 13.5,		-- Max effective engine alt [km]
             dcx_eng 		= 0.006, 	-- Nacelle drag
-            
+
             -- FUEL FLOW SFC (per engine)
 			-- Matches Rolls-Royce published cruise TSFC of
 			-- 0.584 lb/lbf/h for Trent 772B-60
             cemax			= 0.584,		-- [kg/kgf/h] scaled
             cefor			= 0.584,		-- [kg/kgf/h] scaled
-            
+
             -- Altitude compensation
 			-- Assumes SFM formula thrust = thrust_max(M) - (dpdh_m * h),
 			-- with thrust in N, h in km; tuned to ~17-22% of sea-level
@@ -467,30 +466,30 @@ A_330 =  {
 			-- lapse for high-bypass engines like Trent 700
             dpdh_m			= 29500,		-- [N/km per engine]
             dpdh_f			= 29500,
-            
+
             table_data = {
                 -- M      Pmax (N)   Pmax_ab (N)
                 -- CORRECTED: Flatter curve to prevent thrust starvation at altitude.
                 -- The dpdh_m parameter handles the altitude loss.
                 -- This table provides the "Base" thrust before altitude subtraction.
-                
+
                 -- Static / Low Speed
                 [1]  = {0.0,   632000,   632000},
                 [2]  = {0.1,   625000,   625000},
                 [3]  = {0.2,   618000,   618000},
-                
+
                 -- Climb / Acceleration
                 [4]  = {0.3,   610000,   610000},
                 [5]  = {0.4,   600000,   600000},
                 [6]  = {0.5,   590000,   590000},
-                
+
                 -- Cruise Regime (Mach 0.8+)
                 -- Value kept high (~550kN) so that after subtracting altitude loss (~430kN total),
                 -- we have ~120kN Net Thrust (Correct for A330 cruise drag).
                 [7]  = {0.6,   580000,   580000},
                 [8]  = {0.7,   570000,   570000},
                 [9]  = {0.8,   560000,   560000},
-                
+
                 -- High Speed / Overspeed
                 [10] = {0.86,  540000,   540000},
                 [11] = {0.90,  480000,   480000}, -- Ram drag overtaking thrust
@@ -528,14 +527,14 @@ A_330 =  {
         [29] = {critical_damage = 5, args = {224}, deps_cells = {23, 25}},
         [30] = {critical_damage = 5, args = {214}, deps_cells = {24, 26}},
         [35] = {critical_damage = 6, args = {225}, deps_cells = {23, 29, 25, 37}},
-        [36] = {critical_damage = 6, args = {215}, deps_cells = {24, 30, 26, 38}}, 
+        [36] = {critical_damage = 6, args = {215}, deps_cells = {24, 30, 26, 38}},
         [37] = {critical_damage = 2,  args = {228}},
         [38] = {critical_damage = 2,  args = {218}},
-        [39] = {critical_damage = 2,  args = {244}, deps_cells = {53}}, 
-        [40] = {critical_damage = 2,  args = {241}, deps_cells = {54}}, 
+        [39] = {critical_damage = 2,  args = {244}, deps_cells = {53}},
+        [40] = {critical_damage = 2,  args = {241}, deps_cells = {54}},
         [43] = {critical_damage = 2,  args = {243}, deps_cells = {39, 53}},
-        [44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}}, 
-        [51] = {critical_damage = 2,  args = {240}}, 
+        [44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}},
+        [51] = {critical_damage = 2,  args = {240}},
         [52] = {critical_damage = 2,  args = {238}},
         [53] = {critical_damage = 2,  args = {248}},
         [54] = {critical_damage = 2,  args = {247}},
@@ -545,9 +544,9 @@ A_330 =  {
         [61] = {critical_damage = 2,  args = {147}},
         [82] = {critical_damage = 2,  args = {152}},
     },
-    
-    DamageParts = 
-    {  
+
+    DamageParts =
+    {
         [1] = "A_330-OBLOMOK-WING-R",
         [2] = "A_330-OBLOMOK-WING-L",
     },
@@ -556,7 +555,7 @@ A_330 =  {
 	-- ============================================================
 	-- LIGHTS DEFINITION
 	-- ============================================================
-	
+
 	--[[
 		--------------------------------------------------------------
 		------------------  HawaiianRyan overhaul  -------------------
@@ -579,16 +578,16 @@ A_330 =  {
 		WOLALIGHT_IR_FORMATION     = 13		-- IR formation strips. Currently not implemented due to engine NVG limitations.
 		WOLALIGHT_CABIN_WORK	   = 14		-- Flight instrument illumination of pilots
 	]]
-	
+
     lights_data = {
 	typename = "collection", lights = {
-	
+
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
                 [1] = {
                     typename = "collection",
-                    lights = {						
+                    lights = {
 						{
                             typename = "Spot", position = { -31.0, 2.206, 0 },
 							direction = {azimuth = math.rad(180.0)},
@@ -608,7 +607,7 @@ A_330 =  {
 							direction = {azimuth = math.rad(60.0), elevation = math.rad(0)},
 							proto = lamp_prototypes.BANO_8M_green, angle_max = math.rad(120.0), angle_min = math.rad(0),
 						},
-						
+
 						{	-- port empennage logo illumination. Source: https://www.flickr.com/photos/rbertoli/17255429984  and  https://www.flickr.com/photos/josepha_mtl/40028537472  and  https://twitter.com/TomPodolec/status/1021973854074355713/photo/1  and  https://www.airliners.net/photo/Air-France/Airbus-A330-203/1537643/L
                             typename = "Spot",  position = { -28.0, 2.3, -4.5 },
 							direction = {azimuth = math.rad(80.0), elevation = math.rad(-48.0)},
@@ -621,7 +620,7 @@ A_330 =  {
                             proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0),
                             exposure = {{0, 0.9, 1.0}}, power_up_t = 0.2, cool_down_t = 0.2, movable = true,
                         },
-						
+
 						-- Wing illumination. Source: https://www.flickr.com/photos/rbertoli/17255429984
 						{
 							typename = "Spot",  position = { 19.200, 0.10, -3.80 },
@@ -652,7 +651,7 @@ A_330 =  {
 							cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
 						},
 						{
-                            typename = "Spot",  position = { 9.30, -1.200, -3.20 }, 
+                            typename = "Spot",  position = { 9.30, -1.200, -3.20 },
 							direction = {azimuth = math.rad(-8.0), elevation = math.rad(3.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
@@ -695,7 +694,7 @@ A_330 =  {
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Runway turnoff lights. These really ought to be animated as part of the wheel steering mechanism, but I don't know how to do that.
 						{
                             typename = "Spot",  position = { 19.800, 0.080, -3.80 },
@@ -713,7 +712,7 @@ A_330 =  {
                 },
             },
         },
-        
+
 		[WOLALIGHT_BEACONS] = {			-- For moving around on the ground/taxiing.
             typename = "collection",
             lights = {
@@ -732,7 +731,7 @@ A_330 =  {
                 },
             },
         },
-		
+
         [WOLALIGHT_STROBES] = {			-- For moving around on/near the runway (including airborne).
             typename = "collection",
             lights = {
@@ -747,7 +746,7 @@ A_330 =  {
                             typename = "natostrobelight", position = { 6.95, -4.10, 0.000 },
                             proto = lamp_prototypes.SMI_2KM, period = 1.9, phase_shift = 0.5,
                         },
-						
+
 						{
                             typename = "Spot", position = { -7.327613, 1.587861, -29.040228  },
                             controller = "VariablePatternStrobe", mode = "2 Flash Long",
@@ -770,7 +769,7 @@ A_330 =  {
                 },
             },
         },
-    
+
         [WOLALIGHT_FORMATION_LIGHTS] = {
 			typename = "collection",
 			lights = {
@@ -792,7 +791,7 @@ A_330 =  {
 				},
 			},
 		},
-		
+
 		[WOLALIGHT_CABIN_NIGHT] = {
             typename = "collection",
             lights = {

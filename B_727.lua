@@ -26,25 +26,25 @@ CONVERSION NOTES FOR BOEING 727-100:
 --]]
 
 B_727 =  {
-      
+
 	Name 			= 'B_727',
 	DisplayName		= _('B727-100'),
 	date_of_introduction= 1964.02,
 	Picture 		= "B-727.png",
 	Rate 			= "40",
 	Shape			= "B_727",
-	WorldID			=  WSTYPE_PLACEHOLDER, 
+	WorldID			=  WSTYPE_PLACEHOLDER,
 	defFuelRatio    = 0.8,
 	singleInFlight 	= true,
-        
-	shape_table_data 	= 
+
+	shape_table_data 	=
 	{
 		{
 			file  	 	= 'B_727';
-			life  	 	= 20; 
-			vis   	 	= 3; 
-			desrt    	= 'kc-135-oblomok'; 
-			fire  	 	= { 300, 2}; 
+			life  	 	= 20;
+			vis   	 	= 3;
+			desrt    	= 'kc-135-oblomok';
+			fire  	 	= { 300, 2};
 			username	= 'B_727';
 			index       =  WSTYPE_PLACEHOLDER;
 			classname   = "lLandPlane";
@@ -56,11 +56,11 @@ B_727 =  {
 			fire  		= { 240, 2};
 		},
 	},
-	
+
 	mapclasskey 		= "P0091000029",
 	attribute  			= {wsType_Air, wsType_Airplane, wsType_Cruiser, WSTYPE_PLACEHOLDER, "Transports",},
 	Categories 			= {},
-	
+
 	-- ============================================================
 	-- MASS & CAPACITY (727-100)
 	-- ============================================================
@@ -68,7 +68,7 @@ B_727 =  {
 	M_nominal	=	65000,		-- kg (Typical Mission Weight)
 	M_max		=	72570,		-- kg (MTOW 160,000 lbs)
 	M_fuel_max	=	23260,		-- kg (The 727-100 has a smaller center tank, leading to lower total capacity)
-	
+
 	-- ============================================================
 	-- GEOMETRY & DIMENSIONS
 	-- ============================================================
@@ -78,13 +78,13 @@ B_727 =  {
 	wing_span	=	32.92,
 	wing_tip_pos = 	{-6.21, -1.45,	16.41},
 
-	
+
 	-- Gear Positions (Adjusted for -100 wheelbase ~53ft/16m)
 	nose_gear_pos 	= 	{ 15.61, -3.825,  0.0}, 		-- Nose gear position (ground under center of the axle)
-		
+
 	main_gear_pos 	= 	{-0.557, -3.945,  3.1},			-- Main gear position (ground under center of the axle)
 														-- automatically mirrored
-	
+
 	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
 	nose_gear_amortizer_reversal_stroke 	 = -0.235,	-- Full Strut Compression (maximum+ weight on wheels)
 	nose_gear_amortizer_normal_weight_stroke = -0.0494,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
@@ -94,7 +94,7 @@ B_727 =  {
 	main_gear_amortizer_reversal_stroke 	 = -0.082,	-- Full Strut Compression (maximum+ weight on wheels)
 	main_gear_amortizer_normal_weight_stroke = -0.0172,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
 	main_gear_wheel_diameter 				 =  0.841,	-- Diameter of the main gear wheels (meters)
-	
+
 	--[[
 		tand_gear_max defines the Maximum Nose Wheel Steering Angle using the formula:
 		
@@ -108,7 +108,7 @@ B_727 =  {
 				75°					3.732			Extreme castering (rare).
 	]]
 	tand_gear_max	=	math.tan(math.rad(78)),
-	
+
 
 	-- ============================================================
 	-- PERFORMANCE PARAMETERS (JT8D-7)
@@ -123,15 +123,15 @@ B_727 =  {
 	Mach_max	=	0.88,		-- MMO slightly lower on early models
 	Vy_max	    =	12.7,       -- m/s (~2,500 ft/min)
 	range	    =	4300,       -- km (Standard -100 range)
-	
+
 	-- Limits
 	Ny_min      	= 	-1.52,    -- [G]
     Ny_max      	= 	2.0,      -- [G]
     Ny_max_e    	= 	2.5,      -- [G]
 	bank_angle_max	=	35,
 	AOA_take_off	=	math.rad(9.0),
-	
-	
+
+
 	-- ===================================================================
     -- INERTIA & CG
     -- ===================================================================
@@ -273,9 +273,9 @@ B_727 =  {
 	
 ]]
 	moment_of_inertia	= {2.7e6, 10.5e6, 9.47e6, -250e3},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
-	
-	
-	
+
+
+
 	-- ============================================================
 	-- ENGINE & FUEL (3x Pratt & Whitney JT8D-7)
 	-- ============================================================
@@ -283,19 +283,19 @@ B_727 =  {
 	-- 3 x 14,000 lbf = 42,000 lbf = ~186,825 N
 	thrust_sum_max	= 19050,	-- kgf
 	thrust_sum_ab	= 19050,	-- kgf
-	
+
 	-- Fuel Consumption:
 	-- Cruise Flow: ~3,200 kg/hr = ~0.889 kg/s
 	average_fuel_consumption = 0.889,  -- kg/sec
-	
+
 	has_afteburner	=	false,
 	has_thrustReverser = true,
-	
+
 	engines_count	=	3,
 	engines_startup_sequence = { 2, 0, 1 },
-	engines_nozzles = 
+	engines_nozzles =
 	{
-		[1] = 
+		[1] =
 		{
 			pos = 	{-9.9,  0.0,  -2.375},	-- Port engine
 			elevation			=	-3.5,	-- 3-4 degree exhaust inclination (negative means exhaust points down)
@@ -305,8 +305,8 @@ B_727 =  {
 			exhaust_length_ab_K	=	0.76,
 			smokiness_level     = 	0.08, 	-- JT8Ds are smokey
 			engine_number       = 	1,
-		}, 
-		[2] = 
+		},
+		[2] =
 		{
 			pos = 	{-15.25, 0.02, 0.0}, 	-- S-Duct engine
 			elevation			=	0,		-- 0 degree exhaust inclination (negative means exhaust points down)
@@ -315,8 +315,8 @@ B_727 =  {
 			exhaust_length_ab_K	=	0.76,
 			smokiness_level     = 	0.08,
 			engine_number       = 	2,
-		}, 
-		[3] = 
+		},
+		[3] =
 		{
 			pos = 	{-9.9,	0.0,	2.375},	-- Starboard engine
 			elevation			=	-3.5,	-- 3-4 degree exhaust inclination (negative means exhaust points down)
@@ -326,8 +326,8 @@ B_727 =  {
 			exhaust_length_ab_K	=	0.76,
 			smokiness_level     = 	0.08,
 			engine_number       = 	3,
-		}, 
-	}, 
+		},
+	},
 
 	-- ============================================================
 	-- SYSTEMS & CREW
@@ -342,21 +342,21 @@ B_727 =  {
 	flaps_maneuver	=	15/30,	-- Flaps 15 for takeoff; 30 degrees for normal-length field landing (40 degrees possible)
 	brakeshute_name	=	0,
 	is_tanker		=	false,
-	
+
 	crew_size		=	3,
-	crew_members = 
+	crew_members =
 	{
-		[1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {17.65, 0.9, -0.44} }, 
-		[2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {17.65, 0.9,  0.44} }, 
-		[3] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {15.37, 0.08, 0} }, 
-	}, 
+		[1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {17.65, 0.9, -0.44} },
+		[2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {17.65, 0.9,  0.44} },
+		[3] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {15.37, 0.08, 0} },
+	},
 
 	RCS						=	35, 	-- [m^2] Slightly smaller
 	detection_range_max		=	30,		-- [km] Distance pilots in this airframe can possibly become aware of other airframes
 	IR_emission_coeff		=	1.2,	-- Older, "dirty" engines with low bypass (1:1); hotter exhaust and 3 engines make it brighter than modern narrowbodies.
 	IR_emission_coeff_ab	=	0,
 
-	fires_pos = 
+	fires_pos =
 	{
 		[1] = 	{-0.138,	-0.79,	0},
 		[2] = 	{-0.138,	-0.79,	5.741},
@@ -369,7 +369,7 @@ B_727 =  {
 		[9] = 	{-0.347,	-1.875,	-8.138},
 		[10] = 	{-5.024,	-1.353,	13.986},
 		[11] = 	{-5.024,	-1.353,	-13.986},
-	}, 
+	},
 
     CanopyGeometry = {
         azimuth = {-110.0, 110.0},
@@ -383,7 +383,7 @@ B_727 =  {
 		{ id = 'l_engine',  label = _('L-ENGINE'), 	enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 		{ id = 'r_engine',	label = _('R-ENGINE'), 	enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 	},
-	
+
 	HumanRadio = {
 		frequency = 127.5,
 		editable = true,
@@ -393,8 +393,8 @@ B_727 =  {
 	},
 
 	Pylons = {},
-	
-	Tasks = { aircraft_task(Transport) },	
+
+	Tasks = { aircraft_task(Transport) },
 	DefaultTask = aircraft_task(Nothing),
 
 	-- ============================================================
@@ -408,32 +408,32 @@ B_727 =  {
 			kjx		= 2.3,		-- Roll inertia
 			kjz		= 0.0011,	-- Pitch inertia
 			Czbe	= -0.014,	-- Directional stability
-			
+
 			cx_gear	= 0.020,	-- Gear drag coefficient
 			cx_flap	= 0.08,		-- Triple-slotted flaps create massive drag
 			cy_flap	= 0.65,		-- Triple-slotted flaps create massive lift
 			cx_brk	= 0.02,		-- Speedbrakes are effective on clean wing
-		
-			table_data = 
+
+			table_data =
 			{
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
 				-- 		 M      Cx0     Cya      B        B4    Omxmax   Aldop   Cymax
-				
+
 				-- Low Speed
 				[1]  = {0.0,   0.034,  0.090,  0.055,   0.001,   0.35,   13.0,   1.45},
 				[2]  = {0.2,   0.034,  0.090,  0.055,   0.001,   0.45,   13.0,   1.45},
 				[3]  = {0.4,   0.035,  0.090,  0.055,   0.002,   0.45,   12.5,   1.42},
-				
+
 				-- Climb
 				[4]  = {0.6,   0.037,  0.078,  0.06,    0.010,   0.50,   15.0,   1.40},
-				
+
 				-- Cruise (Mach 0.78 - 0.82 typical)
 				[5]  = {0.7,   0.040,  0.050,  0.065,   0.020,   0.50,   14.0,   1.30},
 				[6]  = {0.8,   0.042,  0.048,  0.068,   0.030,   0.50,   14.0,   1.05},
 				[7]  = {0.84,  0.048,  0.046,  0.070,   0.030,   0.45,   13.0,   1.20},
-				
+
 				-- Mach Limit
 				[8]  = {0.88,  0.055,  0.042,  0.180,   0.100,   0.70,   11.0,   0.80},
 				[9]  = {0.9,   0.100,  0.041,  0.300,   0.200,   0.50,   12.0,   1.00},
@@ -441,11 +441,11 @@ B_727 =  {
 			},
 		},
 
-		
+
 		engine = {
 			typeng 	= 4,
 			type 	= "TurboFan",
-			
+
 			Nmg		= 57.1,			-- JT8D-7 N2 ground idle speed (%)
 			Nominal_RPM = 12250,	-- JT8D-7 100% speed high pressure turbine (N2)
 			Nominal_Fan_RPM = 8600,	-- JT8D-7 100% fan speed (N1)
@@ -453,20 +453,20 @@ B_727 =  {
 			MaxRUD	= 1,
 			MaksRUD	= 1,
 			ForsRUD	= 1,
-			
+
 			hMaxEng	= 13.0,     -- [km] Service ceiling ~41,000ft
 			dcx_eng	= 0.0090,
-			
+
 			-- FUEL FLOW
 			-- JT8D-7 is ~0.86 kg/kN/h TSFC @ 9,150 m altitude
 			cemax	= 0.092,    -- [kg/kgf/h] scaled
             cefor	= 0.092,
-			
+
 			-- Altitude Lapse
 			dpdh_m	= 5500,	-- [N/km per engine]
 			dpdh_f	= 5500,
-			
-			table_data = 
+
+			table_data =
 			{
 				-- THRUST TABLE (3x JT8D-7)
 				-- Static: ~186.8 kN Total
@@ -511,14 +511,14 @@ B_727 =  {
 		[29] = {critical_damage = 5,  args = {224}, deps_cells = {23, 25}},
 		[30] = {critical_damage = 5,  args = {214}, deps_cells = {24, 26}},
 		[35] = {critical_damage = 6,  args = {225}, deps_cells = {23, 29, 25, 37}},
-		[36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}}, 
+		[36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}},
 		[37] = {critical_damage = 2,  args = {228}},
 		[38] = {critical_damage = 2,  args = {218}},
-		[39] = {critical_damage = 2,  args = {244}, deps_cells = {53}}, 
-		[40] = {critical_damage = 2,  args = {241}, deps_cells = {54}}, 
+		[39] = {critical_damage = 2,  args = {244}, deps_cells = {53}},
+		[40] = {critical_damage = 2,  args = {241}, deps_cells = {54}},
 		[43] = {critical_damage = 2,  args = {243}, deps_cells = {39, 53}},
-		[44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}}, 
-		[51] = {critical_damage = 2,  args = {240}}, 
+		[44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}},
+		[51] = {critical_damage = 2,  args = {240}},
 		[52] = {critical_damage = 2,  args = {238}},
 		[53] = {critical_damage = 2,  args = {248}},
 		[54] = {critical_damage = 2,  args = {247}},
@@ -528,17 +528,17 @@ B_727 =  {
 		[61] = {critical_damage = 2,  args = {147}},
 		[82] = {critical_damage = 2,  args = {152}},
 	},
-	
-	DamageParts = 
-	{  
+
+	DamageParts =
+	{
 		[1] = "B_727-OBLOMOK-WING-R",
 		[2] = "B_727-OBLOMOK-WING-L",
 	},
-	
+
 	-- ============================================================
 	-- LIGHTS DEFINITION
 	-- ============================================================
-	
+
 	--[[
 		DCS World\Scripts\Aircrafts\_Common\Lights.lua
 		
@@ -558,10 +558,10 @@ B_727 =  {
 		WOLALIGHT_IR_FORMATION     = 13		-- IR formation strips. Currently not implemented due to engine NVG limitations.
 		WOLALIGHT_CABIN_WORK	   = 14		-- Flight instrument illumination of pilots
 	]]
-	
+
 	-- Boeing 727 - Exterior Lighting: https://www.youtube.com/watch?v=OZC7fiNOL10
 	lights_data = { typename = "collection", lights = {
-	
+
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
@@ -587,7 +587,7 @@ B_727 =  {
 							direction = {azimuth = math.rad(60.0), elevation = math.rad(0)},
 							proto = lamp_prototypes.BANO_7M_green, angle_max = math.rad(120.0), angle_min = math.rad(0),
 						},
-						
+
 						{	-- port empennage logo illumination. Source: https://www.jetphotos.com/photo/8520559  and  https://www.jetphotos.com/photo/446298  and  https://www.airplane-pictures.net/photo/1195781/pr-ttp-total-linhas-areas-boeing-727-200f/
                             typename = "Spot",  position = {  -7.0, -2.6, -16.3 },
 							direction = {azimuth = math.rad(110.0), elevation = math.rad(-20.0)},
@@ -600,7 +600,7 @@ B_727 =  {
                             proto = lamp_prototypes.LFS_R_27_130, angle_max = math.rad(25.0), angle_min = math.rad(0),
                             exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.8, movable = true,
                         },
-						
+
 						-- Wing illumination. Source: https://www.youtube.com/watch?v=OZC7fiNOL10
 						{
 							typename = "Spot",  position = { 6.30, -0.80, -2.80 },
@@ -630,10 +630,10 @@ B_727 =  {
 							proto = lamp_prototypes.LFS_R_27_250, angle_max = math.rad(40.0), angle_min = math.rad(0),
 							cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
 						},
-						
+
 						-- Inboard takeoff lights (wing root). Source: https://www.youtube.com/watch?v=OZC7fiNOL10
 						{
-                            typename = "Spot",  position = { 6.7, -1.45, -2.20 }, 
+                            typename = "Spot",  position = { 6.7, -1.45, -2.20 },
 							direction = {azimuth = math.rad(-6.0), elevation = math.rad(3.0)},
                             proto = lamp_prototypes.LFS_P_27_450, angle_max = math.rad(21.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
@@ -644,7 +644,7 @@ B_727 =  {
                             proto = lamp_prototypes.LFS_P_27_450, angle_max = math.rad(21.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Outboard takeoff lights (located within inboard edge of #1 and #6 Kreuger flaps). Source: https://www.youtube.com/watch?v=OZC7fiNOL10
 						{
                             typename = "Spot",  position = { 2.744, -1.882, -5.867 },
@@ -657,7 +657,7 @@ B_727 =  {
 							direction = {azimuth = math.rad(4.0), elevation = math.rad(3.0)},
                             proto = lamp_prototypes.LFS_P_27_450, angle_max = math.rad(28.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
-                        },	
+                        },
                     },
                 },
             },
@@ -674,10 +674,10 @@ B_727 =  {
 							proto = lamp_prototypes.LFS_R_27_250, angle_max = math.rad(40.0), angle_min = math.rad(0),
 							cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
 						},
-                        
+
 						-- Runway turnoff lights. Source: https://www.airplane-pictures.net/photo/8660/n727vj-kingfisher-airlines-boeing-727-40/
 						{
-                            typename = "Spot",  position = { 7.6, -0.60, -1.80 }, 
+                            typename = "Spot",  position = { 7.6, -0.60, -1.80 },
 							direction = {azimuth = math.rad(-30.0), elevation = math.rad(4.0)},
                             proto = lamp_prototypes.LFS_R_27_250, angle_max = math.rad(40.0), angle_min = math.rad(0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
@@ -692,7 +692,7 @@ B_727 =  {
                 },
             },
         },
-		
+
 		[WOLALIGHT_BEACONS] = {			-- For moving around on the ground/taxiing.
             typename = "collection",
             lights = {
@@ -711,7 +711,7 @@ B_727 =  {
                 },
             },
         },
-		
+
         [WOLALIGHT_STROBES] = {			-- For moving around on/near the runway (including airborne).
             typename = "collection",
             lights = {
@@ -726,7 +726,7 @@ B_727 =  {
                             typename = "natostrobelight", position = { 3.30, -2.90, 0.000},
                             proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
                         },
-						
+
 						{
                             typename = "Spot", position = { -5.544352, -1.457095, -16.368313 },
                             controller = "VariablePatternStrobe", mode = "1 Flash",
@@ -749,7 +749,7 @@ B_727 =  {
                 },
             },
         },
-    
+
         [WOLALIGHT_FORMATION_LIGHTS] = {
 			typename = "collection",
 			lights = {
@@ -771,7 +771,7 @@ B_727 =  {
 				},
 			},
 		},
-		
+
 		[WOLALIGHT_CABIN_NIGHT] = {
             typename = "collection",
             lights = {
@@ -790,8 +790,8 @@ B_727 =  {
                 },
             },
         },
-    		
-  			
+
+
 	}},
 }
 

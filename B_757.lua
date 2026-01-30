@@ -38,18 +38,18 @@ B_757 =  {
     Picture             = "B-757.png",
     Rate                = "40",
     Shape               = "B_757",
-    WorldID             =  WSTYPE_PLACEHOLDER, 
-	defFuelRatio    	= 0.8, 
+    WorldID             =  WSTYPE_PLACEHOLDER,
+	defFuelRatio    	= 0.8,
     singleInFlight      = true,
 
-    shape_table_data 	= 
+    shape_table_data 	=
     {
         {
             file  	 	= 'B_757';
-            life  	 	= 20; 
-            vis   	 	= 3; 
-            desrt    	= 'kc-135-oblomok'; 
-            fire  	 	= { 300, 2}; 
+            life  	 	= 20;
+            vis   	 	= 3;
+            desrt    	= 'kc-135-oblomok';
+            fire  	 	= { 300, 2};
             username	= 'B_757';
             index       =  WSTYPE_PLACEHOLDER;
             classname   = "lLandPlane";
@@ -69,7 +69,7 @@ B_757 =  {
     -- ===================================================================
     -- MASS & DIMENSIONS (757-300)
     -- ===================================================================
-    
+
     -- Mass Parameters
     M_empty     = 64590,    -- [kg] (OEW approx 142,400 lbs)
     M_nominal   = 108000,   -- [kg] (Heavier typical operating weight)
@@ -81,7 +81,7 @@ B_757 =  {
     height      = 13.56,    -- [m] (44 ft 6 in)
     wing_area   = 181.25,   -- [m^2] (Same wing)
     wing_span   = 38.05,    -- [m] (Standard, No Winglets)
-	
+
 	-- ===================================================================
     -- INERTIA & CG
     -- ===================================================================
@@ -251,16 +251,16 @@ B_757 =  {
 	
 ]]
 	moment_of_inertia	= {4.65e6, 23.8e6, 21.5e6, -380e3},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
-	
-	
+
+
 	-- Boeing 757-300 NOMINALLY LOADED Center of Mass
 	-- Estimated for a model with origin at the nose tip (nominally loaded)
 	-- center_of_mass = {-24.5 + nose_x, -1.0 + nose_y, 0.0},
-	
+
 	-- Boeing 757-300 EMPTY Center of Mass (DCS expects empty weight)
 	-- Located approx 17% MAC (approx 23.5 meters aft of nose)
 	-- center_of_mass = {-23.5 + nose_x, -0.5 + nose_y, 0.0},
-	
+
 	-- B757-300 NOMINALLY LOADED Inertia tensor: {Roll, Yaw, Pitch, Product_of_inertia(I_xz)}
     -- Calculated by scaling B747 reference data.
     -- Note: 757-300 is a "flying pencil," so Yaw/Pitch inertia is high relative to Roll.
@@ -269,7 +269,7 @@ B_757 =  {
     -- ===================================================================
     -- PERFORMANCE PARAMETERS
     -- ===================================================================
-    
+
     -- Speeds
     V_opt           = 243,      -- [m/s TAS] (Mach 0.80 cruise)
     V_take_off      = 75,       -- [m/s TAS] (Typical V2 ~145-150 kts / ~75-77 m/s at MTOW)
@@ -277,7 +277,7 @@ B_757 =  {
     V_max_sea_level = 210, 		-- [m/s TAS] Set to max dive speed (Vd = ~408 KCAS) since DCS was magic restricting climb due to powerful engines
     V_max_h         = 248,      -- [m/s TAS] (Mach 0.86 MMO)
     CAS_min         = 68,       -- [m/s TAS] (Higher stall speed)
-    Mach_max        = 0.86,     
+    Mach_max        = 0.86,
 
     -- Climb & Ceiling
     H_max           = 12800,    -- [m] Service ceiling
@@ -299,7 +299,7 @@ B_757 =  {
     -- ===================================================================
     -- PROPULSION (RB211-535E4B)
     -- ===================================================================
-    
+
     -- Thrust: 43,100 lbf per engine (Same max rating, but required for -300)
     thrust_sum_max      = 39090,   -- [kgf]
     thrust_sum_ab       = 39090,   -- [kgf]
@@ -309,9 +309,9 @@ B_757 =  {
     -- ===================================================================
     -- SYSTEM & EQUIPMENT
     -- ===================================================================
-    
+
     has_speedbrake              = true,
-    has_differential_stabilizer = false, 
+    has_differential_stabilizer = false,
     radar_can_see_ground        = false,
 	flaps_transmission          = "Hydraulic",
     undercarriage_transmission  = "Hydraulic",
@@ -325,10 +325,10 @@ B_757 =  {
 
     -- Gear Geometry
 	nose_gear_pos 	= 	{21.394, -4.751, 0}, 			-- Nose gear position (ground under center of the axle)
-		
+
 	main_gear_pos 	= 	{-0.87, -4.784, 4.27},			-- Main gear position (ground under center of the axle)
 														-- automatically mirrored
-	
+
 	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
 	nose_gear_amortizer_reversal_stroke 	 = -0.4188,	-- Full Strut Compression (maximum+ weight on wheels)
 	nose_gear_amortizer_normal_weight_stroke = -0.0859,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
@@ -338,7 +338,7 @@ B_757 =  {
 	main_gear_amortizer_reversal_stroke 	 = -0.1456,	-- Full Strut Compression (maximum+ weight on wheels)
 	main_gear_amortizer_normal_weight_stroke = -0.04220,-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
 	main_gear_wheel_diameter 				 =  1.082,	-- Diameter of the main gear wheels (meters)
-	
+
 	--[[
 		tand_gear_max defines the Maximum Nose Wheel Steering Angle using the formula:
 		
@@ -359,10 +359,10 @@ B_757 =  {
     wing_tip_pos                = {-3.71, 0.00, 18.82},
     stores_number               = 0,
     brakeshute_name             = 0,
-	
+
 	engines_count				= 2,
 	engines_startup_sequence 	= { 1, 0 },
-    engines_nozzles = 
+    engines_nozzles =
     {
         [1] = {
             pos                 = {1.87, -2.705, -6.698},
@@ -373,7 +373,7 @@ B_757 =  {
             exhaust_length_ab_K = 0.76,
             smokiness_level     = 0.01, -- Clean burning modern turbofan
 			engine_number       = 1,
-        }, 
+        },
         [2] = {
             pos                 = {1.87, -2.705, 6.698},
             elevation			= -3.5,	-- 3-3.5 degree exhaust depression (negative means exhaust points down)
@@ -383,16 +383,16 @@ B_757 =  {
             exhaust_length_ab_K = 0.76,
             smokiness_level     = 0.01,
 			engine_number       = 2,
-        }, 
-    }, 
+        },
+    },
 
-    crew_members = 
+    crew_members =
     {
         [1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {19.0, 1.5, -0.5} }, -- Pilot
         [2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {19.0, 1.5,  0.5} }, -- Co-Pilot
     },
 
-    fires_pos = 
+    fires_pos =
     {
         [1] = 	{-0.138,	-0.79,	 0},
         [2] = 	{-0.138,	-0.79,	 5.741},
@@ -411,7 +411,7 @@ B_757 =  {
         azimuth = {-110.0, 110.0},
         elevation = {-30.0, 60.0},
     },
-	
+
     Failures = {
         { id = 'asc',       label = _('ASC'),       enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
         { id = 'autopilot', label = _('AUTOPILOT'), enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
@@ -429,7 +429,7 @@ B_757 =  {
 	},
 
     Pylons = { },
-    Tasks = { aircraft_task(Transport) },	
+    Tasks = { aircraft_task(Transport) },
     DefaultTask = aircraft_task(Nothing),
 
     -- ===================================================================
@@ -444,38 +444,38 @@ B_757 =  {
             kjx         = 2.45,     -- Roll inertia
             kjz         = 0.0018,   -- Pitch inertia
             Czbe        = -0.018,   -- Directional stability
-            
+
             -- Drag coefficients
             cx_gear     = 0.025,    -- Gear drag coefficient
             cx_flap     = 0.060,    -- Flaps drag coefficient
             cy_flap     = 0.95,		-- Flaps lift coefficient
             cx_brk      = 0.05,     -- Speedbrake drag
-            
-            table_data = {	
+
+            table_data = {
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
 				-- 		M       Cx0     Cya      B        B4    Omxmax   Aldop   Cymax
-				
+
 				-- Low Speed
 				[1]  = {0.0,   0.018,  0.11,   0.035,   0.001,   0.35,   13,     1.45},
 				[2]  = {0.2,   0.018,  0.11,   0.035,   0.001,   0.45,   13,     1.45},
 				[3]  = {0.4,   0.019,  0.11,   0.035,   0.002,   0.45,   12.5,   1.45},
-				
+
 				-- Climb
 				[4]  = {0.6,   0.021,  0.11,   0.04,    0.01,    0.50,   15,     1.40},
-				
+
 				-- Cruise (Mach 0.78 - 0.82 typical)
 				[5]  = {0.7,   0.024,  0.11,   0.045,   0.02,    0.50,   14,	 1.30},
 				[6]  = {0.8,   0.026,  0.11,   0.048,   0.03,    0.50,   14.0,	 1.15},
 				[7]  = {0.84,  0.032,  0.10,   0.050,   0.03,    0.45,   13,	 1.20},
-				
+
 				-- Mach Limit
 				[8]  = {0.88,  0.055,  0.100,  0.18,   0.100,  	 0.7,    11.0,	 0.80},
 				[9]  = {0.9,   0.100,  0.082,  0.30,   0.200,    0.5,    12,     1.00},
 				[10] = {1.0,   0.150,  0.080,  0.50,   0.300,    0.3,    8.0,    0.40},
             },
-			
+
 
 -- BOEING 757-300 REPRESENTATIVE AERODYNAMIC TABLES
 
@@ -601,41 +601,41 @@ mx_table_data = {
 -- High Speed: Aileron reversal risk / flexibility limits
 [3] = {0.8,  0.1, 	  0.03, 	0.65, 	4.5, 	0.9, 	0.1, 	-0.05,	-0.03, 	1.5, 	0.04, 	2.0, 	-0.04, 	0.3, 	0.8},
 [4] = {0.9,  0.1, 	  0.02, 	0.70, 	5.0, 	0.9, 	0.1, 	-0.05,	-0.02, 	1.5, 	0.04, 	1.5, 	-0.04, 	0.2, 	0.5},
-	
+
 },
 
 
 
         }, -- end of aerodynamics tables
-        
-        engine = 
+
+        engine =
         {
             typeng  = 4,
 			type 	= "TurboFan",
-            
+
 			-- For Rolls-Royce RB211-535E4B engine
             Nmg     = 63.0,     	-- N3 Idle RPM %
 			Nominal_RPM = 10611,	-- 100% speed high pressure turbine (N3)
 			Nominal_Fan_RPM = 4500,	-- 100% fan speed (N1)
-			
+
             MinRUD  = 0,
             MaxRUD  = 1,
             MaksRUD = 1,
             ForsRUD = 1,
-            
+
             hMaxEng = 13.5,    		-- Max effective engine alt [km]
             dcx_eng = 0.0095,   	-- Nacelle drag
-            
+
             -- FUEL FLOW SFC
             -- SFC per Rolls-Royce RB211-535E4B engine
             cemax	= 0.605,     	-- [kg/kgf/h] scaled
             cefor   = 0.605,     	-- [kg/kgf/h] scaled
-			
+
 			-- Altitude compensation
             dpdh_m  = 26100,		-- [N/km per engine]
             dpdh_f  = 26100,
-            
-            table_data = 
+
+            table_data =
             {
                 -- THRUST TABLE (2x RB211-535E4B)
 				-- Static: ~383,400 N Total
@@ -648,8 +648,8 @@ mx_table_data = {
 				[5] = {0.8,    375000,     375000}, -- Cruise Base (Net ~88kN at FL350)
 				[6] = {0.86,   360000,     360000},
 				[7] = {0.9,    300000,     300000},
-            }, 
-        }, 
+            },
+        },
     },
 
 	-- ===================================================================
@@ -682,14 +682,14 @@ mx_table_data = {
         [29] = {critical_damage = 5,  args = {224}, deps_cells = {23, 25}},
         [30] = {critical_damage = 5,  args = {214}, deps_cells = {24, 26}},
         [35] = {critical_damage = 6,  args = {225}, deps_cells = {23, 29, 25, 37}},
-        [36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}}, 
+        [36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}},
         [37] = {critical_damage = 2,  args = {228}},
         [38] = {critical_damage = 2,  args = {218}},
-        [39] = {critical_damage = 2,  args = {244}, deps_cells = {53}}, 
-        [40] = {critical_damage = 2,  args = {241}, deps_cells = {54}}, 
+        [39] = {critical_damage = 2,  args = {244}, deps_cells = {53}},
+        [40] = {critical_damage = 2,  args = {241}, deps_cells = {54}},
         [43] = {critical_damage = 2,  args = {243}, deps_cells = {39, 53}},
-        [44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}}, 
-        [51] = {critical_damage = 2,  args = {240}}, 
+        [44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}},
+        [51] = {critical_damage = 2,  args = {240}},
         [52] = {critical_damage = 2,  args = {238}},
         [53] = {critical_damage = 2,  args = {248}},
         [54] = {critical_damage = 2,  args = {247}},
@@ -699,9 +699,9 @@ mx_table_data = {
         [61] = {critical_damage = 2,  args = {147}},
         [82] = {critical_damage = 2,  args = {152}},
     },
-    
-    DamageParts = 
-    {  
+
+    DamageParts =
+    {
         [1] = "B_757-OBLOMOK-WING-R",
         [2] = "B_757-OBLOMOK-WING-L",
     },
@@ -709,7 +709,7 @@ mx_table_data = {
     -- ===================================================================
     -- LIGHTS
     -- ===================================================================
-	
+
 	--[[
 		--------------------------------------------------------------
 		------------------  HawaiianRyan overhaul  -------------------
@@ -732,10 +732,10 @@ mx_table_data = {
 		WOLALIGHT_IR_FORMATION     = 13		-- IR formation strips. Currently not implemented due to engine NVG limitations.
 		WOLALIGHT_CABIN_WORK	   = 14		-- Flight instrument illumination of pilots
 	]]
-	
+
     lights_data = {
 	typename = "collection", lights = {
-	
+
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
@@ -761,20 +761,20 @@ mx_table_data = {
 							direction = {azimuth = math.rad(60.0), elevation = math.rad(0)},
 							proto = lamp_prototypes.BANO_8M_green, angle_max = math.rad(120.0), angle_min = math.rad(0),
 						},
-						
+
 						{	-- port empennage logo illumination. Source: https://www.jetphotos.com/photo/9445752
                             typename = "Spot",  position = { -23.000, 0.300, -4.00 },
-							direction = {azimuth = math.rad(70.0), elevation = math.rad(-52.0)}, 
+							direction = {azimuth = math.rad(70.0), elevation = math.rad(-52.0)},
                             proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
                             exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.2,
                         },
 						{	-- starboard empennage logo illumination. Source: https://www.jetphotos.com/photo/9445752
                             typename = "Spot",  position = { -23.000, 0.300, 4.00 },
-							direction = {azimuth = math.rad(-70.0), elevation = math.rad(-52.0)}, 
+							direction = {azimuth = math.rad(-70.0), elevation = math.rad(-52.0)},
                             proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
                             exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.2,
                         },
-						
+
 						-- Wing illumination.
 						{
 							typename = "Spot",  position = { 10.70, 0.800, -2.20 },
@@ -848,7 +848,7 @@ mx_table_data = {
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Runway turnoff lights. These really ought to be animated as part of the wheel steering mechanism, but I don't know how to do that.
 						{
                             typename = "Spot",  position = { 17.300, -2.200, -1.700 },
@@ -866,7 +866,7 @@ mx_table_data = {
                 },
             },
         },
-		
+
 		[WOLALIGHT_BEACONS] = {			-- For moving around on the ground/taxiing.
 			-- Source: https://commons.wikimedia.org/wiki/File:Boeing_757-225,_Atlasjet_International_Airways_AN0450402.jpg
             typename = "collection",
@@ -886,7 +886,7 @@ mx_table_data = {
                 },
             },
         },
-		
+
         [WOLALIGHT_STROBES] = {			-- For moving around on/near the runway (including airborne).
 			-- Source: https://commons.wikimedia.org/wiki/File:Boeing_757-225,_Atlasjet_International_Airways_AN0450402.jpg
             typename = "collection",
@@ -902,7 +902,7 @@ mx_table_data = {
                             typename = "natostrobelight", position = { 1.30, -3.10, 0.000 },
                             proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
                         },
-						
+
 						{
                             typename = "Spot", position = { -3.713652, 0.004093, -18.803585 },
                             controller = "VariablePatternStrobe", mode = "1 Flash",
@@ -925,7 +925,7 @@ mx_table_data = {
                 },
             },
         },
-    
+
         [WOLALIGHT_FORMATION_LIGHTS] = {
 			typename = "collection",
 			lights = {

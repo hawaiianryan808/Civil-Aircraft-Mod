@@ -39,19 +39,19 @@ B_747 =  {
     WorldID             = WSTYPE_PLACEHOLDER,
     defFuelRatio        = 0.6, -- Freighters often fly lighter fuel loads for max payload
     singleInFlight      = true,
-    
+
     mapclasskey         = "P0091000029",
     attribute           = {wsType_Air, wsType_Airplane, wsType_Cruiser, WSTYPE_PLACEHOLDER, "Transports",},
     Categories          = {},
 
-    shape_table_data    = 
+    shape_table_data    =
     {
         {
             file        = 'B_747',
             life        = 25, -- Increased structural toughness
-            vis         = 3, 
-            desrt       = 'kc-135-oblomok', 
-            fire        = { 300, 2},       
+            vis         = 3,
+            desrt       = 'kc-135-oblomok',
+            fire        = { 300, 2},
             username    = 'B_747',
             index       = WSTYPE_PLACEHOLDER,
             classname   = "lLandPlane",
@@ -74,15 +74,15 @@ B_747 =  {
     height      = 12.4,		-- [m] (Actual 63 ft 8 in - 19.4m) - Limited because DCS is stupid
     wing_area   = 560,   	-- [m^2] (Increased for -400 wing) https://www.airliners.net/aircraft-data/boeing-747-400/100 https://www.aviatorjoe.net/go/compare/747-400F/747-8F/
     wing_span   = 59.44,	-- [m] (64.44m real-world)
-    
+
     -- Gear Geometry
     wing_tip_pos    = 	{-13.89, -0.16,  29.64},
-    
+
     nose_gear_pos 	= 	{24.606, -6.035, 0}, 			-- Nose gear position (ground under center of the axle)
-		
+
 	main_gear_pos 	= 	{-2.45,  -6.013, 6.325},		-- Main gear position (ground under center of the axle)
 														-- automatically mirrored
-	
+
 	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
 	nose_gear_amortizer_reversal_stroke 	 = -0.4184,	-- Full Strut Compression (maximum+ weight on wheels)
 	nose_gear_amortizer_normal_weight_stroke = -0.189,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
@@ -92,7 +92,7 @@ B_747 =  {
 	main_gear_amortizer_reversal_stroke 	 = -0.1451,	-- Full Strut Compression (maximum+ weight on wheels)
 	main_gear_amortizer_normal_weight_stroke = -0.0696,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
 	main_gear_wheel_diameter 				 =  1.349,	-- Diameter of the main gear wheels (meters)
-    
+
     tand_gear_max   =   math.tan(math.rad(70)),
 
     -- ===================================================================
@@ -107,8 +107,8 @@ B_747 =  {
     -- Fuel Consumption (AI & General)
     -- Cruise fuel flow is ~11,500–12,000 kg/h total / ~3.2 kg/s
     average_fuel_consumption = 3.2, -- [kg/sec] total
-	
-	
+
+
 	-- ===================================================================
     -- INERTIA & CG (B747-400F)
     -- ===================================================================
@@ -254,7 +254,7 @@ B_747 =  {
 	
 ]]
 	moment_of_inertia	= {53.3e6, 130.7e6, 118e6, -2.1e6},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
-	
+
 
     -- ===================================================================
     -- 4. FLIGHT PERFORMANCE
@@ -264,7 +264,7 @@ B_747 =  {
     range               = 8230,    -- [km] (Real max range with typical payload
 								   --        is ~4,445 nm / 8,230 km, as per
 								   --        Boeing and Cargolux specs)
-    
+
     -- Speeds (UPDATED for Mach 0.85 Cruise)
     V_opt               = 257,  -- [m/s TAS] (Mach 0.85 cruise at FL350)
     V_take_off          = 90,   -- [m/s TAS] (Higher MTOW requires slightly higher V2)
@@ -290,15 +290,15 @@ B_747 =  {
     engines_count       = 4,
     has_afteburner      = false,
     has_thrustReverser  = true,
-    
+
     -- Thrust Parameters (4x GE CF6-80C2B1F)
     -- Approx 57,900 lbf per engine = 257.55 kN
     -- Total Static Thrust: 1,030,200 N
     thrust_sum_max      = 105051, -- [kgf] (Significant increase over -200)
     thrust_sum_ab       = 105051, -- [kgf] (No AB)
-    
+
     engines_startup_sequence = { 3, 2, 1, 0 },	-- Often started in pairs or 4-3-2-1
-    engines_nozzles = 
+    engines_nozzles =
     {
         [1] = 	-- Left outboard
         {
@@ -343,7 +343,7 @@ B_747 =  {
             exhaust_length_ab_K =   0.76,
             smokiness_level     =   0.01,
 			engine_number       = 	4,
-        },      
+        },
     },
 
     -- ===================================================================
@@ -354,7 +354,7 @@ B_747 =  {
     radar_can_see_ground    = false,-- Plane cannot detect ground units
     detection_range_max		= 30,	-- [km] Distance pilots in this airframe can possibly become aware of other airframes
     IR_emission_coeff       = 3.4, 	-- Four large engines. The sheer quantity of hot gas generates a massive broad-spectrum signature.
-    
+
     -- Aircraft Specifics
     tanker_type                 = 0,
     is_tanker                   = false,
@@ -366,7 +366,7 @@ B_747 =  {
     brakeshute_name             = 0,
     stores_number               = 0,
 
-    crew_members = 
+    crew_members =
     {
         [1] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {26.41, 3.035, -0.62}, }, -- Pilot
         [2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {26.41, 3.035,  0.62}, }, -- Co-Pilot
@@ -394,15 +394,14 @@ B_747 =  {
     },
 
     Pylons = {},
-    Tasks = { aircraft_task(Transport), },  
+    Tasks = { aircraft_task(Transport), },
     DefaultTask = aircraft_task(Transport),
 
     -- ===================================================================
     -- 7. SFM DATA (AERODYNAMICS & ENGINE SIMULATION)
     -- ===================================================================
     SFM_Data = {
-        aerodynamics = 
-        {
+        aerodynamics = {
             -- Control authority parameters
             Cy0         = 0.10,     -- Positive lift at zero AoA
             Mzalfa      = 4.5,      -- Pitch stability
@@ -410,41 +409,40 @@ B_747 =  {
             kjx         = 3.1,      -- Higher Roll Inertia (heavier wings/fuel)
             kjz         = 0.0014,   -- Pitch inertia
             Czbe        = -0.018,   -- Directional stability
-            
+
             -- Drag coefficients
             cx_gear     = 0.045,    -- Gear drag increment (from paper initial climb)
             cx_flap     = 0.06,     -- Flap drag
             cy_flap     = 0.50,     -- Flap lift
             cx_brk      = 0.05,     -- Speedbrake drag (estimated)
-        
-            table_data = 
-            {
+
+            table_data = {
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
 				-- 		M       Cx0      Cya      B        B4    Omxmax   Aldop   Cymax
 				-- REVISION for -400F: Slightly lower form drag Cx0
-				
+
 				-- Low Speed
 				[1]  = {0.0,   0.015,  0.095,   0.033,   0.001,   0.35,   13,     1.45},
 				[2]  = {0.2,   0.015,  0.095,   0.033,   0.001,   0.45,   13,     1.45},
 				[3]  = {0.4,   0.016,  0.095,   0.033,   0.002,   0.45,   12.5,   1.45},
-				
+
 				-- Climb
 				[4]  = {0.6,   0.018,  0.093,  0.038,    0.01,    0.50,   15,     1.40},
-				
+
 				-- Cruise (Mach 0.82 - 0.86 typical)
 				[5]  = {0.7,   0.022,  0.092,  0.043,    0.02,    0.50,   14,     1.30},
 				[6]  = {0.8,   0.024,  0.091,  0.046,    0.03,    0.50,   14.0,   1.15},
 				[7]  = {0.84,  0.032,  0.090,  0.048,    0.03,    0.45,   13,     1.20},
-				
+
 				-- Mach Limit
 				[8]  = {0.88,  0.055,  0.105,  0.170,    0.100,   0.7,    11.0,   0.80},
 				[9]  = {0.9,   0.120,  0.087,  0.290,    0.200,   0.5,    12,     1.00},
 				[10] = {1.0,   0.350,  0.085,  0.490,    0.300,   0.3,    8.0,    0.40},
             },
-			
-			
+
+
 -- BOEING 747-400F AERODYNAMIC TABLES
 -- Calibrated for High Inertia, Transonic Cruise (M0.85), and Heavy Weight Ops.
 
@@ -555,33 +553,32 @@ mx_table_data = {
 [4] = {0.9,  0.10, 	  0.015,   0.85, 	5.0, 	0.9, 	0.1, 	-0.05,	-0.02, 	1.5, 	0.04, 	0.20, 	-0.04, 	0.2, 	0.5},
 
 },
-			
-			
+
+
         },	-- end of aerodynamics tables
-        
-        engine = 
-        {
+
+        engine = {
 			-- ===================================================================
 			-- ENGINE CONFIGURATION (GE CF6-80C2B1F)
 			-- ===================================================================
 
             typeng  = 4,
 			type	= "TurboFan",
-            
+
             -- RPM and throttle
             Nmg     = 62.5,     		-- N2 Idle RPM %
             Nominal_RPM = 10850.0,   	-- N2 100% RPM
             Nominal_Fan_RPM = 3650.0,	-- N1 100% RPM
-			
+
             MinRUD  = 0,
             MaxRUD  = 1,
             MaksRUD = 1,
             ForsRUD = 1,
-            
+
             -- Altitude and drag
             hMaxEng = 15.5,     -- Modern engines sustain combustion higher
             dcx_eng = 0.0125,   -- Larger nacelles (higher drag)
-            
+
             -- FUEL CONSUMPTION (Specific Fuel Consumption - SFC - per engine)
 			-- CF6-80C2B1F TSFC is approx 0.307 (Cruise) to 0.56 (Takeoff) lb/lbf/hr
 			-- DCS Units: [kg / kgf / h]
@@ -589,13 +586,12 @@ mx_table_data = {
 			-- We use a blended value for the simple model.
             cemax   = 0.560,	-- [kg/kgf/h]
             cefor   = 0.560,	-- [kg/kgf/h]
-            
+
             -- Thrust lapse for high-bypass turbofans
             dpdh_m  = 30000,	-- [N/km per engine]
             dpdh_f  = 30000,
-        
-            table_data = 
-            {
+
+            table_data = {
                 -- THRUST TABLE (4x CF6-80C2B1F)
 				-- Total Thrust Sum [Newtons] vs Mach Number
 				-- 1 Engine = ~257,550 N (57,900 lbf)
@@ -605,12 +601,12 @@ mx_table_data = {
 				[2] =   {0.2,     985000,      985000},    -- Initial Climb
 				[3] =   {0.4,     920000,      920000},
 				[4] =   {0.6,     850000,      850000},
-				
+
 				-- Cruise Range (Lapse is handled by dpdh_m, this is Mach efficiency)
 				[5] =   {0.7,     780000,      780000},
 				[6] =   {0.8,     720000,      720000},    -- Cruise Baseline
-				[7] =   {0.85,    680000,      680000},    
-				
+				[7] =   {0.85,    680000,      680000},
+
 				-- High Speed / Choke
 				[8] =   {0.9,     550000,      550000},    -- Inlet recovery loss
 				[9] =   {0.95,    400000,      400000},
@@ -649,14 +645,14 @@ mx_table_data = {
         [29] = {critical_damage = 5,  args = {224}, deps_cells = {23, 25}},
         [30] = {critical_damage = 5,  args = {214}, deps_cells = {24, 26}},
         [35] = {critical_damage = 6,  args = {225}, deps_cells = {23, 29, 25, 37}},
-        [36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}}, 
+        [36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}},
         [37] = {critical_damage = 2,  args = {228}},
         [38] = {critical_damage = 2,  args = {218}},
-        [39] = {critical_damage = 2,  args = {244}, deps_cells = {53}}, 
-        [40] = {critical_damage = 2,  args = {241}, deps_cells = {54}}, 
+        [39] = {critical_damage = 2,  args = {244}, deps_cells = {53}},
+        [40] = {critical_damage = 2,  args = {241}, deps_cells = {54}},
         [43] = {critical_damage = 2,  args = {243}, deps_cells = {39, 53}},
-        [44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}}, 
-        [51] = {critical_damage = 2,  args = {240}}, 
+        [44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}},
+        [51] = {critical_damage = 2,  args = {240}},
         [52] = {critical_damage = 2,  args = {238}},
         [53] = {critical_damage = 2,  args = {248}},
         [54] = {critical_damage = 2,  args = {247}},
@@ -666,14 +662,14 @@ mx_table_data = {
         [61] = {critical_damage = 2,  args = {147}},
         [82] = {critical_damage = 2,  args = {152}},
     },
-    
-    DamageParts = 
-    {  
+
+    DamageParts =
+    {
         [1] = "B_747-OBLOMOK-WING-R",
         [2] = "B_747-OBLOMOK-WING-L",
     },
 
-    fires_pos = 
+    fires_pos =
     {
         [1] =   {-0.138,    -0.79,  0},
         [2] =   {-0.138,    -0.79,  5.741},
@@ -691,7 +687,7 @@ mx_table_data = {
     -- ===================================================================
     -- 9. LIGHTS DEFINITION
     -- ===================================================================
-	
+
 	--[[
 		--------------------------------------------------------------
 		------------------  HawaiianRyan overhaul  -------------------
@@ -714,10 +710,10 @@ mx_table_data = {
 		WOLALIGHT_IR_FORMATION     = 13		-- IR formation strips. Currently not implemented due to engine NVG limitations.
 		WOLALIGHT_CABIN_WORK	   = 14		-- Flight instrument illumination of pilots
 	]]
-	
+
     lights_data = {
 	typename = "collection", lights = {
-	
+
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
@@ -743,20 +739,20 @@ mx_table_data = {
 							direction = {azimuth = math.rad(55.0), elevation = math.rad(0.0)},
                             proto = lamp_prototypes.BANO_8M_green, angle_max = math.rad(110.0), angle_min = math.rad(0.0),
                         },
-						
+
 						{	-- port empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
                             typename = "Spot",  position = { -30.000, 2.500, -5.00 },
-							direction = {azimuth = math.rad(80.0), elevation = math.rad(-47.0)}, 
+							direction = {azimuth = math.rad(80.0), elevation = math.rad(-47.0)},
                             proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
                             exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
                         },
 						{	-- starboard empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
                             typename = "Spot",  position = { -30.000, 2.500, 5.00 },
-							direction = {azimuth = math.rad(-80.0), elevation = math.rad(-47.0)}, 
+							direction = {azimuth = math.rad(-80.0), elevation = math.rad(-47.0)},
                             proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
                             exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
                         },
-						
+
 						-- Wing illumination.
 						{
                             typename = "Spot",  position = { 19.000, 1.000, -3.20 },
@@ -786,7 +782,7 @@ mx_table_data = {
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(25.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Inboard landing lights.
                         {
                             typename = "Spot",  position = { 10.500, -1.200, -5.500 },
@@ -800,15 +796,15 @@ mx_table_data = {
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Outboard landing lights: https://www.cpat.com/courses/boeing-747-400/747-400-interactive-aircraft-systems-diagrams/
-                        {						
+                        {
                             typename = "Spot",  position = { 10.500, -1.200, -6.000 },
 							direction = {azimuth = math.rad(-15.0), elevation = math.rad(8.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-                        {						
+                        {
                             typename = "Spot",  position = { 10.500, -1.200, 6.000 },
 							direction = {azimuth = math.rad(15.0), elevation = math.rad(8.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
@@ -830,7 +826,7 @@ mx_table_data = {
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(33.3), angle_min = math.rad(0.0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Inboard taxis lights.
                         {
                             typename = "Spot",  position = { 7.500, -1.200, -5.500 },
@@ -844,15 +840,15 @@ mx_table_data = {
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0.0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-						
+
 						-- Outboard taxi lights
-                        {						
+                        {
                             typename = "Spot",  position = { 10.500, -1.200, -6.000 },
 							direction = {azimuth = math.rad(-30.0), elevation = math.rad(7.0)},
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
                         },
-                        {						
+                        {
                             typename = "Spot",  position = { 10.500, -1.200, 6.000 },
 							direction = {azimuth = math.rad(30.0), elevation = math.rad(7.0)},
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
@@ -862,7 +858,7 @@ mx_table_data = {
                 },
             },
 		},
-      
+
         [WOLALIGHT_BEACONS] = {		-- For moving around on the ground/taxiing.
 			-- Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
             typename = "collection",
@@ -878,16 +874,16 @@ mx_table_data = {
                             typename = "natostrobelight", position = { -17.0, -3.0, 0.000},
                             proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
                         },
-						
+
 						{	-- port empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
                             typename = "Spot",  position = { -30.000, 2.500, -5.00 },
-							direction = {azimuth = math.rad(80.0), elevation = math.rad(-47.0)}, 
+							direction = {azimuth = math.rad(80.0), elevation = math.rad(-47.0)},
                             proto = lamp_prototypes.FR_100, intensity_max = 100.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
                             exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
                         },
 						{	-- starboard empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
                             typename = "Spot",  position = { -30.000, 2.500, 5.00 },
-							direction = {azimuth = math.rad(-80.0), elevation = math.rad(-47.0)}, 
+							direction = {azimuth = math.rad(-80.0), elevation = math.rad(-47.0)},
                             proto = lamp_prototypes.FR_100, intensity_max = 100.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
                             exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
                         },
@@ -895,7 +891,7 @@ mx_table_data = {
                 },
             },
         },
-		
+
 		[WOLALIGHT_STROBES] = {		-- For moving around on/near the runway (including airborne).
 			-- Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
             typename = "collection",
@@ -911,7 +907,7 @@ mx_table_data = {
                             typename = "natostrobelight", position = { -17.0, -3.0, 0.000},
                             proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
                         },
-						
+
 						{
                             typename = "Spot", position = { -11.358561, -0.081693, -29.7552 },
                             controller = "VariablePatternStrobe", mode = "1 Flash",
@@ -934,7 +930,7 @@ mx_table_data = {
                 },
             },
         },
-    
+
         [WOLALIGHT_FORMATION_LIGHTS] = {
 			typename = "collection",
 			lights = {

@@ -30,18 +30,18 @@ A_380 =  {
     Picture 			= "A-380.png",
     Rate 				= "40",
     Shape				= "A_380",
-    WorldID				= WSTYPE_PLACEHOLDER, 
+    WorldID				= WSTYPE_PLACEHOLDER,
 	defFuelRatio    	= 0.8,
     singleInFlight 		= true,
 
-    shape_table_data 	= 
+    shape_table_data 	=
     {
         {
             file  	 	= 'A_380';
-            life  	 	= 20; 
-            vis   	 	= 3; 
-            desrt    	= 'kc-135-oblomok'; 
-            fire  	 	= { 300, 2}; 
+            life  	 	= 20;
+            vis   	 	= 3;
+            desrt    	= 'kc-135-oblomok';
+            fire  	 	= { 300, 2};
             username	= 'A_380';
             index       =  WSTYPE_PLACEHOLDER;
             classname   = "lLandPlane";
@@ -157,8 +157,8 @@ A_380 =  {
 				75°					3.732			Extreme castering (rare).
 	]]
 	tand_gear_max	=	math.tan(math.rad(70)),
-	
-	
+
+
 	-- ===================================================================
     -- INERTIA & CG
     -- ===================================================================
@@ -300,8 +300,8 @@ A_380 =  {
 	
 ]]
 	moment_of_inertia	= {138e6, 234e6, 211e6, -1.8e6},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
-	
-	
+
+
 
     -- ===================================================================
     -- ENGINE NOZZLES
@@ -309,7 +309,7 @@ A_380 =  {
 	engines_startup_sequence = { 0, 1, 2, 3 }, -- Left to Right
     engines_nozzles = {
         [1] = {		-- Left outboard
-			pos = {-1.227, -1.9785, -25.374}, 
+			pos = {-1.227, -1.9785, -25.374},
 			elevation			= -2.5,	-- 2.5 degree exhaust depression (negative means exhaust points down)
 			azimuth             = 2.0,	-- 2 degree toe-in (positive means thrust vector points toward longitudinal axis; exhaust points away)
 			diameter 			= 1.522,
@@ -329,10 +329,10 @@ A_380 =  {
 			engine_number 		= 2,
 		},
         [3] = {		-- Right inboard
-			pos = {6.348, -3.072, 14.582}, 
+			pos = {6.348, -3.072, 14.582},
 			elevation			= -3.0,	-- 3.0 degree exhaust depression (negative means exhaust points down)
 			azimuth             = -1.5,	-- 1.5 degree toe-in (negative means thrust vector points toward longitudinal axis; exhaust points away)
-			diameter 			= 1.522, 
+			diameter 			= 1.522,
 			exhaust_length_ab 	= 7.62,
 			exhaust_length_ab_K = 0.76,
 			smokiness_level 	= 0.01,
@@ -342,9 +342,9 @@ A_380 =  {
 			pos = {-1.227, -1.9785, 25.374},
 			elevation			= -2.5,	-- 2.5 degree exhaust depression (negative means exhaust points down)
 			azimuth             = -2.0,	-- 2 degree toe-in (negative means thrust vector points toward longitudinal axis; exhaust points away)
-			diameter 			= 1.522, 
-			exhaust_length_ab 	= 7.62, 
-			exhaust_length_ab_K = 0.76, 
+			diameter 			= 1.522,
+			exhaust_length_ab 	= 7.62,
+			exhaust_length_ab_K = 0.76,
 			smokiness_level 	= 0.01,
 			engine_number 		= 4,
 		},
@@ -355,7 +355,7 @@ A_380 =  {
         [2] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {32.9, 0.986, 0.50} },
         [3] = { ejection_seat_name = 0, drop_canopy_name = 0, pos = {29.9, 0.986, 0} },
     },
-    
+
     fires_pos = {
         [1] = 	{-0.138,	-0.79,	0},
         [2] = 	{-0.138,	-0.79,	5.741},
@@ -398,7 +398,7 @@ A_380 =  {
 
     Pylons = { },
 
-    Tasks = { aircraft_task(Transport) },	
+    Tasks = { aircraft_task(Transport) },
     DefaultTask = aircraft_task(Nothing),
 
     -- ===================================================================
@@ -413,33 +413,33 @@ A_380 =  {
             kjx         = 3.75,		-- High roll inertia
             kjz         = 0.0025,   -- Pitch inertia
             Czbe        = -0.010,   -- Directional stability
-            
+
             -- Drag coefficients (Large Surface Areas)
             cx_gear     = 0.055,	-- Gear drag coefficient
             cx_flap     = 0.07,		-- Flaps drag coefficient
             cy_flap     = 0.90,		-- Flaps lift coefficient
             cx_brk      = 0.15,		-- Speedbrake drag
-            
+
             table_data = {
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
 				-- 		 M      Cx0     Cya       B       B4     Omxmax  Aldop    Cymax
 				-- REVISION: Slightly lower induced drag for sharklets
-				
+
 				-- Low Speed
 				[1]  = {0.0,   0.018,  0.095,   0.025,   0.001,   0.35,   13,     1.45},
 				[2]  = {0.2,   0.018,  0.095,   0.025,   0.001,   0.45,   13,     1.45},
 				[3]  = {0.4,   0.019,  0.095,   0.025,   0.002,   0.45,   12.5,   1.45},
-				
+
 				-- Climb
 				[4]  = {0.6,   0.021,  0.093,  0.03,     0.01,    0.50,   15,     1.40},
-				
+
 				-- Cruise (Mach 0.82 - 0.86 typical)
 				[5]  = {0.7,   0.024,  0.092,   0.035,   0.02,    0.50,   14,     1.30},
 				[6]  = {0.8,   0.026,  0.091,   0.038,   0.03,    0.50,   14.0,   1.05},
 				[7]  = {0.84,  0.032,  0.090,   0.04,    0.03,    0.45,   13,     1.20},
-				
+
 				-- Mach Limit
 				[8]  = {0.88,  0.055,  0.105,   0.16,    0.100,   0.7,    11.0,   0.80},
 				[9]  = {0.9,   0.12,   0.087,   0.28,    0.200,   0.5,    12,     1.00},
@@ -474,43 +474,43 @@ A_380 =  {
 				[15] = {0.94,  0.115,  0.068,  0.400,   0.195,   0.12,    8.5,    0.88},
 				[16] = {0.98,  0.180,  0.060,  0.650,   0.290,   0.10,    7.5,    0.60},
 			]]
-            }, 
+            },
         },
-        
+
         engine = {
             typeng 			= 4,
 			type 			= "TurboFan",
-            
+
 			-- For Trent 972 engine
             Nmg             = 68.0,     -- N3 Idle RPM %
             Nominal_RPM     = 12200.0,  -- 100% speed high pressure turbine (N3)
             Nominal_Fan_RPM = 2900.0,   -- 100% fan speed (N1)
-			
+
             MinRUD          = 0,
             MaxRUD          = 1,
             MaksRUD         = 1,
             ForsRUD         = 1,
-            
+
             hMaxEng 		= 14.5,     -- Max effective engine alt [km]
             dcx_eng 		= 0.0135,   -- Nacelle drag
-            
+
             -- FUEL FLOW SFC
             cemax   		= 0.605,	-- [kg/kgf/h] scaled
             cefor   		= 0.605,	-- [kg/kgf/h] scaled
-            
+
 			-- Altitude compensation
 			-- Standard for high-bypass turbofans to 
 			-- approximate proper altitude thrust lapse.
             dpdh_m  		= 88200/4,  -- [N/km per engine]
             dpdh_f  		= 88200/4,
-        
+
             -- Thrust table (Static Total)
-            table_data = 
+            table_data =
             {
 				-- THRUST TABLE (4x Trent 972)
                 -- CORRECTED: Flatter curve to prevent thrust starvation at altitude.
                 -- At M0.85/11km, this provides ~300kN Net Thrust (matches Cruise Drag).
-                
+
                 -- 		 M     Pmax (N)   Pmax_ab (N)
                 [1]  = {0.0,   1427000,   1427000}, -- Static
                 [2]  = {0.1,   1420000,   1420000},
@@ -562,10 +562,10 @@ A_380 =  {
         [36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}}, -- wing in right 
         [37] = {critical_damage = 2,  args = {228}},
         [38] = {critical_damage = 2,  args = {218}},
-        [39] = {critical_damage = 2,  args = {244}, deps_cells = {53}}, 
-        [40] = {critical_damage = 2,  args = {241}, deps_cells = {54}}, 
+        [39] = {critical_damage = 2,  args = {244}, deps_cells = {53}},
+        [40] = {critical_damage = 2,  args = {241}, deps_cells = {54}},
         [43] = {critical_damage = 2,  args = {243}, deps_cells = {39, 53}},
-        [44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}}, 
+        [44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}},
         [51] = {critical_damage = 2,  args = {240}}, -- elevator in left
         [52] = {critical_damage = 2,  args = {237}}, -- elevator in right
         [53] = {critical_damage = 2,  args = {248}}, -- rudder left
@@ -577,7 +577,7 @@ A_380 =  {
         [82] = {critical_damage = 2,  args = {152}},
     },
 
-    DamageParts = {  
+    DamageParts = {
         [1] = "A_380-OBLOMOK-WING-R",
         [2] = "A_380-OBLOMOK-WING-L",
     },
@@ -680,7 +680,7 @@ A_380 =  {
 							cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
 						},
 						{
-                            typename = "Spot",  position = { 15.0, -1.800, -5.50 }, 
+                            typename = "Spot",  position = { 15.0, -1.800, -5.50 },
 							direction = {azimuth = math.rad(-8.0), elevation = math.rad(3.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
@@ -690,7 +690,7 @@ A_380 =  {
 							direction = {azimuth = math.rad(8.0), elevation = math.rad(3.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
                             cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
-                        },					
+                        },
                     },
                 },
             },
@@ -708,7 +708,7 @@ A_380 =  {
 							cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
 						},
 						{
-                            typename = "Spot",  position = { 15.0, -1.800, -5.50 }, 
+                            typename = "Spot",  position = { 15.0, -1.800, -5.50 },
 							direction = {azimuth = math.rad(-10.0), elevation = math.rad(3.0)},
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
                             cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
@@ -736,7 +736,7 @@ A_380 =  {
                     },
                 },
             },
-		},	
+		},
 
         [WOLALIGHT_BEACONS] = {			-- For moving around on the ground/taxiing.
             typename = "collection",

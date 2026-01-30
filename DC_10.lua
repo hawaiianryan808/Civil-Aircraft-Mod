@@ -12,21 +12,21 @@ DC_10 =  {
     Picture             = "DC-10.png",
     Rate                = "40",
     Shape               = "DC_10",
-    WorldID             = WSTYPE_PLACEHOLDER, 
-	defFuelRatio    	= 0.8, 
+    WorldID             = WSTYPE_PLACEHOLDER,
+	defFuelRatio    	= 0.8,
     singleInFlight      = true,
-    
+
     -- ===================================================================
     -- 1. VISUAL MODEL & DESTRUCTION
     -- ===================================================================
-    shape_table_data = 
+    shape_table_data =
     {
         {
             file        = "DC_10",
-            life        = 20, 
-            vis         = 3, 
+            life        = 20,
+            vis         = 3,
             desrt       = "kc-135-oblomok",
-            fire        = { 300, 2}, 
+            fire        = { 300, 2},
             username    = "DC_10",
             index       = WSTYPE_PLACEHOLDER,
             classname   = "lLandPlane",
@@ -38,7 +38,7 @@ DC_10 =  {
             fire        = { 240, 2},
         },
     },
-    
+
     mapclasskey = "P0091000029",
     attribute   = {wsType_Air, wsType_Airplane, wsType_Cruiser, WSTYPE_PLACEHOLDER, "Transports",},
     Categories  = { },
@@ -51,15 +51,15 @@ DC_10 =  {
     height      = 17.55,    -- [m] (57 ft 7 in)
     wing_span   = 50.39,    -- [m] (165 ft 4 in)
     wing_area   = 338.8,    -- [m^2] (3,647 sq ft)
-    
+
     wing_tip_pos	= {-9.65,   0.46, 25.2},
-	
+
     -- Landing Gear (Centerline gear present on -30 and -40)
 	nose_gear_pos 	= 	{21.33, -5.25, -0.007233}, 		-- Nose gear position (ground under center of the axle)
-		
+
 	main_gear_pos 	= 	{-1.92, -5.105,  6.4},			-- Main gear position (ground under center of the axle)
 														-- automatically mirrored
-	
+
 	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
 	nose_gear_amortizer_reversal_stroke 	 = -0.23851,-- Full Strut Compression (maximum+ weight on wheels)
 	nose_gear_amortizer_normal_weight_stroke = -0.09938,-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
@@ -69,7 +69,7 @@ DC_10 =  {
 	main_gear_amortizer_reversal_stroke 	 = -0.19929,-- Full Strut Compression (maximum+ weight on wheels)
 	main_gear_amortizer_normal_weight_stroke = -0.08304,-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
 	main_gear_wheel_diameter 				 =  1.535,	-- Diameter of the main gear wheels (meters)
-	
+
 	--[[
 		tand_gear_max defines the Maximum Nose Wheel Steering Angle using the formula:
 		
@@ -83,7 +83,7 @@ DC_10 =  {
 				75°					3.732			Extreme castering (rare).
 	]]
 	tand_gear_max	=	math.tan(math.rad(68)),
-	
+
 
     -- ===================================================================
     -- 3. WEIGHT & MASS
@@ -92,7 +92,7 @@ DC_10 =  {
     M_nominal   = 220000,   -- [kg] (Typical operational weight)
     M_max       = 251744,   -- [kg] (MTOW: 555,000 lbs)
     M_fuel_max  = 108149,   -- [kg] (Standard -30/-40 fuel capacity)
-    
+
     -- ===================================================================
     -- 4. PERFORMANCE & SPEEDS
     -- ===================================================================
@@ -104,23 +104,23 @@ DC_10 =  {
     V_max_h         = 272.4,    -- [m/s TAS] Maximum speed at high altitude (Mach 0.88 MMO)
     CAS_min         = 72,       -- [m/s TAS] Stall speed (~140 kts stall/min maneuvering)
     Mach_max        = 0.88,     -- MMO
-    
+
     -- Altitude & Range
     H_max           = 12800,    -- [m] (Service Ceiling 42,000 ft)
     range           = 9400,     -- [km] (Slightly less than -30 due to fuel burn)
-    
+
     -- Aerodynamic Performance
     Vy_max          = 10.5,     -- [m/s] (Slightly higher thrust improves climb)
     AOA_take_off    = math.rad(10), -- ~10 degrees
     bank_angle_max  = 35,       -- [degrees] Standard airline limit
-    
+
     -- G-Limits
     Ny_min          =  -1.52,   -- [G]
     Ny_max          =  2.0,		-- [G]
     Ny_max_e        =  2.5,		-- [G]
-	
-	
-	
+
+
+
 	-- ===================================================================
     -- INERTIA & CG
     -- ===================================================================
@@ -262,28 +262,28 @@ DC_10 =  {
 	
 ]]
 	moment_of_inertia	= {24.5e6, 60.6e6, 54.7e6, -1.1e6},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
-	
-	
-	
-    
+
+
+
+
     -- ===================================================================
     -- 5. ENGINE & FUEL (3x P&W JT9D-59A)
     -- ===================================================================
-    
+
 	-- Thrust Total (3 engines combined)
     -- 3 x 53,000 lbf = 159,000 lbf = ~707,260 N
     thrust_sum_max  = 72124,   -- [kgf] Combined thrust
     thrust_sum_ab   = 72124,   -- [kgf] Combined thrust w/afterburner
-    
+
     -- Fuel Consumption
     -- JT9D-59A burn is higher than CF6. Approx 2.92 kg/sec total cruise.
     average_fuel_consumption = 2.92, -- [kg/sec] Aveerage fuel consumption at cruise
 
     -- Engine Nozzles
-	
+
 	engines_count	=	3,
 	engines_startup_sequence = { 1, 2, 0 },
-    engines_nozzles = 
+    engines_nozzles =
     {
 		[1] = -- Left Wing Engine
         {
@@ -306,7 +306,7 @@ DC_10 =  {
             exhaust_length_ab_K = 0.76,
             smokiness_level     = 0.14, -- JT9D was known to be smokier than CF6
 			engine_number       = 2,
-        }, 
+        },
         [3] = -- Right Wing Engine
         {
             pos                 = {1.66, -2.7139, 9.021},	-- #3 Engine
@@ -342,7 +342,7 @@ DC_10 =  {
     is_tanker                   = false,
 	flaps_transmission          = "Hydraulic",
     undercarriage_transmission  = "Hydraulic",
-    
+
     -- Detection & Stealth
     RCS                     = 85, 		-- [m^2] Large RCS for widebody
     detection_range_max		= 30,		-- [km] Distance pilots in this airframe can possibly become aware of other airframes
@@ -371,7 +371,7 @@ DC_10 =  {
 	},
 
     Pylons = { },
-    Tasks = { aircraft_task(Transport), },    
+    Tasks = { aircraft_task(Transport), },
     DefaultTask = aircraft_task(Nothing),
 
     -- ===================================================================
@@ -386,75 +386,75 @@ DC_10 =  {
             kjx         = 2.6,      -- Roll inertia (Widebody)
             kjz         = 0.0012,   -- Pitch inertia
             Czbe        = -0.016,   -- Directional stability
-            
+
             -- Drag coefficients
             cx_gear     = 0.030,    -- High drag (3 main gear bogies)
             cx_flap     = 0.100,    -- Large double-slotted flaps
             cy_flap     = 0.70,     -- Flap lift
             cx_brk      = 0.06,    	-- Spoiler drag
-            
+
             table_data = {
 				-- Aerodynamic Drag Polar Table
 				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
 				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
                 -- 		 M      Cx0     Cya      B        B4    Omxmax   Aldop   Cymax
-                
+
                 -- Low speed / Takeoff / Landing
 				[1]  = {0.0,   0.020,  0.130,  0.060,   0.004,   0.40,   15.0,   1.72},
 				[2]  = {0.2,   0.020,  0.130,  0.061,   0.006,   0.42,   15.0,   1.72},
 				[3]  = {0.4,   0.021,  0.125,  0.063,   0.011,   0.42,   14.8,   1.60},
-				
+
 				-- Climb
 				[4]  = {0.6,   0.023,  0.140,  0.068,   0.018,   0.42,   14.5,   1.46},
-				
+
 				-- Cruise
 				[5]  = {0.78,  0.029,  0.145,  0.092,   0.035,   0.40,   13.8,   1.38},
 				[6]  = {0.80,  0.030,  0.142,  0.100,   0.040,   0.38,   13.5,   1.34},
 				[7]  = {0.82,  0.032,  0.140,  0.108,   0.044,   0.38,   13.0,   1.30},
 				[8]  = {0.84,  0.034,  0.138,  0.118,   0.050,   0.35,   12.8,   1.26},
-				
+
 				-- MMO approach
 				[9]  = {0.85,  0.037,  0.120,  0.135,   0.058,   0.33,   12.5,   1.22},
 				[10] = {0.88,  0.055,  0.100,  0.185,   0.080,   0.30,   12.0,   1.12},
-				
+
 				-- Overspeed
 				[11] = {0.90,  0.075,  0.085,  0.255,   0.115,   0.25,   11.0,   1.00},
 				[12] = {0.92,  0.100,  0.071,  0.360,   0.165,   0.20,   10.0,   0.85},
 				[13] = {1.0,   0.180,  0.060,  0.650,   0.300,   0.15,   7.0,    0.50},
             },
         },
-        
+
         engine = {
             typeng  	= 4,        	-- E_TURBOFAN
 			type 		= "TurboFan",
-            
+
             -- RPM (Pratt & Whitney JT9D-59A Data)
             -- JT9D has lower rotor speeds than CF6
             Nmg     	= 60.5,   		-- N2 Idle RPM %
 			Nominal_RPM = 8011.0,		-- N2 (High Compressor) 100%
 			Nominal_Fan_RPM = 3780.0, 	-- N1 (Fan) 100%
-			
+
             MinRUD  	= 0,
             MaxRUD  	= 1,
             MaksRUD 	= 1,
             ForsRUD 	= 1,
-            
+
             -- Performance Envelope
             hMaxEng 	= 13.8,     -- [km] Max engine altitude (flameout altitude)
             dcx_eng 	= 0.0150,   -- Increased nacelle drag (Bulbous P&W nacelle)
-            
+
             -- Fuel Flow (JT9D-59A)
             -- TSFC of ~0.63 lb/lbf/h for JT9D-59A; yields realistic
 			-- burn rates of ~10,500 kg/h at cruise thrust
             cemax   	= 0.63,     -- [kg/kgf/h] scaled
             cefor   	= 0.63,     -- [kg/kgf/h] scaled
-            
+
             -- Altitude compensation
 			-- Standard for high-bypass turbofans to approximate
 			-- thrust lapse (~30% at cruise altitude)
             dpdh_m		= 38000,	-- [N/km per engine]
             dpdh_f		= 38000,	-- 35500?
-        
+
             table_data = {
                 -- THRUST (3x JT9D-59A)
                 -- Total Static: 707.4 kN (3x 53,000 lbf = 235.7 kN each)
@@ -520,14 +520,14 @@ DC_10 =  {
         [105]= {critical_damage = 2, args = {603}}, -- ENGINE_3
         [106]= {critical_damage = 2, args = {604}}, -- ENGINE_4
     },
-    
-    DamageParts = 
-    {  
-        [1] = "DC_10-OBLOMOK-WING-R", 
-        [2] = "DC_10-OBLOMOK-WING-L", 
+
+    DamageParts =
+    {
+        [1] = "DC_10-OBLOMOK-WING-R",
+        [2] = "DC_10-OBLOMOK-WING-L",
     },
-    
-    fires_pos = 
+
+    fires_pos =
     {
         [1] =   {7.166, -1.843, 0},
         [2] =   {3.863, -0.629, 2.578},
@@ -541,12 +541,12 @@ DC_10 =  {
         [10] =  {-23.974, 4.877, 0},
         [11] =  {-23.974, 4.877, 0},
     },
-	
-	
+
+
 	-- ============================================================
 	-- LIGHTS DEFINITION
 	-- ============================================================
-	
+
 	--[[
 		--------------------------------------------------------------
 		------------------  HawaiianRyan overhaul  -------------------
@@ -572,7 +572,7 @@ DC_10 =  {
 
     lights_data = {
 	typename = "collection", lights = {
-	
+
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
@@ -598,7 +598,7 @@ DC_10 =  {
 							direction = {azimuth = math.rad(60.0), elevation = math.rad(0)}, argument = 191,
 							proto = lamp_prototypes.BANO_8M_green, angle_max = math.rad(120.0), angle_min = math.rad(0),
 						},
-						
+
 						{	-- port aft-facing white tail light. Source: http://www.arcforums.com/forums/air/index.php?/topic/192063-dc-10-lights/
                             typename = "Spot", position = { -12.65, 0.4590, -25.145 },
 							direction = {azimuth = math.rad(180.0)},
@@ -617,20 +617,20 @@ DC_10 =  {
 							typename = "Omni", position = { -12.65, 0.4590, -25.145 },
 							proto = lamp_prototypes.ANO_3_Bl, movable = true,
 						},
-						
+
 						{	-- port empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:McDonnell_Douglas_DC-10-30,_Air_Zaire_AN0199454.jpg
                             typename = "Spot",  position = { -24.000, 1.900, -8.00 },
-							direction = {azimuth = math.rad(68.0), elevation = math.rad(-47.0)}, 
+							direction = {azimuth = math.rad(68.0), elevation = math.rad(-47.0)},
                             proto = lamp_prototypes.LFS_R_27_130, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
                             exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.2, movable = true,
                         },
 						{	-- starboard empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:McDonnell_Douglas_DC-10-30,_Air_Zaire_AN0199454.jpg
                             typename = "Spot",  position = { -24.000, 1.900, 8.00 },
-							direction = {azimuth = math.rad(-68.0), elevation = math.rad(-47.0)}, 
+							direction = {azimuth = math.rad(-68.0), elevation = math.rad(-47.0)},
                             proto = lamp_prototypes.LFS_R_27_130, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
                             exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.2, movable = true,
                         },
-						
+
 						-- Wing illumination. Source: http://www.arcforums.com/forums/air/index.php?/topic/192063-dc-10-lights/
 						{
 							typename = "Spot",  position = { 9.100, 0.680, -3.25 },
@@ -691,7 +691,7 @@ DC_10 =  {
 							typename = "Omni", position = { 21.387432, -2.901209, 0.00 },
 							proto = lamp_prototypes.LFS_R_27_250, cool_down_t = 0.5, range = 6.0, movable = true,
 						},
-						
+
 						-- Runway turnoff lights. These really ought to be animated as part of the wheel steering mechanism, but I don't know how to do that.
 						{
                             typename = "Spot",  position = { 11.300, -0.600, -3.100 },
@@ -709,7 +709,7 @@ DC_10 =  {
                 },
             },
         },
-		
+
 		[WOLALIGHT_BEACONS] = {
 			-- Source: http://www.arcforums.com/forums/air/index.php?/topic/192063-dc-10-lights/    and    https://www.youtube.com/watch?v=EMzBSU-dlSM
             typename = "collection",
@@ -744,7 +744,7 @@ DC_10 =  {
                             typename = "natostrobelight", position = { -8.000, -2.900, 0.000},
                             proto = lamp_prototypes.SMI_2KM, period = 1.9, phase_shift = 0.5,
                         },
-						
+
 						{
                             typename = "Spot", position = { -9.316712, 0.440826, -25.289371 },
                             controller = "VariablePatternStrobe", mode = "2 Flash Long",
@@ -767,7 +767,7 @@ DC_10 =  {
                 },
             },
         },
-    
+
         [WOLALIGHT_FORMATION_LIGHTS] = {
 			typename = "collection",
 			lights = {
@@ -789,7 +789,7 @@ DC_10 =  {
 				},
 			},
 		},
-		
+
 		[WOLALIGHT_CABIN_NIGHT] = {
             typename = "collection",
             lights = {

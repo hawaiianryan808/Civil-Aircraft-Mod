@@ -21,7 +21,6 @@ FINAL CONVERSION TO AIRBUS A320neo (LEAP-1A)
 --]]
 
 A_320 =  {
-
 		Name 			= 'A_320',
 		DisplayName		= _('A320neo'),
 		date_of_introduction  	= 2016.01,
