@@ -14,10 +14,6 @@ FINAL CONVERSION TO AIRBUS A320neo (LEAP-1A)
    - Startup: Engine 2 (Right) -> Engine 1 (Left).
    - Efficiency: Tuned for ~0.65 kg/s cruise burn.
 
-3. AERODYNAMICS:
-   - Cy0: Reduced to 0.05 to prevent "ballooning" on landing.
-   - Drag: Optimized for Mach 0.78 cruise.
-   - Sharklets: Accounted for in reduced induced drag parameters.
 --]]
 
 A_320 =  {

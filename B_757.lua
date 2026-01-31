@@ -16,16 +16,9 @@ CONFIGURATION: BOEING 757-300 (Standard / No Winglets)
    - OEW: 64,590 kg (Heavier airframe).
    - Max Fuel: 34,400 kg (Same tank capacity as -200).
 
-3. AERODYNAMICS:
-   - Parasitic Drag (Cx0): Increased to 0.018 (More fuselage surface area).
-   - Pitch Inertia (kjz): Increased significantly (Longer moment arm).
-   - Pitch Damping (Mzalfadt): Increased.
-   - Rotation: Slower rotation rate required to avoid tailstrike.
-
 4. ENGINE (RB211-535E4B):
    - Thrust: 43,100 lbf (191.7 kN) per engine.
    - Same rating as high-spec -200, but lower Thrust-to-Weight ratio.
-   - Climb Rate: Reduced from 22 m/s to 15.2 m/s due to weight.
 --]]
 
 local nose_x	=	26.51

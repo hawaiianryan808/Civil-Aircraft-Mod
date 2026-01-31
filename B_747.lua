@@ -8,20 +8,15 @@ CHANGE LOG & IMPLEMENTATION NOTES (CONVERSION TO 747-400F):
    - Updated to B-747-400F.
    - Introduction date updated to 1993 (Entry into service of Freighter).
 
-2. DIMENSIONS:
-   - Wing Span: Increased to 64.44m (Winglets).
-   - Wing Area: Increased to 560 m^2.
-
-3. MASS AND FUEL:
+2. MASS AND FUEL:
    - M_max (MTOW): Increased to 396,890 kg (875,000 lbs standard).
    - M_fuel_max: Increased to 172,500 kg (Reflects larger capacity of -400).
    - M_empty: Adjusted to 178,000 kg (Reinforced freighter floor vs Pax interior).
 
-4. PROPULSION (GE CF6-80C2B1F):
+3. PROPULSION (GE CF6-80C2B1F):
    - Thrust: Increased to 1,104 kN Total (4x ~62,000 lbf).
-   - Efficiency: Improved fuel consumption parameters (High-bypass turbofans).
 
-5. CREW:
+4. CREW:
    - Reduced crew_size to 2 (Digital Glass Cockpit, no Flight Engineer).
 --]]
 

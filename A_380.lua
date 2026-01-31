@@ -10,13 +10,7 @@ FINAL CONVERSION TO AIRBUS A380-800 (REAL WORLD SPEC)
    - Height: 24.09 m
    - Wing Area: 845 m² (Verified).
 
-2. AERODYNAMICS:
-   - Cy0 (Zero-Lift Coeff): Increased to 0.15. 
-     (Previous 0.02 was too low for a high-camber superjumbo wing).
-   - Pitch Stability (Mzalfa): High (6.0) to simulate heavy damping.
-   - Roll Inertia (kjx): High (3.75) for 80m span.
-
-3. PROPULSION (Rolls-Royce Trent 972):
+2. PROPULSION (Rolls-Royce Trent 972):
    - Thrust: 4 × 356.81 kN = 1,427 kN / ~145,500 kgf for Trent 972
    - Fuel Flow: 4.7 kg/s cruise average (~17t/hr).
    - OEW: 276,800 kg.

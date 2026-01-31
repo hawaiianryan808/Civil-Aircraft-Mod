@@ -19,10 +19,6 @@ FINAL CONVERSION TO AIRBUS A330-300 (TRENT 700)
    - Cruise Fuel Flow: 1.61 kg/s (~5,800 kg/hr).
    - Altitude Lapse: Tuned via dpdh_m for high-bypass characteristics.
 
-4. AERODYNAMICS:
-   - Supercritical wing profile (Cy0 = 0.12).
-   - Cruise optimization at Mach 0.82.
-   - Drag Rise adjusted for MMO Mach 0.86.
 --]]
 
 A_330 =  {

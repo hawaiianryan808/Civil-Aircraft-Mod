@@ -1,4 +1,3 @@
-Cessna_210N =  {
 --[[
 ==================================================================================
 CESSNA P210N PRESSURIZED CENTURION CONFIGURATION w/ CONTINENTAL TSIO-520-AF ENGINE
@@ -14,6 +13,7 @@ Useful source: FAA Type Certificate Data Sheet (TCDS) No. 3A21
 ==================================================================================
 ]]
 
+Cessna_210N =  {
 	Name										= 'Cessna_210N',
 	DisplayName									= _('Cessna P210N'),
 	date_of_introduction						= 1978.01,
