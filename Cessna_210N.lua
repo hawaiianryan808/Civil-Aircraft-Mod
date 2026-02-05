@@ -59,7 +59,7 @@ Cessna_210N =  {
 	wing_area									= 16.3,		-- [m] 175 sq ft (approx)
 	wing_span									= 11.20,	-- [m] 36 ft 9 in
 	
-	wing_tip_pos								= {-0.256, 0.82, 5.52},
+	wing_tip_pos								= {-0.875, 0.77, 5.56},
 	
 	CanopyGeometry = {
 		azimuth		= {-130.0, 130.0},
@@ -94,7 +94,7 @@ Cessna_210N =  {
 	Ny_min										= -1.52,	-- [G] Minimum G-load
 	Ny_max										= 2.3,		-- [G] Maximum nominal G-load
 	Ny_max_e									= 3.8,		-- [G] Maximum emergency G-load (+3.8G)
-	bank_angle_max								= 38,		-- [degrees]
+	bank_angle_max								= 40,		-- [degrees]
 	
 	has_afteburner								= false,
 	has_speedbrake								= false,
@@ -710,7 +710,7 @@ Cessna_210N =  {
 												"torque peak" of the engine.
 											]]
 			
-			k_reg					= 5e-2,	-- Regulator Gain/Response
+			k_reg					= 8e-2,	-- Regulator Gain/Response
 										--[[	The "k_reg" Parameter: Manifold Pressure Regulator Gain
 
 												In the DCS Standard Flight Model (SFM) Piston Engine (typeng = 2),
