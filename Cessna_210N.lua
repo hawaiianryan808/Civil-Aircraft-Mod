@@ -131,7 +131,7 @@ Cessna_210N =  {
 				60°					1.732			Carrier deck handling / Tight turns.
 				75°					3.732			Extreme castering (rare).
 	]]
-	tand_gear_max								= math.tan(math.rad(35)),
+	tand_gear_max		= math.tan(math.rad(35)),
 	
 	
 	-- ===================================================================
@@ -278,17 +278,23 @@ Cessna_210N =  {
 	Airliners typically have heavy, podded engines located below the wing (-Y in TsAGI) and
 	generally forward of the Center of Gravity (+X), while the empennage/tail (-X)
 	structure is high (+Y). The sum of those products should be NEGATIVE.
+
+	Jxx = Roll inertia
+	Jyy = Yaw inertia
+	Jzz = Pitch inertia
+
+	Note: J instead of I since Russian TsAGI uses J for inertia, not I. This has relevance
+	in the aerodynamics section with kjx and kjz.
 	
 ]]
-	-- moment_of_inertia							= {2500, 3500, 4100},
-	moment_of_inertia	= {8500, 12900, 11600, -150},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
+	moment_of_inertia	= {1500, 2500, 4100, -150},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
 	
 
 	-- ==================================================================================
 	-- AERODYNAMICS (Simple Flight Model)
 	-- ==================================================================================
-	AOA_take_off								= math.rad(10),	-- ~10 deg
-	flaps_maneuver								= 10/30,		-- Takeoff flaps: Flaps 10; landing = max @ 30 degrees
+	AOA_take_off		= math.rad(10),	-- ~10 deg
+	flaps_maneuver		= 10/30,		-- Takeoff flaps: Flaps 10; landing = max @ 30 degrees
 	
 	SFM_Data = {
 		aerodynamics = {
@@ -298,10 +304,10 @@ Cessna_210N =  {
 			-- Lift & Stability
 			Cy0			= 0.05,		-- Lift coefficient at zero AoA (High camber wing)
 			Mzalfa		= 4.4,		-- High pitch stability (Heavy nose / long tail)
-			Mzalfadt	= 0.8,		-- Pitch damping
-			kjx			= 1.8,		-- Roll inertia
+			Mzalfadt	= 0.8,		-- Pitch damping coefficient
+			kjx			= 3.8,		-- Roll damping coefficient
 			kjz			= 0.0018,	-- Pitch inertia
-			Czbe		= -0.045,	-- Directional stability
+			Czbe		= -0.12,	-- Directional stability
 			
 			-- Drag Coefficients
 			cx_gear		= 0.045,	-- Gear drag
@@ -310,7 +316,7 @@ Cessna_210N =  {
 			cx_brk		= 0.060,	-- No speedbrakes
 		
 			table_data = {
-				-- REVISED: Based on NASA TN D-7197 (Wind Tunnel Test of Light High-Wing Airplane - Cessna 210)
+				-- Based on NASA TN D-7197 (Wind Tunnel Test of Light High-Wing Airplane - Cessna 210)
 				-- https://ntrs.nasa.gov/api/citations/19730016341/downloads/19730016341.pdf
 				
 				-- M     Cx0     Cya      B       B4    Omxmax   Aldop   Cymax
@@ -606,7 +612,7 @@ Cessna_210N =  {
 													Low Nu_1 (0.75):	The line is shallow. At 100% RPM, you only get ~75%
 																		of the table's potential thrust.
 
-													High Nu_1 (2.5):	The line is steep. At 100% RPM, you get 250% of the
+													High Nu_1 (1.25):	The line is steep. At 100% RPM, you get 250% of the
 																		table's potential thrust. (This is how we simulate
 																		the massive power jump of a TSIO-520 turbo system).
 												
@@ -623,7 +629,7 @@ Cessna_210N =  {
 												6. Why This Matters for the Cessna P210N
 
 												Because the DCS SFM calculates airframe drag conservatively (often higher than
-												reality for light aircraft), we use Nu_1 = 2.5 to force the engine to output
+												reality for light aircraft), we use Nu_1 = 1.25 to force the engine to output
 												the raw horsepower needed to overcome that drag and match the real-world
 												cruise speed of 168 KTAS.
 										]]
@@ -704,7 +710,7 @@ Cessna_210N =  {
 												"torque peak" of the engine.
 											]]
 			
-			k_reg					= 1.5e-5,	-- Regulator Gain/Response
+			k_reg					= 5e-2,	-- Regulator Gain/Response
 										--[[	The "k_reg" Parameter: Manifold Pressure Regulator Gain
 
 												In the DCS Standard Flight Model (SFM) Piston Engine (typeng = 2),
