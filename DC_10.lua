@@ -292,7 +292,7 @@ DC_10 =  {
 			azimuth             = 2.0,	-- 2.0 degree toe-in (positive means thrust vector points toward longitudinal axis; exhaust points away)
             diameter            = 1.21,
             exhaust_length_ab   = 9.144,
-            exhaust_length_ab_K = 0.76,
+            exhaust_length_ab_K = 9.144,
             smokiness_level     = 0.14, -- JT9D was known to be smokier than CF6
 			engine_number       = 1,
         },
@@ -300,10 +300,10 @@ DC_10 =  {
         {
             pos                 = {-27.6, 4.797, 0}, 		-- #2 Engine (Tail)
             elevation			= 2.5,	-- 2.5 degree exhaust inclination (positive means exhaust points up)
-			azimuth             = 0.0,
+			azimuth             = 0,    -- Centerline engine
             diameter            = 1.21,
             exhaust_length_ab   = 9.144,
-            exhaust_length_ab_K = 0.76,
+            exhaust_length_ab_K = 9.144,
             smokiness_level     = 0.14, -- JT9D was known to be smokier than CF6
 			engine_number       = 2,
         },
@@ -314,7 +314,7 @@ DC_10 =  {
 			azimuth             = -2.0,	-- 2.0 degree toe-in (negative means thrust vector points toward longitudinal axis; exhaust points away)
             diameter            = 1.21,
             exhaust_length_ab   = 9.144,
-            exhaust_length_ab_K = 0.76,
+            exhaust_length_ab_K = 9.144,
             smokiness_level     = 0.14, -- JT9D was known to be smokier than CF6
 			engine_number       = 3,
         },

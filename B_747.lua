@@ -772,38 +772,41 @@ mx_table_data = {
                     typename = "collection",
                     lights = {
                         {
-                            typename = "Spot", position = { 29.000, -4.000, 0.000 },
-							direction = {elevation = math.rad(8.0)}, argument = 51,
+                            typename = "Spot", position = { 25.000, -4.030, 0.000 },
+                            connector = "MAIN_SPOT_PTR",
+                            argument = 51, movable = true,
+							-- direction = {elevation = math.rad(8.0)},
+                            dir_correction = {elevation = math.rad(8.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(25.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
                         },
 
 						-- Inboard landing lights.
                         {
-                            typename = "Spot",  position = { 10.500, -1.200, -5.500 },
+                            typename = "Spot",  position = { 9.700, -1.560, -6.722 },
 							direction = {azimuth = math.rad(-5.0), elevation = math.rad(8.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
                         },
                         {
-                            typename = "Spot",  position = { 10.500, -1.200, 5.500 },
+                            typename = "Spot",  position = { 9.700, -1.560, 6.722 },
 							direction = {azimuth = math.rad(5.0), elevation = math.rad(8.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
                         },
 
 						-- Outboard landing lights: https://www.cpat.com/courses/boeing-747-400/747-400-interactive-aircraft-systems-diagrams/
                         {
-                            typename = "Spot",  position = { 10.500, -1.200, -6.000 },
+                            typename = "Spot",  position = { 9.32, -1.560, -7.168 },
 							direction = {azimuth = math.rad(-15.0), elevation = math.rad(8.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
                         },
                         {
-                            typename = "Spot",  position = { 10.500, -1.200, 6.000 },
+                            typename = "Spot",  position = { 9.32, -1.560, 7.168 },
 							direction = {azimuth = math.rad(15.0), elevation = math.rad(8.0)},
                             proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
                         },
                     },
                 },
@@ -816,38 +819,41 @@ mx_table_data = {
                     typename = "collection",
                     lights = {
                         {
-                            typename = "Spot",  position = { 25.000, -4.000, 0.000 },
-							direction = {azimuth = math.rad(0.0), elevation = math.rad(4.0)}, argument = 51,
+                            typename = "Spot",  position = { 25.000, -4.030, 0.000 },
+                            connector = "MAIN_SPOT_PTR",
+                            argument = 51, movable = true,
+							-- direction = {elevation = math.rad(4.0)},
+                            dir_correction = {elevation = math.rad(4.0)},
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(33.3), angle_min = math.rad(0.0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
                         },
 
 						-- Inboard taxis lights.
                         {
-                            typename = "Spot",  position = { 7.500, -1.200, -5.500 },
+                            typename = "Spot",  position = { 9.700, -1.560, -6.722 },
 							direction = {azimuth = math.rad(-8.0), elevation = math.rad(4.0)},
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0.0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
                         },
                         {
-                            typename = "Spot",  position = { 7.500, -1.200, 5.500 },
+                            typename = "Spot",  position = { 9.700, -1.560, 6.722 },
 							direction = {azimuth = math.rad(8.0), elevation = math.rad(4.0)},
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0.0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
                         },
 
 						-- Outboard taxi lights
                         {
-                            typename = "Spot",  position = { 10.500, -1.200, -6.000 },
+                            typename = "Spot",  position = { 9.32, -1.560, -7.168 },
 							direction = {azimuth = math.rad(-30.0), elevation = math.rad(7.0)},
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
                         },
                         {
-                            typename = "Spot",  position = { 10.500, -1.200, 6.000 },
+                            typename = "Spot",  position = { 9.32, -1.560, 7.168 },
 							direction = {azimuth = math.rad(30.0), elevation = math.rad(7.0)},
                             proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}}, movable = true,
+                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
                         },
                     },
                 },

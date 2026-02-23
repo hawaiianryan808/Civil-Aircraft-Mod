@@ -357,7 +357,7 @@ Cessna_210N =  {
 			prop_pitch_feather		= 0,		-- If prop_pitch_feather < prop_pitch_max then no feathering available
 			
 			-- The prop axis is along points (2.495246, -0.105623) and (2.1088955, -0.0770895)
-			prop_locations			= { { 2.191, -0.083153, 0 }, {0.0, 0.0, math.rad(-3.0)} },
+			prop_locations			= { { 2.191, -0.083153, 0 }, { 0, 0, math.rad(-3.0) } },
 			
 			-- Turbocharged Altitude Performance
 			hMaxEng					= 5.5,		-- [km] Critical altitude (~18,000 ft) where wastegate closes fully
