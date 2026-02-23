@@ -25,9 +25,9 @@ B_747 =  {
     -- ===================================================================
     -- 1. IDENTITY & ASSETS
     -- ===================================================================
-    Name                = 'B_747', -- Internal name often stays same to link to existing shapes/cockpits if no new mod exists
-    DisplayName         = _('B747-400F'),
-    date_of_introduction= 1993.11,
+    Name                = "B_747", -- Internal name often stays same to link to existing shapes/cockpits if no new mod exists
+    DisplayName         = _("B747-400F"),
+    date_of_introduction = 1993.11,
     Picture             = "B-747.png",
     Rate                = "50", -- Slightly higher rate for modern heavy
     Shape               = "B_747",
@@ -42,12 +42,12 @@ B_747 =  {
     shape_table_data    =
     {
         {
-            file        = 'B_747',
+            file        = "B_747",
             life        = 25, -- Increased structural toughness
             vis         = 3,
-            desrt       = 'kc-135-oblomok',
+            desrt       = "kc-135-oblomok",
             fire        = { 300, 2},
-            username    = 'B_747',
+            username    = "B_747",
             index       = WSTYPE_PLACEHOLDER,
             classname   = "lLandPlane",
             positioning = "BYNORMAL",
@@ -63,30 +63,30 @@ B_747 =  {
     -- 2. DIMENSIONS & GEOMETRY
     -- ===================================================================
     -- Dimensions (Updated for -400F)
-	-- The DCS model is undersized, so these dimensions will reflect the
-	-- 3D model instead or less because DCS's spawn volume limits are stupid.
+    -- The DCS model is undersized, so these dimensions will reflect the
+    -- 3D model instead or less because DCS's spawn volume limits are stupid.
     length      = 65.0,		-- [m] (Actual 231 ft 10 in - 70.6m) - Limited because DCS is stupid
     height      = 12.4,		-- [m] (Actual 63 ft 8 in - 19.4m) - Limited because DCS is stupid
     wing_area   = 560,   	-- [m^2] (Increased for -400 wing) https://www.airliners.net/aircraft-data/boeing-747-400/100 https://www.aviatorjoe.net/go/compare/747-400F/747-8F/
     wing_span   = 59.44,	-- [m] (64.44m real-world)
 
     -- Gear Geometry
-    wing_tip_pos    = 	{-13.89, -0.16,  29.64},
+    wing_tip_pos    =   {-13.89, -0.16,  29.64},
 
-    nose_gear_pos 	= 	{24.606, -6.035, 0}, 			-- Nose gear position (ground under center of the axle)
+    nose_gear_pos 	=   {24.606, -6.035, 0}, 			-- Nose gear position (ground under center of the axle)
 
-	main_gear_pos 	= 	{-2.45,  -6.013, 6.325},		-- Main gear position (ground under center of the axle)
-														-- automatically mirrored
+    main_gear_pos 	=   {-2.45,  -6.013, 6.325},		-- Main gear position (ground under center of the axle)
+                                                        -- automatically mirrored
 
-	nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
-	nose_gear_amortizer_reversal_stroke 	 = -0.4184,	-- Full Strut Compression (maximum+ weight on wheels)
-	nose_gear_amortizer_normal_weight_stroke = -0.189,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
-	nose_gear_wheel_diameter				 =  1.272,	-- Diameter of the nose gear wheel (meters)
+    nose_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (arg 2)
+    nose_gear_amortizer_reversal_stroke 	 = -0.4184,	-- Full Strut Compression (maximum+ weight on wheels)
+    nose_gear_amortizer_normal_weight_stroke = -0.189,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
+    nose_gear_wheel_diameter				 =  1.272,	-- Diameter of the nose gear wheel (meters)
 
-	main_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (args 4 and 6)
-	main_gear_amortizer_reversal_stroke 	 = -0.1451,	-- Full Strut Compression (maximum+ weight on wheels)
-	main_gear_amortizer_normal_weight_stroke = -0.0696,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
-	main_gear_wheel_diameter 				 =  1.349,	-- Diameter of the main gear wheels (meters)
+    main_gear_amortizer_direct_stroke 		 =  0.0,	-- Full Strut Expansion (no weight on wheels) (args 4 and 6)
+    main_gear_amortizer_reversal_stroke 	 = -0.1451,	-- Full Strut Compression (maximum+ weight on wheels)
+    main_gear_amortizer_normal_weight_stroke = -0.0696,	-- Strut Weight Compression (normal compression with weight on wheels; number is amount of "chrome showing")
+    main_gear_wheel_diameter 				 =  1.349,	-- Diameter of the main gear wheels (meters)
 
     tand_gear_max   =   math.tan(math.rad(70)),
 
@@ -104,7 +104,7 @@ B_747 =  {
     average_fuel_consumption = 3.2, -- [kg/sec] total
 
 
-	-- ===================================================================
+    -- ===================================================================
     -- INERTIA & CG (B747-400F)
     -- ===================================================================
 --[[
@@ -230,10 +230,10 @@ B_747 =  {
 	Reminder: MOI and POI units for DCS should be kg*m^2. POI is optional.
 	DCS MOI + optional POI order:	{Roll, Yaw, Pitch, POI}
 ]]
-	-- DCS Empty Weight CG (relative to 3D mesh origin, +x fwd, +y up, +z right)
-	-- center of mass position relative to object 3d model center for empty aircraft [m]
-	-- in TsAGI coordinate system.
-	-- Nominal (Loaded ~25% MAC)
+    -- DCS Empty Weight CG (relative to 3D mesh origin, +x fwd, +y up, +z right)
+    -- center of mass position relative to object 3d model center for empty aircraft [m]
+    -- in TsAGI coordinate system.
+    -- Nominal (Loaded ~25% MAC)
     -- Center of Mass (Relative to Model Origin)
     -- Rear-most Trunnion (Body Gear) is at x = -1.646
     -- CG set to 1.50 to provide ~3.15m static margin forward of the pivot.
@@ -248,17 +248,17 @@ B_747 =  {
 	structure is high (+Y). The sum of those products should be NEGATIVE.
 	
 ]]
-	moment_of_inertia	= {53.3e6, 130.7e6, 118e6, -2.1e6},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
+    moment_of_inertia	= {53.3e6, 130.7e6, 118e6, -2.1e6},	-- [kg*m^2] {Roll, Yaw, Pitch, POI}
 
 
     -- ===================================================================
     -- 4. FLIGHT PERFORMANCE
     -- ===================================================================
     -- Altitude & Range
-    H_max               = 13750,   -- [m] (Service ceiling 45,100 ft)
-    range               = 8230,    -- [km] (Real max range with typical payload
-								   --        is ~4,445 nm / 8,230 km, as per
-								   --        Boeing and Cargolux specs)
+    H_max               = 13750,    -- [m] (Service ceiling 45,100 ft)
+    range               = 8230,     -- [km] (Real max range with typical payload
+                                    --       is ~4,445 nm / 8,230 km, as per
+                                    --       Boeing and Cargolux specs)
 
     -- Speeds (UPDATED for Mach 0.85 Cruise)
     V_opt               = 257,  -- [m/s TAS] (Mach 0.85 cruise at FL350)
@@ -299,45 +299,45 @@ B_747 =  {
         {
             pos =   {-4.2,	-2.96,	-21.121},
             elevation			=  	-2.25,	-- 2-2.5 degree exhaust depression (negative means exhaust points down)
-			azimuth             = 	2.0,	-- 2.0 degree toe-in (positive means thrust vector points toward longitudinal axis; exhaust points away)
+            azimuth             = 	2.0,	-- 2.0 degree toe-in (positive means thrust vector points toward longitudinal axis; exhaust points away)
             diameter    		=   0.755,
             exhaust_length_ab   =   9,
             exhaust_length_ab_K =   0.76,
             smokiness_level     =   0.01,	-- Newer engines are cleaner
-			engine_number       = 	1,
+            engine_number       = 	1,
         },
         [2] = 	-- Left inboard
         {
             pos =   {3.922,	-3.537,	-12.119},
             elevation			=  	-2.25,	-- 2-2.5 degree exhaust depression (negative means exhaust points down)
-			azimuth             = 	2.0,	-- 2.0 degree toe-in (positive means thrust vector points toward longitudinal axis; exhaust points away)
+            azimuth             = 	2.0,	-- 2.0 degree toe-in (positive means thrust vector points toward longitudinal axis; exhaust points away)
             diameter    		=   0.755,
             exhaust_length_ab   =   9,
             exhaust_length_ab_K =   0.76,
             smokiness_level     =   0.01,
-			engine_number       = 	2,
+            engine_number       = 	2,
         },
         [3] = 	-- Right inboard
         {
             pos =   {3.922,	-3.537,	12.119},
-            elevation			=  	-2.25,	-- 2-2.5 degree exhaust depression (negative means exhaust points down)
-			azimuth             =  -2.0,	-- 2.0 degree toe-in (negative means thrust vector points toward longitudinal axis; exhaust points away)
+            elevation           =  	-2.25,	-- 2-2.5 degree exhaust depression (negative means exhaust points down)
+            azimuth             =  -2.0,	-- 2.0 degree toe-in (negative means thrust vector points toward longitudinal axis; exhaust points away)
             diameter    		=   0.755,
             exhaust_length_ab   =   9,
             exhaust_length_ab_K =   0.76,
             smokiness_level     =   0.01,
-			engine_number       = 	3,
+            engine_number       = 	3,
         },
         [4] = 	-- Right outboard
         {
             pos =   {-4.2,	-2.96,	21.121},
             elevation			=  	-2.25,	-- 2-2.5 degree exhaust depression (negative means exhaust points down)
-			azimuth             =  -2.0,	-- 2.0 degree toe-in (negative means thrust vector points toward longitudinal axis; exhaust points away)
+            azimuth             =  -2.0,	-- 2.0 degree toe-in (negative means thrust vector points toward longitudinal axis; exhaust points away)
             diameter    		=   0.755,
             exhaust_length_ab   =   9,
             exhaust_length_ab_K =   0.76,
             smokiness_level     =   0.01,
-			engine_number       = 	4,
+            engine_number       = 	4,
         },
     },
 
@@ -357,7 +357,7 @@ B_747 =  {
     has_differential_stabilizer = false,
     flaps_transmission          = "Hydraulic",
     undercarriage_transmission  = "Hydraulic",
-    flaps_maneuver              = 20/30,	-- Corresponds to Flaps 20; Flaps 30 for landing
+    flaps_maneuver              = 20 / 30,	-- Corresponds to Flaps 20; Flaps 30 for landing
     brakeshute_name             = 0,
     stores_number               = 0,
 
@@ -381,11 +381,11 @@ B_747 =  {
     },
 
     Failures = {
-        { id = 'asc',       label = _('ASC'),       enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
-        { id = 'autopilot', label = _('AUTOPILOT'), enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
-        { id = 'hydro',     label = _('HYDRO'),     enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
-        { id = 'l_engine',  label = _('L-ENGINE'),  enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
-        { id = 'r_engine',  label = _('R-ENGINE'),  enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
+        { id = "asc",       label = _("ASC"),       enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
+        { id = "autopilot", label = _("AUTOPILOT"), enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
+        { id = "hydro",     label = _("HYDRO"),     enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
+        { id = "l_engine",  label = _("L-ENGINE"),  enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
+        { id = "r_engine",  label = _("R-ENGINE"),  enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
     },
 
     Pylons = {},
@@ -412,29 +412,29 @@ B_747 =  {
             cx_brk      = 0.05,     -- Speedbrake drag (estimated)
 
             table_data = {
-				-- Aerodynamic Drag Polar Table
-				-- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
-				-- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
-				-- 		M       Cx0      Cya      B        B4    Omxmax   Aldop   Cymax
-				-- REVISION for -400F: Slightly lower form drag Cx0
+                -- Aerodynamic Drag Polar Table
+                -- M: Mach, Cx0: Zero-lift drag, Cya: Normal force coeff, B/B4: Polar shape
+                -- Omxmax: Roll rate, Aldop: Max AoA, Cymax: Max Lift
+                -- 		M       Cx0      Cya      B        B4    Omxmax   Aldop   Cymax
+                -- REVISION for -400F: Slightly lower form drag Cx0
 
-				-- Low Speed
-				[1]  = {0.0,   0.015,  0.095,   0.033,   0.001,   0.35,   13,     1.45},
-				[2]  = {0.2,   0.015,  0.095,   0.033,   0.001,   0.45,   13,     1.45},
-				[3]  = {0.4,   0.016,  0.095,   0.033,   0.002,   0.45,   12.5,   1.45},
+                -- Low Speed
+                [1]  = {0.0,   0.015,  0.095,   0.033,   0.001,   0.35,   13,     1.45},
+                [2]  = {0.2,   0.015,  0.095,   0.033,   0.001,   0.45,   13,     1.45},
+                [3]  = {0.4,   0.016,  0.095,   0.033,   0.002,   0.45,   12.5,   1.45},
 
-				-- Climb
-				[4]  = {0.6,   0.018,  0.093,  0.038,    0.01,    0.50,   15,     1.40},
+                -- Climb
+                [4]  = {0.6,   0.018,  0.093,  0.038,    0.01,    0.50,   15,     1.40},
 
-				-- Cruise (Mach 0.82 - 0.86 typical)
-				[5]  = {0.7,   0.022,  0.092,  0.043,    0.02,    0.50,   14,     1.30},
-				[6]  = {0.8,   0.024,  0.091,  0.046,    0.03,    0.50,   14.0,   1.15},
-				[7]  = {0.84,  0.032,  0.090,  0.048,    0.03,    0.45,   13,     1.20},
+                -- Cruise (Mach 0.82 - 0.86 typical)
+                [5]  = {0.7,   0.022,  0.092,  0.043,    0.02,    0.50,   14,     1.30},
+                [6]  = {0.8,   0.024,  0.091,  0.046,    0.03,    0.50,   14.0,   1.15},
+                [7]  = {0.84,  0.032,  0.090,  0.048,    0.03,    0.45,   13,     1.20},
 
-				-- Mach Limit
-				[8]  = {0.88,  0.055,  0.105,  0.170,    0.100,   0.7,    11.0,   0.80},
-				[9]  = {0.9,   0.120,  0.087,  0.290,    0.200,   0.5,    12,     1.00},
-				[10] = {1.0,   0.350,  0.085,  0.490,    0.300,   0.3,    8.0,    0.40},
+                -- Mach Limit
+                [8]  = {0.88,  0.055,  0.105,  0.170,    0.100,   0.7,    11.0,   0.80},
+                [9]  = {0.9,   0.120,  0.087,  0.290,    0.200,   0.5,    12,     1.00},
+                [10] = {1.0,   0.350,  0.085,  0.490,    0.300,   0.3,    8.0,    0.40},
             },
 
 
@@ -553,12 +553,12 @@ mx_table_data = {
         },	-- end of aerodynamics tables
 
         engine = {
-			-- ===================================================================
-			-- ENGINE CONFIGURATION (GE CF6-80C2B1F)
-			-- ===================================================================
+            -- ===================================================================
+            -- ENGINE CONFIGURATION (GE CF6-80C2B1F)
+            -- ===================================================================
 
             typeng  = 4,
-			type	= "TurboFan",
+            type	= "TurboFan",
 
             -- RPM and throttle
             Nmg     = 62.5,     		-- N2 Idle RPM %
@@ -575,10 +575,10 @@ mx_table_data = {
             dcx_eng = 0.0125,   -- Larger nacelles (higher drag)
 
             -- FUEL CONSUMPTION (Specific Fuel Consumption - SFC - per engine)
-			-- CF6-80C2B1F TSFC is approx 0.307 (Cruise) to 0.56 (Takeoff) lb/lbf/hr
-			-- DCS Units: [kg / kgf / h]
-			-- Converted: 0.307 lb/lbf/hr ≈ 0.307 kg/kgf/hr (Units are roughly 1:1)
-			-- We use a blended value for the simple model.
+            -- CF6-80C2B1F TSFC is approx 0.307 (Cruise) to 0.56 (Takeoff) lb/lbf/hr
+            -- DCS Units: [kg / kgf / h]
+            -- Converted: 0.307 lb/lbf/hr ≈ 0.307 kg/kgf/hr (Units are roughly 1:1)
+            -- We use a blended value for the simple model.
             cemax   = 0.560,	-- [kg/kgf/h]
             cefor   = 0.560,	-- [kg/kgf/h]
 
@@ -588,23 +588,23 @@ mx_table_data = {
 
             table_data = {
                 -- THRUST TABLE (4x CF6-80C2B1F)
-				-- Total Thrust Sum [Newtons] vs Mach Number
-				-- 1 Engine = ~257,550 N (57,900 lbf)
-				-- 4 Engines = ~1,030,200 N
-				--      Mach      Thrust(N)    Thrust_AB(N)
-				[1] =   {0.0,     1030200,     1030200},   -- Static Takeoff
-				[2] =   {0.2,     985000,      985000},    -- Initial Climb
-				[3] =   {0.4,     920000,      920000},
-				[4] =   {0.6,     850000,      850000},
+                -- Total Thrust Sum [Newtons] vs Mach Number
+                -- 1 Engine = ~257,550 N (57,900 lbf)
+                -- 4 Engines = ~1,030,200 N
+                --      Mach      Thrust(N)    Thrust_AB(N)
+                [1] =   {0.0,     1030200,     1030200},   -- Static Takeoff
+                [2] =   {0.2,     985000,      985000},    -- Initial Climb
+                [3] =   {0.4,     920000,      920000},
+                [4] =   {0.6,     850000,      850000},
 
-				-- Cruise Range (Lapse is handled by dpdh_m, this is Mach efficiency)
-				[5] =   {0.7,     780000,      780000},
-				[6] =   {0.8,     720000,      720000},    -- Cruise Baseline
-				[7] =   {0.85,    680000,      680000},
+                -- Cruise Range (Lapse is handled by dpdh_m, this is Mach efficiency)
+                [5] =   {0.7,     780000,      780000},
+                [6] =   {0.8,     720000,      720000},    -- Cruise Baseline
+                [7] =   {0.85,    680000,      680000},
 
-				-- High Speed / Choke
-				[8] =   {0.9,     550000,      550000},    -- Inlet recovery loss
-				[9] =   {0.95,    400000,      400000},
+                -- High Speed / Choke
+                [8] =   {0.9,     550000,      550000},    -- Inlet recovery loss
+                [9] =   {0.95,    400000,      400000},
             },
         },
     },
@@ -683,7 +683,7 @@ mx_table_data = {
     -- 9. LIGHTS DEFINITION
     -- ===================================================================
 
-	--[[
+    --[[
 		--------------------------------------------------------------
 		------------------  HawaiianRyan overhaul  -------------------
 		--------------------------------------------------------------
@@ -707,254 +707,230 @@ mx_table_data = {
 	]]
 
     lights_data = {
-	typename = "collection", lights = {
-
+    typename = "collection", lights = {
         [WOLALIGHT_NAVLIGHTS] = {
             typename = "Collection",
             lights = {
-                [1] = {
-                    typename = "collection",
-                    lights = {
-                        {
-                            typename = "Spot", position = { -34.262684, 2.350242, 0 },
-							direction = {azimuth = math.rad(180.0), elevation = math.rad(0.0)},
-                            proto = lamp_prototypes.ANO_3_Bl, angle_max = math.rad(140.0), angle_min = math.rad(0.0),
-                        },
-						{
-							typename = "Omni", position = { -34.262684, 2.350242, 0 },
-							proto = lamp_prototypes.ANO_3_Bl, movable = true,
-						},
-                        {
-                            typename = "Spot", position = { -11.358561, -0.081693, -29.7552 },
-							direction = {azimuth = math.rad(-55.0), elevation = math.rad(0.0)},
-                            proto = lamp_prototypes.BANO_8M_red, angle_max = math.rad(110.0), angle_min = math.rad(0.0),
-                        },
-                        {
-                            typename = "Spot", position = { -11.358136, -0.081694, 29.7551 },
-							direction = {azimuth = math.rad(55.0), elevation = math.rad(0.0)},
-                            proto = lamp_prototypes.BANO_8M_green, angle_max = math.rad(110.0), angle_min = math.rad(0.0),
-                        },
-
-						{	-- port empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
-                            typename = "Spot",  position = { -30.000, 2.500, -5.00 },
-							direction = {azimuth = math.rad(80.0), elevation = math.rad(-47.0)},
-                            proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
-                            exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
-                        },
-						{	-- starboard empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
-                            typename = "Spot",  position = { -30.000, 2.500, 5.00 },
-							direction = {azimuth = math.rad(-80.0), elevation = math.rad(-47.0)},
-                            proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
-                            exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
-                        },
-
-						-- Wing illumination.
-						{
-                            typename = "Spot",  position = { 19.000, 1.000, -3.20 },
-							direction = {azimuth = math.rad(-140.0), elevation = math.rad(5.0)},
-                            proto = lamp_prototypes.LFS_R_27_180, angle_max = math.rad(30.0), angle_min = math.rad(0),
-                            exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.5, movable = true,
-                        },
-						{
-                            typename = "Spot",  position = { 19.000, 1.000, 3.20 },
-							direction = {azimuth = math.rad(140.0), elevation = math.rad(5.0)},
-                            proto = lamp_prototypes.LFS_R_27_180, angle_max = math.rad(30.0), angle_min = math.rad(0),
-                            exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.5, movable = true,
-                        },
-                    },
+                {
+                    typename = "Spot", position = { -34.262684, 2.350242, 0 },
+                    direction = {azimuth = math.rad(180.0), elevation = math.rad(0.0)},
+                    proto = lamp_prototypes.ANO_3_Bl, angle_max = math.rad(140.0), angle_min = math.rad(0.0),
                 },
+                {
+                    typename = "Omni", position = { -34.262684, 2.350242, 0 },
+                    proto = lamp_prototypes.ANO_3_Bl, movable = true,
+                },
+                {
+                    typename = "Spot", position = { -11.358561, -0.081693, -29.7552 },
+                    direction = {azimuth = math.rad(-55.0), elevation = math.rad(0.0)},
+                    proto = lamp_prototypes.BANO_8M_red, angle_max = math.rad(110.0), angle_min = math.rad(0.0),
+                },
+                {
+                    typename = "Spot", position = { -11.358136, -0.081694, 29.7551 },
+                    direction = {azimuth = math.rad(55.0), elevation = math.rad(0.0)},
+                    proto = lamp_prototypes.BANO_8M_green, angle_max = math.rad(110.0), angle_min = math.rad(0.0),
+                },
+
+                {	-- port empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
+                    typename = "Spot",  position = { -30.000, 2.500, -5.00 },
+                    direction = {azimuth = math.rad(80.0), elevation = math.rad(-47.0)},
+                    proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
+                    exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
+                },
+                {	-- starboard empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
+                    typename = "Spot",  position = { -30.000, 2.500, 5.00 },
+                    direction = {azimuth = math.rad(-80.0), elevation = math.rad(-47.0)},
+                    proto = lamp_prototypes.FR_100, intensity_max = 120.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
+                    exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
+                },
+
+                -- Wing illumination.
+                {
+                    typename = "Spot",  position = { 19.000, 1.000, -3.20 },
+                    direction = {azimuth = math.rad(-140.0), elevation = math.rad(5.0)},
+                    proto = lamp_prototypes.LFS_R_27_180, angle_max = math.rad(30.0), angle_min = math.rad(0),
+                    exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.5, movable = true,
+                },
+                {
+                    typename = "Spot",  position = { 19.000, 1.000, 3.20 },
+                    direction = {azimuth = math.rad(140.0), elevation = math.rad(5.0)},
+                    proto = lamp_prototypes.LFS_R_27_180, angle_max = math.rad(30.0), angle_min = math.rad(0),
+                    exposure = {{0, 0.9, 1.0}}, cool_down_t = 0.5, movable = true,
+                },
+
             },
         },
         [WOLALIGHT_SPOTS] = {
             typename = "Collection",
             lights = {
-                [1] = {
-                    typename = "collection",
-                    lights = {
-                        {
-                            typename = "Spot", position = { 25.000, -4.030, 0.000 },
-                            connector = "MAIN_SPOT_PTR",
-                            argument = 51, movable = true,
-							-- direction = {elevation = math.rad(8.0)},
-                            dir_correction = {elevation = math.rad(8.0)},
-                            proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(25.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
-                        },
+                {
+                    typename = "Spot", position = { 25.000, -4.030, 0.000 },
+                    proto = lamp_prototypes.LFS_P_27_1000,
+                    argument = 51, movable = true,
+                    direction = {elevation = math.rad(8.0)},
+                    angle_max = math.rad(25.0), angle_min = math.rad(0),
+                    cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
+                },
 
-						-- Inboard landing lights.
-                        {
-                            typename = "Spot",  position = { 9.700, -1.560, -6.722 },
-							direction = {azimuth = math.rad(-5.0), elevation = math.rad(8.0)},
-                            proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
-                        },
-                        {
-                            typename = "Spot",  position = { 9.700, -1.560, 6.722 },
-							direction = {azimuth = math.rad(5.0), elevation = math.rad(8.0)},
-                            proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
-                        },
+                -- Inboard landing lights.
+                {
+                    typename = "Spot",  position = { 9.700, -1.560, -6.722 },
+                    proto = lamp_prototypes.LFS_P_27_1000,
+                    direction = {azimuth = math.rad(-5.0), elevation = math.rad(8.0)},
+                    angle_max = math.rad(21.0),
+                    cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
+                },
+                {
+                    typename = "Spot",  position = { 9.700, -1.560, 6.722 },
+                    proto = lamp_prototypes.LFS_P_27_1000,
+                    direction = {azimuth = math.rad(5.0), elevation = math.rad(8.0)},
+                    angle_max = math.rad(21.0),
+                    cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
+                },
 
-						-- Outboard landing lights: https://www.cpat.com/courses/boeing-747-400/747-400-interactive-aircraft-systems-diagrams/
-                        {
-                            typename = "Spot",  position = { 9.32, -1.560, -7.168 },
-							direction = {azimuth = math.rad(-15.0), elevation = math.rad(8.0)},
-                            proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
-                        },
-                        {
-                            typename = "Spot",  position = { 9.32, -1.560, 7.168 },
-							direction = {azimuth = math.rad(15.0), elevation = math.rad(8.0)},
-                            proto = lamp_prototypes.LFS_P_27_1000, angle_max = math.rad(21.0), angle_min = math.rad(0),
-                            cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
-                        },
-                    },
+                -- Outboard landing lights: https://www.cpat.com/courses/boeing-747-400/747-400-interactive-aircraft-systems-diagrams/
+                {
+                    typename = "Spot",  position = { 9.32, -1.560, -7.168 },
+                    proto = lamp_prototypes.LFS_P_27_1000,
+                    direction = {azimuth = math.rad(-15.0), elevation = math.rad(8.0)},
+                    angle_max = math.rad(21.0),
+                    cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
+                },
+                {
+                    typename = "Spot",  position = { 9.32, -1.560, 7.168 },
+                    proto = lamp_prototypes.LFS_P_27_1000,
+                    direction = {azimuth = math.rad(15.0), elevation = math.rad(8.0)},
+                    angle_max = math.rad(21.0),
+                    cool_down_t = 0.8, exposure = {{0, 0.9, 1.0}},
                 },
             },
         },
         [WOLALIGHT_TAXI_LIGHTS] = {
             typename = "Collection",
             lights = {
-                [1] = {
-                    typename = "collection",
-                    lights = {
-                        {
-                            typename = "Spot",  position = { 25.000, -4.030, 0.000 },
-                            connector = "MAIN_SPOT_PTR",
-                            argument = 51, movable = true,
-							-- direction = {elevation = math.rad(4.0)},
-                            dir_correction = {elevation = math.rad(4.0)},
-                            proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(33.3), angle_min = math.rad(0.0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
-                        },
-
-						-- Inboard taxis lights.
-                        {
-                            typename = "Spot",  position = { 9.700, -1.560, -6.722 },
-							direction = {azimuth = math.rad(-8.0), elevation = math.rad(4.0)},
-                            proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0.0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
-                        },
-                        {
-                            typename = "Spot",  position = { 9.700, -1.560, 6.722 },
-							direction = {azimuth = math.rad(8.0), elevation = math.rad(4.0)},
-                            proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0.0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
-                        },
-
-						-- Outboard taxi lights
-                        {
-                            typename = "Spot",  position = { 9.32, -1.560, -7.168 },
-							direction = {azimuth = math.rad(-30.0), elevation = math.rad(7.0)},
-                            proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
-                        },
-                        {
-                            typename = "Spot",  position = { 9.32, -1.560, 7.168 },
-							direction = {azimuth = math.rad(30.0), elevation = math.rad(7.0)},
-                            proto = lamp_prototypes.LFS_R_27_450, angle_max = math.rad(30.0), angle_min = math.rad(0),
-                            cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
-                        },
-                    },
+                {
+                    typename = "Spot",  position = { 25.000, -4.030, 0.000 },
+                    proto = lamp_prototypes.LFS_R_27_450,
+                    argument = 51, movable = true,
+                    direction = {elevation = math.rad(4.0)},
+                    angle_max = math.rad(33.3),
+                    cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
                 },
-            },
-		},
 
-        [WOLALIGHT_BEACONS] = {		-- For moving around on the ground/taxiing.
-			-- Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
-            typename = "collection",
-            lights = {
-                [1] = {
-                    typename = "Collection",
-                    lights = {
-                        {
-                            typename = "natostrobelight", position = { 17.0, 5.0, 0.000},
-                            proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
-                        },
-                        {
-                            typename = "natostrobelight", position = { -17.0, -3.0, 0.000},
-                            proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
-                        },
+                -- Inboard taxi lights.
+                {
+                    typename = "Spot",  position = { 9.700, -1.560, -6.722 },
+                    proto = lamp_prototypes.LFS_R_27_450,
+                    direction = {azimuth = math.rad(-8.0), elevation = math.rad(4.0)},
+                    angle_max = math.rad(30.0),
+                    cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
+                },
+                {
+                    typename = "Spot",  position = { 9.700, -1.560, 6.722 },
+                    proto = lamp_prototypes.LFS_R_27_450,
+                    direction = {azimuth = math.rad(8.0), elevation = math.rad(4.0)},
+                    angle_max = math.rad(30.0),
+                    cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
+                },
 
-						{	-- port empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
-                            typename = "Spot",  position = { -30.000, 2.500, -5.00 },
-							direction = {azimuth = math.rad(80.0), elevation = math.rad(-47.0)},
-                            proto = lamp_prototypes.FR_100, intensity_max = 100.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
-                            exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
-                        },
-						{	-- starboard empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
-                            typename = "Spot",  position = { -30.000, 2.500, 5.00 },
-							direction = {azimuth = math.rad(-80.0), elevation = math.rad(-47.0)},
-                            proto = lamp_prototypes.FR_100, intensity_max = 100.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
-                            exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
-                        },
-                    },
+                -- Outboard taxi lights
+                {
+                    typename = "Spot",  position = { 9.32, -1.560, -7.168 },
+                    proto = lamp_prototypes.LFS_R_27_450,
+                    direction = {azimuth = math.rad(-30.0), elevation = math.rad(7.0)},
+                    angle_max = math.rad(30.0),
+                    cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
+                },
+                {
+                    typename = "Spot",  position = { 9.32, -1.560, 7.168 },
+                    proto = lamp_prototypes.LFS_R_27_450,
+                    direction = {azimuth = math.rad(30.0), elevation = math.rad(7.0)},
+                    angle_max = math.rad(30.0),
+                    cool_down_t = 0.5, exposure = {{0, 0.9, 1.0}},
                 },
             },
         },
 
-		[WOLALIGHT_STROBES] = {		-- For moving around on/near the runway (including airborne).
-			-- Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
-            typename = "collection",
+        [WOLALIGHT_BEACONS] = {		-- For moving around on the ground/taxiing.
+            -- Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
+            typename = "Collection",
             lights = {
-                [1] = {
-                    typename = "Collection",
-                    lights = {
-                        {
-                            typename = "natostrobelight", position = { 17.0, 5.0, 0.000},
-                            proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
-                        },
-                        {
-                            typename = "natostrobelight", position = { -17.0, -3.0, 0.000},
-                            proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
-                        },
+                {
+                    typename = "natostrobelight", position = { 17.0, 5.0, 0.000},
+                    proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
+                },
+                {
+                    typename = "natostrobelight", position = { -17.0, -3.0, 0.000},
+                    proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
+                },
 
-						{
-                            typename = "Spot", position = { -11.358561, -0.081693, -29.7552 },
-                            controller = "VariablePatternStrobe", mode = "1 Flash",
-							proto = lamp_prototypes.MPS_1, intensity_max = 750.0, period = 0.333, phase_shift = 0.25,
-							direction = {azimuth = math.rad(-90.0), elevation = math.rad(0)}, angle_max = math.rad(180.0), angle_min = math.rad(0),
-                        },
-                        {
-                            typename = "Spot", position = { -11.358136, -0.081694, 29.7551 },
-                            controller = "VariablePatternStrobe", mode = "1 Flash",
-							proto = lamp_prototypes.MPS_1, intensity_max = 750.0, period = 0.333, phase_shift = 0.25,
-							direction = {azimuth = math.rad(90.0), elevation = math.rad(0)}, angle_max = math.rad(180.0), angle_min = math.rad(0),
-                        },
-						{
-                            typename = "Spot", position = { -34.262684, 2.350242, 0 },
-                            controller = "VariablePatternStrobe", mode = "1 Flash",
-							proto = lamp_prototypes.MPS_1, intensity_max = 750.0, period = 0.333, phase_shift = 0.25,
-							direction = {azimuth = math.rad(180.0), elevation = math.rad(0)}, angle_max = math.rad(160.0), angle_min = math.rad(0),
-                        },
-                    },
+                {	-- port empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
+                    typename = "Spot",  position = { -30.000, 2.500, -5.00 },
+                    direction = {azimuth = math.rad(80.0), elevation = math.rad(-47.0)},
+                    proto = lamp_prototypes.FR_100, intensity_max = 100.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
+                    exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
+                },
+                {	-- starboard empennage logo illumination. Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
+                    typename = "Spot",  position = { -30.000, 2.500, 5.00 },
+                    direction = {azimuth = math.rad(-80.0), elevation = math.rad(-47.0)},
+                    proto = lamp_prototypes.FR_100, intensity_max = 100.0, angle_max = math.rad(80.0), angle_min = math.rad(0.0),
+                    exposure = {{0, 0.9, 1.0}}, power_up_t = 0.25, cool_down_t = 0.2, movable = true,
+                },
+            },
+        },
+
+        [WOLALIGHT_STROBES] = {		-- For moving around on/near the runway (including airborne).
+            -- Source: https://commons.wikimedia.org/wiki/File:Boeing_747_navigation_lights.svg
+            typename = "Collection",
+            lights = {
+                {
+                    typename = "natostrobelight", position = { 17.0, 5.0, 0.000},
+                    proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
+                },
+                {
+                    typename = "natostrobelight", position = { -17.0, -3.0, 0.000},
+                    proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
+                },
+
+                {
+                    typename = "Spot", position = { -11.358561, -0.081693, -29.7552 },
+                    controller = "VariablePatternStrobe", mode = "1 Flash",
+                    proto = lamp_prototypes.MPS_1, intensity_max = 750.0, period = 0.333, phase_shift = 0.25,
+                    direction = {azimuth = math.rad(-90.0), elevation = math.rad(0)}, angle_max = math.rad(180.0), angle_min = math.rad(0),
+                },
+                {
+                    typename = "Spot", position = { -11.358136, -0.081694, 29.7551 },
+                    controller = "VariablePatternStrobe", mode = "1 Flash",
+                    proto = lamp_prototypes.MPS_1, intensity_max = 750.0, period = 0.333, phase_shift = 0.25,
+                    direction = {azimuth = math.rad(90.0), elevation = math.rad(0)}, angle_max = math.rad(180.0), angle_min = math.rad(0),
+                },
+                {
+                    typename = "Spot", position = { -34.262684, 2.350242, 0 },
+                    controller = "VariablePatternStrobe", mode = "1 Flash",
+                    proto = lamp_prototypes.MPS_1, intensity_max = 750.0, period = 0.333, phase_shift = 0.25,
+                    direction = {azimuth = math.rad(180.0), elevation = math.rad(0)}, angle_max = math.rad(160.0), angle_min = math.rad(0),
                 },
             },
         },
 
         [WOLALIGHT_FORMATION_LIGHTS] = {
-			typename = "collection",
-			lights = {
-				[1] = {
-					typename = "Collection",
-					lights = {
-						{typename = "argumentlight",argument = 190}, -- Left Position(red)
-						{typename = "argumentlight",argument = 191}, -- Right Position(green)
-						{typename = "argumentlight",argument = 192}, -- Tail Position (white)
-						{
-                            typename = "natostrobelight", position = { 17.0, 5.0, 0.000},
-                            proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
-                        },
-                        {
-                            typename = "natostrobelight", position = { -17.0, -3.0, 0.000},
-                            proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
-                        },
-					},
-				},
-			},
-		},
-	},
-	},
+            typename = "Collection",
+            lights = {
+                {typename = "argumentlight",argument = 190}, -- Left Position(red)
+                {typename = "argumentlight",argument = 191}, -- Right Position(green)
+                {typename = "argumentlight",argument = 192}, -- Tail Position (white)
+                {
+                    typename = "natostrobelight", position = { 17.0, 5.0, 0.000},
+                    proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
+                },
+                {
+                    typename = "natostrobelight", position = { -17.0, -3.0, 0.000},
+                    proto = lamp_prototypes.SMI_2KM, period = 1.5, phase_shift = 0.0,
+                },
+            },
+        },
+    },
+    },
 }
 
 add_aircraft(B_747)
