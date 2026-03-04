@@ -556,7 +556,6 @@ B_737 =  {
 	]]
 	lights_data = {
 		typename = "collection", lights = {
-
 		[WOLALIGHT_AUX_LIGHTS] = {
             typename = "Collection",
             lights = {
@@ -805,14 +804,14 @@ B_737 =  {
                 [1] = {
                     typename = "Collection",
                     lights = {
-                        -- {
-                            -- typename = "natostrobelight", position = { 2.9, 1.9, 0.000 },
-                            -- proto = lamp_prototypes.SMI_2KM, period = 1.50, phase_shift = 0.0,
-                        -- },
-                        -- {
-                            -- typename = "natostrobelight", position = { -2.0, -3.1, 0.000 },
-                            -- proto = lamp_prototypes.SMI_2KM, period = 1.50, phase_shift = 0.0,
-                        -- },
+                        {
+                            typename = "natostrobelight", position = { 2.9, 1.9, 0.000 },
+                            proto = lamp_prototypes.SMI_2KM, period = 1.50, phase_shift = 0.0,
+                        },
+                        {
+                            typename = "natostrobelight", position = { -2.0, -3.1, 0.000 },
+                            proto = lamp_prototypes.SMI_2KM, period = 1.50, phase_shift = 0.5,
+                        },
                     },
                 },
             },
@@ -830,26 +829,26 @@ B_737 =  {
                         },
                         {
                             typename = "natostrobelight", position = { -2.0, -3.1, 0.000 },
-                            proto = lamp_prototypes.SMI_2KM, period = 1.50, phase_shift = 0.0,
+                            proto = lamp_prototypes.SMI_2KM, period = 1.50, phase_shift = 0.5,
                         },
-						-- {
-                            -- typename = "Spot", position = { -5.125769, -0.499848, -17.105591 },
-                            -- controller = "VariablePatternStrobe", mode = "1 Flash",
-							-- proto = lamp_prototypes.MPS_1, intensity_max = 500.0, period = 0.333, phase_shift = 0.25,
-							-- direction = {azimuth = math.rad(-90.0), elevation = math.rad(0)}, angle_max = math.rad(180.0), angle_min = math.rad(0),
-                        -- },
-                        -- {
-                            -- typename = "Spot", position = { -5.125177, -0.499719, 17.105755 },
-                            -- controller = "VariablePatternStrobe", mode = "1 Flash",
-							-- proto = lamp_prototypes.MPS_1, intensity_max = 500.0, period = 0.333, phase_shift = 0.25,
-							-- direction = {azimuth = math.rad(90.0), elevation = math.rad(0)}, angle_max = math.rad(180.0), angle_min = math.rad(0),
-                        -- },
-						-- {
-                            -- typename = "Spot", position = { -17.0112, -0.971818, 0 },
-                            -- controller = "VariablePatternStrobe", mode = "1 Flash",
-							-- proto = lamp_prototypes.MPS_1, intensity_max = 500.0, period = 0.333, phase_shift = 0.25,
-							-- direction = {azimuth = math.rad(180.0), elevation = math.rad(0)}, angle_max = math.rad(160.0), angle_min = math.rad(0),
-                        -- },
+						{
+                            typename = "Spot", position = { -5.125769, -0.499848, -17.105591 },
+                            controller = "VariablePatternStrobe", mode = "1 Flash",
+							proto = lamp_prototypes.MPS_1, intensity_max = 500.0, period = 0.333, phase_shift = 0.25,
+							direction = {azimuth = math.rad(-90.0), elevation = math.rad(0)}, angle_max = math.rad(180.0), angle_min = math.rad(0),
+                        },
+                        {
+                            typename = "Spot", position = { -5.125177, -0.499719, 17.105755 },
+                            controller = "VariablePatternStrobe", mode = "1 Flash",
+							proto = lamp_prototypes.MPS_1, intensity_max = 500.0, period = 0.333, phase_shift = 0.25,
+							direction = {azimuth = math.rad(90.0), elevation = math.rad(0)}, angle_max = math.rad(180.0), angle_min = math.rad(0),
+                        },
+						{
+                            typename = "Spot", position = { -17.0112, -0.971818, 0 },
+                            controller = "VariablePatternStrobe", mode = "1 Flash",
+							proto = lamp_prototypes.MPS_1, intensity_max = 500.0, period = 0.333, phase_shift = 0.25,
+							direction = {azimuth = math.rad(180.0), elevation = math.rad(0)}, angle_max = math.rad(160.0), angle_min = math.rad(0),
+                        },
                     },
                 },
             },
